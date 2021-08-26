@@ -1,0 +1,9 @@
+format: jb-book
+root: intro
+parts:
+- caption: 线性神经网络
+  chapters:
+  - file: a1.linear regression
+  - file: a2.fashion mnist
+  - file: a3.training pipeline
+  - file: a4.softmax regression
