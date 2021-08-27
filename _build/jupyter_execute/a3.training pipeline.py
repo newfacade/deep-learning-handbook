@@ -1,4 +1,4 @@
-# 图像分类 Pipeline
+# 图像分类Pipeline
 
 ```{note}
 图像分类的pipeline都是类似的，只是模型不同<br/>
@@ -169,7 +169,7 @@ def train_image_classifier(net, train_iter, test_iter, learning_rate, num_epochs
           f"train acc {animator.Y[1][-1]:3f}, "
           f"test acc {animator.Y[2][-1]: 3f}")
 
-CrossEntropyLoss的计算公式:
+分类问题的损失函数CrossEntropyLoss的计算公式:
 
 $$\mbox{loss}(x, class) = -\mbox{log}\left(\frac{\mbox{exp}(x[class])}{\sum_{j}\mbox{exp}(x[j])}\right) = -x[class] + \log\left ({\sum_{j}\exp({x[j]})}\right )$$
 

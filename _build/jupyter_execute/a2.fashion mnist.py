@@ -1,8 +1,9 @@
-# FashionMNIST 数据集
+# Fashion-MNIST数据集
 
 ```{note}
-FashionMNIST 是一个替代 MNIST 的数据集，它的的大小、格式和训练集/测试集划分与 MNIST 完全一致：60000/10000的训练测试数据划分，28x28的灰度图片<br/>
-我们可以使用torchvision下载并预处理FashionMNIST
+Fashion-MNIST是一个替代MNIST的图像分类数据集（因为MNIST太简单了）<br/>
+它的的大小、格式和训练集/测试集划分与MNIST完全一致：60000/10000的训练测试数据划分，28x28的灰度图片，分成10个类别<br/>
+我们可以使用torchvision下载并预处理Fashion-MNIST，后面我们会多次使用到这个数据集
 ```
 
 ## 加载数据
@@ -13,7 +14,7 @@ from torchvision import datasets, transforms
 
 #@save
 def load_data_fashion_mnist(batch_size, resize=None):
-    """加载FashionMNIST."""
+    """加载Fashion-MNIST."""
     # 定义transforms，肯定要ToTensor，Resize is optional
     trans = [transforms.ToTensor()]
     if resize:
@@ -31,19 +32,15 @@ train_iter, test_iter = load_data_fashion_mnist(batch_size=128)
 
 ## 探索
 
-为了看一下，不重要
-
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE" # prevent imshow error
-
+Fashion-MNIST中包含的10个类别分别为t-shirt（T恤）、trouser（裤子）、pullover（套衫）、dress（连衣裙）、coat（外套）、sandal（凉鞋）、shirt（衬衫）、sneaker（运动鞋）、bag（包）和ankle boot（短靴）。以下函数用于在数字标签索引及其文本名称之间进行转换。
 
 def get_fashion_mnist_labels(labels):
     """label to name"""
     text_labels = ['t-shirt', 'trouser', 'pullover', 'dress', 'coat', 
                    'sandal', 'shirt', 'sneaker', 'bag', 'ankle boot']
     return [text_labels[int(i)] for i in labels]
+
+import matplotlib.pyplot as plt
 
 
 def show_images(images, num_rows, num_columns, scale=2, titles=None):

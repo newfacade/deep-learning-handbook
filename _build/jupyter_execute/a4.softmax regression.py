@@ -1,16 +1,15 @@
-# 单层神经网络
+# Softmax回归
 
 ```{note}
-本节用最简单的单层神经网络（实际上就是softmax regression）来实现图像分类，主要目的是为了跑通流程
+本节用最简单的softmax回归（实际上就是单层神经网络）来实现图像分类，主要目的是为了跑通流程
 ```
 
-## 定义三要素
+## 定义模型
 
 ![jupyter](images/softmax.svg)
 
 import torch
 from torch import nn
-import d2l
 
 
 def init_weights(m):
@@ -26,6 +25,8 @@ net = nn.Sequential(nn.Flatten(), nn.Linear(784, 10))
 net.apply(init_weights)
 
 ## 训练
+
+import d2l
 
 # 1.获取数据
 batch_size = 256

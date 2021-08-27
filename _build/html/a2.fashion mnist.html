@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionMNIST 数据集 &#8212; 深度学习手册</title>
+    <title>Fashion-MNIST数据集 &#8212; 深度学习手册</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="图像分类 Pipeline" href="a3.training pipeline.html" />
+    <link rel="next" title="图像分类Pipeline" href="a3.training pipeline.html" />
     <link rel="prev" title="线性回归" href="a1.linear regression.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -94,29 +94,41 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  线性神经网络
+  深度学习基础
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="a1.linear regression.html">
-   线性回归
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="a0.html">
+   线性模型
   </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   FashionMNIST 数据集
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a3.training pipeline.html">
-   图像分类 Pipeline
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a4.softmax regression.html">
-   单层神经网络
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="a1.linear regression.html">
+     线性回归
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Fashion-MNIST数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a3.training pipeline.html">
+     图像分类Pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a4.softmax regression.html">
+     Softmax回归
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -243,12 +255,13 @@
         
               <div>
                 
-  <div class="section" id="fashionmnist">
-<h1>FashionMNIST 数据集<a class="headerlink" href="#fashionmnist" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="fashion-mnist">
+<h1>Fashion-MNIST数据集<a class="headerlink" href="#fashion-mnist" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FashionMNIST 是一个替代 MNIST 的数据集，它的的大小、格式和训练集/测试集划分与 MNIST 完全一致：60000/10000的训练测试数据划分，28x28的灰度图片<br/>
-我们可以使用torchvision下载并预处理FashionMNIST</p>
+<p>Fashion-MNIST是一个替代MNIST的图像分类数据集（因为MNIST太简单了）<br/>
+它的的大小、格式和训练集/测试集划分与MNIST完全一致：60000/10000的训练测试数据划分，28x28的灰度图片，分成10个类别<br/>
+我们可以使用torchvision下载并预处理Fashion-MNIST，后面我们会多次使用到这个数据集</p>
 </div>
 <div class="section" id="id1">
 <h2>加载数据<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
@@ -260,7 +273,7 @@
 
 <span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">load_data_fashion_mnist</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">resize</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;加载FashionMNIST.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;加载Fashion-MNIST.&quot;&quot;&quot;</span>
     <span class="c1"># 定义transforms，肯定要ToTensor，Resize is optional</span>
     <span class="n">trans</span> <span class="o">=</span> <span class="p">[</span><span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">()]</span>
     <span class="k">if</span> <span class="n">resize</span><span class="p">:</span>
@@ -282,20 +295,21 @@
 </div>
 <div class="section" id="id2">
 <h2>探索<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>为了看一下，不重要</p>
+<p>Fashion-MNIST中包含的10个类别分别为t-shirt（T恤）、trouser（裤子）、pullover（套衫）、dress（连衣裙）、coat（外套）、sandal（凉鞋）、shirt（衬衫）、sneaker（运动鞋）、bag（包）和ankle boot（短靴）。以下函数用于在数字标签索引及其文本名称之间进行转换。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;KMP_DUPLICATE_LIB_OK&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;TRUE&quot;</span> <span class="c1"># prevent imshow error</span>
-
-
-<span class="k">def</span> <span class="nf">get_fashion_mnist_labels</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_fashion_mnist_labels</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;label to name&quot;&quot;&quot;</span>
     <span class="n">text_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;t-shirt&#39;</span><span class="p">,</span> <span class="s1">&#39;trouser&#39;</span><span class="p">,</span> <span class="s1">&#39;pullover&#39;</span><span class="p">,</span> <span class="s1">&#39;dress&#39;</span><span class="p">,</span> <span class="s1">&#39;coat&#39;</span><span class="p">,</span> 
                    <span class="s1">&#39;sandal&#39;</span><span class="p">,</span> <span class="s1">&#39;shirt&#39;</span><span class="p">,</span> <span class="s1">&#39;sneaker&#39;</span><span class="p">,</span> <span class="s1">&#39;bag&#39;</span><span class="p">,</span> <span class="s1">&#39;ankle boot&#39;</span><span class="p">]</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">text_labels</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">labels</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 
 <span class="k">def</span> <span class="nf">show_images</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">num_rows</span><span class="p">,</span> <span class="n">num_columns</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">titles</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -333,7 +347,7 @@
 torch.Size([128])
 </pre></div>
 </div>
-<img alt="_images/a2.fashion mnist_5_1.png" src="_images/a2.fashion mnist_5_1.png" />
+<img alt="_images/a2.fashion mnist_6_1.png" src="_images/a2.fashion mnist_6_1.png" />
 </div>
 </div>
 </div>
@@ -365,7 +379,7 @@ torch.Size([128])
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="a1.linear regression.html" title="previous page">线性回归</a>
-    <a class='right-next' id="next-link" href="a3.training pipeline.html" title="next page">图像分类 Pipeline</a>
+    <a class='right-next' id="next-link" href="a3.training pipeline.html" title="next page">图像分类Pipeline</a>
 
         </div>
         

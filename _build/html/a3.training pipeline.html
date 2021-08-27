@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图像分类 Pipeline &#8212; 深度学习手册</title>
+    <title>图像分类Pipeline &#8212; 深度学习手册</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="单层神经网络" href="a4.softmax regression.html" />
-    <link rel="prev" title="FashionMNIST 数据集" href="a2.fashion mnist.html" />
+    <link rel="next" title="Softmax回归" href="a4.softmax regression.html" />
+    <link rel="prev" title="Fashion-MNIST数据集" href="a2.fashion mnist.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,29 +94,41 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  线性神经网络
+  深度学习基础
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="a1.linear regression.html">
-   线性回归
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="a0.html">
+   线性模型
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a2.fashion mnist.html">
-   FashionMNIST 数据集
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   图像分类 Pipeline
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a4.softmax regression.html">
-   单层神经网络
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="a1.linear regression.html">
+     线性回归
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a2.fashion mnist.html">
+     Fashion-MNIST数据集
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     图像分类Pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a4.softmax regression.html">
+     Softmax回归
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -249,7 +261,7 @@
               <div>
                 
   <div class="section" id="pipeline">
-<h1>图像分类 Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this headline">¶</a></h1>
+<h1>图像分类Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>图像分类的pipeline都是类似的，只是模型不同<br/>
@@ -460,7 +472,7 @@
 </div>
 </div>
 </div>
-<p>CrossEntropyLoss的计算公式:</p>
+<p>分类问题的损失函数CrossEntropyLoss的计算公式:</p>
 <div class="math notranslate nohighlight">
 \[\mbox{loss}(x, class) = -\mbox{log}\left(\frac{\mbox{exp}(x[class])}{\sum_{j}\mbox{exp}(x[j])}\right) = -x[class] + \log\left ({\sum_{j}\exp({x[j]})}\right )\]</div>
 </div>
@@ -491,8 +503,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="a2.fashion mnist.html" title="previous page">FashionMNIST 数据集</a>
-    <a class='right-next' id="next-link" href="a4.softmax regression.html" title="next page">单层神经网络</a>
+    <a class='left-prev' id="prev-link" href="a2.fashion mnist.html" title="previous page">Fashion-MNIST数据集</a>
+    <a class='right-next' id="next-link" href="a4.softmax regression.html" title="next page">Softmax回归</a>
 
         </div>
         

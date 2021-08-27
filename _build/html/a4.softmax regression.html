@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>单层神经网络 &#8212; 深度学习手册</title>
+    <title>Softmax回归 &#8212; 深度学习手册</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="图像分类 Pipeline" href="a3.training pipeline.html" />
+    <link rel="prev" title="图像分类Pipeline" href="a3.training pipeline.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -93,29 +93,41 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  线性神经网络
+  深度学习基础
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="a1.linear regression.html">
-   线性回归
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="a0.html">
+   线性模型
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a2.fashion mnist.html">
-   FashionMNIST 数据集
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="a3.training pipeline.html">
-   图像分类 Pipeline
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   单层神经网络
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="a1.linear regression.html">
+     线性回归
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a2.fashion mnist.html">
+     Fashion-MNIST数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="a3.training pipeline.html">
+     图像分类Pipeline
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Softmax回归
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -222,12 +234,12 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   定义三要素
+  <a class="reference internal nav-link" href="#id1">
+   定义模型
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
+  <a class="reference internal nav-link" href="#id2">
    训练
   </a>
  </li>
@@ -242,20 +254,19 @@
         
               <div>
                 
-  <div class="section" id="id1">
-<h1>单层神经网络<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="softmax">
+<h1>Softmax回归<a class="headerlink" href="#softmax" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>本节用最简单的单层神经网络（实际上就是softmax regression）来实现图像分类，主要目的是为了跑通流程</p>
+<p>本节用最简单的softmax回归（实际上就是单层神经网络）来实现图像分类，主要目的是为了跑通流程</p>
 </div>
-<div class="section" id="id2">
-<h2>定义三要素<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>定义模型<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p><img alt="jupyter" src="_images/softmax.svg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
-<span class="kn">import</span> <span class="nn">d2l</span>
 
 
 <span class="k">def</span> <span class="nf">init_weights</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
@@ -282,11 +293,13 @@
 </div>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>训练<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>训练<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1.获取数据</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">d2l</span>
+
+<span class="c1"># 1.获取数据</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="n">train_iter</span><span class="p">,</span> <span class="n">test_iter</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_fashion_mnist</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">)</span>
 </pre></div>
@@ -302,7 +315,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loss 0.406, train acc 0.858300, test acc  0.836400
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loss 0.402, train acc 0.858617, test acc  0.841300
 </pre></div>
 </div>
 <img alt="_images/a4.softmax regression_5_1.svg" src="_images/a4.softmax regression_5_1.svg" /></div>
@@ -335,7 +348,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="a3.training pipeline.html" title="previous page">图像分类 Pipeline</a>
+    <a class='left-prev' id="prev-link" href="a3.training pipeline.html" title="previous page">图像分类Pipeline</a>
 
         </div>
         
