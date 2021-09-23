@@ -1,16 +1,21 @@
-# Welcome to your Jupyter Book
+# 前言
 
-This is a small sample book to give you a feel for how book content is
-structured.
+这本书讲深度学习，它是newfacade基础五部曲：
 
-:::{note}
-Here is a note!
-:::
+1. Python手册（包括numpy等包的使用）
 
-And here is a code block:
+2. 工具手册（包括Git以及撰写本书所使用的Jupyter Book等）
 
-```
-e = mc^2
-```
+3. 机器学习手册（使用Sklearn）
 
-Check out the content pages bundled with this sample book to see more.
+4. 深度学习手册（使用Pytorch和TensorFlow）
+
+5. 推荐系统手册（包括Spark等工具的使用）
+
+中的第四部。同其他手册一样，本书目标是简单、清晰和高覆盖。
+
+主要参考资料：
+
+1. Dive into Deep Learning
+
+2. Hands-on Machine Learning with Scikit-Learn, Keras & TensorFlow, 2nd Edition.

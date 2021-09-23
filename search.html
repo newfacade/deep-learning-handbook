@@ -77,7 +77,7 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
-      <img src="_static/logo.png" class="logo" alt="logo">
+      <img src="_static/ayaka.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">深度学习手册</h1>
@@ -91,7 +91,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+   前言
   </a>
  </li>
 </ul>
@@ -102,8 +102,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="a0.html">
-   线性模型
+  <a class="reference internal" href="chapter01/0.html">
+   线性神经网络
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -112,23 +112,496 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="a1.linear regression.html">
+    <a class="reference internal" href="chapter01/1.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="a2.fashion mnist.html">
+    <a class="reference internal" href="chapter01/2.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="a3.training pipeline.html">
+    <a class="reference internal" href="chapter01/3.training pipeline.html">
      图像分类Pipeline
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="a4.softmax regression.html">
+    <a class="reference internal" href="chapter01/4.softmax regression.html">
      Softmax回归
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter02/0.html">
+   多层感知机
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/1.mlp.html">
+     多层感知机
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/2.regularization.html">
+     正则化
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/3.dropout.html">
+     Dropout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/4.batch normalization.html">
+     Batch Normalization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/5.back propagation.html">
+     反向传播
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/6.activation.html">
+     激活函数
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter02/7.initialization.html">
+     初始化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter03/0.html">
+   优化算法
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter03/1.optimization challenges.html">
+     深度学习中的优化挑战
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter03/2.gradient descent.html">
+     梯度下降
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter03/3.momentum.html">
+     动量法
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter03/4.rmsprop.html">
+     RMSprop
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter03/5.adam.html">
+     Adam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter03/6.lr schedule.html">
+     学习率调度器
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  计算机视觉
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter04/0.html">
+   卷积神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/1.convolution.html">
+     卷积
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/2.padding and stride.html">
+     Padding，Stride，Channels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/3.pooling.html">
+     Pooling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/4.lenet.html">
+     LeNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/5.alexnet.html">
+     AlexNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/6.vgg.html">
+     VGG
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/7.googlenet.html">
+     GoogleNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/8.batch normalization.html">
+     卷积层的批标准化
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter04/9.resnet.html">
+     ResNet
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter05/0.html">
+   目标检测
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter05/1.bounding box.html">
+     目标检测和边界框
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter05/2.anchor box.html">
+     标注和预测
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  自然语言处理
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter08/0.html">
+   循环神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/1.language model.html">
+     Language Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/2.text preprocessing.html">
+     Text Preprocessing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/3.rnn.html">
+     RNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/4.training language model.html">
+     Training Language Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/5.gru.html">
+     GRU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/6.lstm.html">
+     LSTM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/7.deep rnn.html">
+     Deep RNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter08/8.bidirectional rnn.html">
+     Bidirectional RNN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter09/0.html">
+   机器翻译
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter09/1.machine translation dataset.html">
+     Machine Translation Dadaset
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter09/2.encoder-decoder.html">
+     Encoder-Decoder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter09/3.training machine translation.html">
+     Training Machine Translation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter09/4.sequence to sequence.html">
+     Sequence to Sequence
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter10/0.html">
+   注意力机制
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter10/1.attention.html">
+     Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter10/2.attention scoring functions.html">
+     Attention Scoring Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter10/3.multi-head attention.html">
+     Multi-Head Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter10/4.positional encoding.html">
+     Positional Encoding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter10/5.positionwise ffn &amp; addnorm.html">
+     Positionwise FFN &amp; AddNorm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter10/6.transformer encoder.html">
+     Transformer Encoder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter10/7.transformer decoder.html">
+     Transformer Decoder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter11/Pretrain.html">
+   Pretrain
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapter12/75.bert.html">
+   Bert
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  tensorflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter14/0.html">
+   基础知识
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter14/1.sequential.html">
+     Keras顺序API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter14/2.functional.html">
+     Keras函数式API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter14/3.overfitting.html">
+     处理过拟合
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter14/4.optimizer.html">
+     优化算法
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter14/5.reuse.html">
+     预训练+微调
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter14/6.hyperparameter.html">
+     调参
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter15/0.html">
+   自定义
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter15/1.custom layer.html">
+     自定义层
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter15/2.custom model.html">
+     自定义模型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter15/3.custom loss.html">
+     自定义损失函数和指标
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter15/4.custom activations etc.html">
+     自定义激活函数、初始化、正则化和约束
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter15/5.custom callback etc.html">
+     自定义回调函数和学习率调度器
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter15/6.custom training.html">
+     自定义训练循环
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter16/0.html">
+   加载和预处理数据
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter16/1.csv data.html">
+     CSV数据
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter16/2.tfrecord.html">
+     TFRecord和Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter16/3.example.html">
+     写入和读取TFRecord文件
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter16/4.preprocess.html">
+     预处理输入特征
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="chapter17/0.html">
+   部署
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter17/1.install.html">
+     启动TensorFlow Serving
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter17/2.restapi.html">
+     通过REST API查询
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="chapter17/3.version.html">
+     部署模型新的版本
     </a>
    </li>
   </ul>

@@ -1,0 +1,1468 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretrain &#8212; 深度学习手册</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Bert" href="../chapter12/75.bert.html" />
+    <link rel="prev" title="Transformer Decoder" href="../chapter10/7.transformer decoder.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/ayaka.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">深度学习手册</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   前言
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  深度学习基础
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter01/0.html">
+   线性神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/1.linear regression.html">
+     线性回归
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+     Fashion-MNIST数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/3.training pipeline.html">
+     图像分类Pipeline
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+     Softmax回归
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter02/0.html">
+   多层感知机
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/1.mlp.html">
+     多层感知机
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/2.regularization.html">
+     正则化
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/3.dropout.html">
+     Dropout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/4.batch normalization.html">
+     Batch Normalization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/5.back propagation.html">
+     反向传播
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/6.activation.html">
+     激活函数
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/7.initialization.html">
+     初始化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter03/0.html">
+   优化算法
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/1.optimization challenges.html">
+     深度学习中的优化挑战
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/2.gradient descent.html">
+     梯度下降
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/3.momentum.html">
+     动量法
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/4.rmsprop.html">
+     RMSprop
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/5.adam.html">
+     Adam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/6.lr schedule.html">
+     学习率调度器
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  计算机视觉
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter04/0.html">
+   卷积神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/1.convolution.html">
+     卷积
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/2.padding and stride.html">
+     Padding，Stride，Channels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/3.pooling.html">
+     Pooling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/4.lenet.html">
+     LeNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/5.alexnet.html">
+     AlexNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/6.vgg.html">
+     VGG
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/7.googlenet.html">
+     GoogleNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/8.batch normalization.html">
+     卷积层的批标准化
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/9.resnet.html">
+     ResNet
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter05/0.html">
+   目标检测
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter05/1.bounding box.html">
+     目标检测和边界框
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter05/2.anchor box.html">
+     标注和预测
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  自然语言处理
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter08/0.html">
+   循环神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/1.language model.html">
+     Language Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/2.text preprocessing.html">
+     Text Preprocessing
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/3.rnn.html">
+     RNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/4.training language model.html">
+     Training Language Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/5.gru.html">
+     GRU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/6.lstm.html">
+     LSTM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/7.deep rnn.html">
+     Deep RNN
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
+     Bidirectional RNN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter09/0.html">
+   机器翻译
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
+     Machine Translation Dadaset
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
+     Encoder-Decoder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/3.training machine translation.html">
+     Training Machine Translation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
+     Sequence to Sequence
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter10/0.html">
+   注意力机制
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/1.attention.html">
+     Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
+     Attention Scoring Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/3.multi-head attention.html">
+     Multi-Head Attention
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/4.positional encoding.html">
+     Positional Encoding
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
+     Positionwise FFN &amp; AddNorm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/6.transformer encoder.html">
+     Transformer Encoder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
+     Transformer Decoder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Pretrain
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter12/75.bert.html">
+   Bert
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  tensorflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter14/0.html">
+   基础知识
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/1.sequential.html">
+     Keras顺序API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/2.functional.html">
+     Keras函数式API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/3.overfitting.html">
+     处理过拟合
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/4.optimizer.html">
+     优化算法
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/5.reuse.html">
+     预训练+微调
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/6.hyperparameter.html">
+     调参
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter15/0.html">
+   自定义
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/1.custom layer.html">
+     自定义层
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/2.custom model.html">
+     自定义模型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/3.custom loss.html">
+     自定义损失函数和指标
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/4.custom activations etc.html">
+     自定义激活函数、初始化、正则化和约束
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/5.custom callback etc.html">
+     自定义回调函数和学习率调度器
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/6.custom training.html">
+     自定义训练循环
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter16/0.html">
+   加载和预处理数据
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/1.csv data.html">
+     CSV数据
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/2.tfrecord.html">
+     TFRecord和Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/3.example.html">
+     写入和读取TFRecord文件
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/4.preprocess.html">
+     预处理输入特征
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter17/0.html">
+   部署
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter17/1.install.html">
+     启动TensorFlow Serving
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter17/2.restapi.html">
+     通过REST API查询
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter17/3.version.html">
+     部署模型新的版本
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapter11/Pretrain.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter11/Pretrain.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter11/Pretrain.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#word2vec">
+   word2vec
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#skip-gram-model">
+     skip-gram model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#continous-bag-of-words-cbow-model">
+     continous bag of words(CBOW) model
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#negative-sampling">
+     Negative Sampling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-for-pretraining-word-embedding">
+     dataset for Pretraining Word Embedding
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reading-the-dataset">
+       Reading the Dataset
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subsampling">
+       subsampling
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#extracting-central-target-words-context-words-and-negatives">
+       Extracting Central Target Words, Context Words and Negatives
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bachify">
+       Bachify
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#combine-all-things-together">
+       Combine All Things Together
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pretraining-word2vec">
+     Pretraining word2vec
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       skip-gram model
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#binary-cross-entropy-loss-function">
+       Binary Cross Entropy Loss Function
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#training">
+       training
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-vectors-glove">
+   Global Vectors(Glove)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="pretrain">
+<h1>Pretrain<a class="headerlink" href="#pretrain" title="Permalink to this headline">¶</a></h1>
+<p>To understand text, we can begin with its representation, such as treating each word or subword as an individual text token.</p>
+<p>As we will see, the representation of each token can be pretrained on a large corpus, using word2vec, GloVe, or subword embedding models. After pretraining, representation of each token can be a vector.</p>
+<p>However, it remains the same no matter what the context is. Many more recent pretraining models adapt representation of the same token to different contexts. Among them is BERT.</p>
+<p><img alt="jupyter" src="../_images/pretrain1.svg" /></p>
+<div class="section" id="word2vec">
+<h2>word2vec<a class="headerlink" href="#word2vec" title="Permalink to this headline">¶</a></h2>
+<p>Previously, we use one-hot vectors to represent words, although they are easy to construct, they are usually not a good choice:</p>
+<ol class="simple">
+<li><p>cannot accurately express the similarity between different words</p></li>
+<li><p>dimension explosion</p></li>
+</ol>
+<p>Word2vec is a tool that we came up with to solve the problem above.</p>
+<p>The Word2vec tool contains two models: skip-gram and continuous bag of words (CBOW).</p>
+<div class="section" id="skip-gram-model">
+<h3>skip-gram model<a class="headerlink" href="#skip-gram-model" title="Permalink to this headline">¶</a></h3>
+<p>The skip-gram model assumes that a word can be used to generate the words surround it.</p>
+<p>Assume that the text sequence is “the man loves his son”. We use “loves” as the central target word and set the context window size to 2</p>
+<p><img alt="jupyter" src="../_images/skip-gram.svg" /></p>
+<p>the probability we concerned is:</p>
+<div class="math notranslate nohighlight">
+\[P(&quot;the&quot;, &quot;man&quot;, &quot;his&quot;, &quot;son&quot;|&quot;loves&quot;)\]</div>
+<p>assume the context words are generated independently of each other:</p>
+<div class="math notranslate nohighlight">
+\[P(&quot;the&quot;|&quot;loves&quot;)\cdot{P(&quot;man&quot;|&quot;loves&quot;)}\cdot{P(&quot;his&quot;|&quot;loves&quot;)}\cdot{P(&quot;son&quot;|&quot;loves&quot;)}\]</div>
+<p>In the skip-gram model, each word is represented as two  <span class="math notranslate nohighlight">\(d\)</span>-dimension vectors.</p>
+<ul class="simple">
+<li><p>the central target vector <span class="math notranslate nohighlight">\(v_{i}\)</span></p></li>
+<li><p>the context vector <span class="math notranslate nohighlight">\(u_{i}\)</span></p></li>
+</ul>
+<p>The conditional probability of generating the context word <span class="math notranslate nohighlight">\(w_{o}\)</span> for the given central target <span class="math notranslate nohighlight">\(w_{c}\)</span> word can be obtained by <strong>performing a softmax operation on the vector inner product</strong>:</p>
+<div class="math notranslate nohighlight">
+\[P(w_{o}|w_{c}) = \frac{exp(u_{o}^{T}v_{c})}{\sum_{i\in{V}}exp(u_{i}^{T}v_{c})}\]</div>
+<p>for a text sequence <span class="math notranslate nohighlight">\(\{w^{(1)},...,w^{(T)}\}\)</span>, the likelihood function of the skip-gram model of window size <span class="math notranslate nohighlight">\(m\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\prod_{t=1}^{T}\prod_{-m\le{j}\le{m}, j\ne{0}}P(w^{(t+j)}|w^{(t)})\]</div>
+<p>Here, any time step that is less than 1 or greater than  𝑇  can be ignored.</p>
+<p>log-likelihood function:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{t=1}^{T}\sum_{-m\le{j}\le{m}, j\ne{0}}log\ P(w^{(t+j)}|w^{(t)})\]</div>
+<div class="math notranslate nohighlight">
+\[log\ P(w_{o}|w_{c}) = u_{o}^{T}v_{c} - log\left(\sum_{i\in{V}}exp(u_{i}^{T}v_{c})\right)\]</div>
+<p>if we use SGD, we can get the gradient with respect to <span class="math notranslate nohighlight">\(v_{c}\)</span> from the formula above:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation}
+\begin{split}
+\frac{\partial log\ P(w_{o}|w_{c})}{\partial v_{c}} =&amp; \frac{\partial\left( u_{o}^{T}v_{c} - log\left(\sum_{i\in{V}}exp(u_{i}^{T}v_{c})\right)\right)}{\partial v_{c}} \\
+=&amp; u_{o} - \frac{\sum_{i\in{V}}exp(u_{i}^{T}v_{c})u_{i}}{\sum_{i\in{V}}exp(u_{i}^{T}v_{c})} \\
+=&amp; u_{o} - \sum_{i\in{V}}P(w_{i}|w_{c})u_{i}
+\end{split}
+\end{equation}
+\end{split}\]</div>
+<p>similarily, we can get the gradient with respect to <span class="math notranslate nohighlight">\(u_{o}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation}
+\begin{split}
+\frac{\partial log\ P(w_{o}|w_{c})}{\partial u_{o}} =&amp; \frac{\partial\left( u_{o}^{T}v_{c} - log\left(\sum_{i\in{V}}exp(u_{i}^{T}v_{c})\right)\right)}{\partial u_{o}} \\
+=&amp; v_{c} - \frac{exp(u_{o}^{T}v_{c})v_{c}}{\sum_{i\in{V}}exp(u_{i}^{T}v_{c})} \\
+=&amp; v_{c} - P(w_{o}|w_{c})v_{c}
+\end{split}
+\end{equation}
+\end{split}\]</div>
+<p>the gradient with respect to <span class="math notranslate nohighlight">\(u_{i}(i\ne{o})\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial log\ P(w_{o}|w_{c})}{\partial u_{i}} = - P(w_{i}|w_{c})v_{c}\]</div>
+<p>computational complexity of each gradient is <span class="math notranslate nohighlight">\(O(|V|)\)</span>.</p>
+<p>generally we used <span class="math notranslate nohighlight">\(v_{c}\)</span> as the representation vector of a word.</p>
+</div>
+<div class="section" id="continous-bag-of-words-cbow-model">
+<h3>continous bag of words(CBOW) model<a class="headerlink" href="#continous-bag-of-words-cbow-model" title="Permalink to this headline">¶</a></h3>
+<p>the CBOW model assumes that the central target word is generated based on the context words.</p>
+<p><img alt="jupyter" src="../_images/cbow.svg" /></p>
+<p>the probability we concerned is:</p>
+<div class="math notranslate nohighlight">
+\[P(&quot;loves&quot; | &quot;the&quot;, &quot;man&quot;, &quot;his&quot;, &quot;son&quot;)\]</div>
+<p>Since there are multiple context words in the CBOW model, we will average their word vectors to compute the conditional probability.</p>
+<p>In the CBOW model, each word is represented as two  <span class="math notranslate nohighlight">\(d\)</span>-dimension vectors.</p>
+<ul class="simple">
+<li><p>the central target vector <span class="math notranslate nohighlight">\(v_{i}\)</span></p></li>
+<li><p>the context vector <span class="math notranslate nohighlight">\(u_{i}\)</span></p></li>
+</ul>
+<p>using softmax:</p>
+<div class="math notranslate nohighlight">
+\[P(w_{c}|w_{o_{1}},...,w_{o_{2m}}) = \frac{exp\left(\frac{1}{2m}v_{c}^{T}(u_{o_{1}} + ... + u_{o_{2m}})\right)}{\sum_{i\in{V}}exp\left(\frac{1}{2m}v_{i}^{T}(u_{o_{1}} + ... + u_{o_{2m}})\right)}\]</div>
+<p>likelihood functions and gradient update rule are then derived similarily.</p>
+<p>unlike skip-gram, generally we used <span class="math notranslate nohighlight">\(u_{i}\)</span> as the representation vector of a word</p>
+</div>
+<div class="section" id="negative-sampling">
+<h3>Negative Sampling<a class="headerlink" href="#negative-sampling" title="Permalink to this headline">¶</a></h3>
+<p>to reduce computational complexity in gradient descent, we come up with the negative sampling method.</p>
+<p>Recall the softmax conditional probability in skip-gram:</p>
+<div class="math notranslate nohighlight">
+\[P(w_{o}|w_{c}) = \frac{exp(u_{o}^{T}v_{c})}{\sum_{i\in{V}}exp(u_{i}^{T}v_{c})}\]</div>
+<p>for particular <span class="math notranslate nohighlight">\((w_{o}, w_{c})\)</span>, we want to maximize <span class="math notranslate nohighlight">\(P(w_{o}|w_{c})\)</span>, that is to say we want:</p>
+<p>1.<span class="math notranslate nohighlight">\(u_{o}^{T}v_{c}\)</span> be large <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> <span class="math notranslate nohighlight">\(\sigma(u_{o}^{T}v_{c})\)</span> be large</p>
+<p>2.<span class="math notranslate nohighlight">\(u_{i}^{T}v_{c} (i\ne{o})\)</span> be small <span class="math notranslate nohighlight">\(\Leftrightarrow\)</span> <span class="math notranslate nohighlight">\(\sigma(-u_{o}^{T}v_{c})\)</span> be large</p>
+<p>for the purpose of reduce computational complexity, instead of iterate all the “negative samples”, we sample <span class="math notranslate nohighlight">\(K\)</span> negative samples.</p>
+<p>then instead of maximize:</p>
+<div class="math notranslate nohighlight">
+\[\frac{exp(u_{o}^{T}v_{c})}{\sum_{i\in{V}}exp(u_{i}^{T}v_{c})}\]</div>
+<p>we maximize:</p>
+<div class="math notranslate nohighlight">
+\[\sigma(u_{o}^{T}v_{c})\prod_{k=1,w_{k}\sim{P(w)}}^{K}\sigma(-u_{i_{k}}^{T}v_{c})\]</div>
+<p>in terms of log loss:</p>
+<div class="math notranslate nohighlight">
+\[l(w_{o},w_{c}) = -log\ \sigma(u_{o}^{T}v_{c}) - \sum_{k=1,w_{k}\sim{P(w)}}^{K}log\ \sigma(-u_{i_{k}}^{T}v_{c})\]</div>
+<p>now computational complexity of each gradient step is <span class="math notranslate nohighlight">\(O(|K|)\)</span>.</p>
+</div>
+<div class="section" id="dataset-for-pretraining-word-embedding">
+<h3>dataset for Pretraining Word Embedding<a class="headerlink" href="#dataset-for-pretraining-word-embedding" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="reading-the-dataset">
+<h4>Reading the Dataset<a class="headerlink" href="#reading-the-dataset" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="kn">import</span> <span class="nn">d2l</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="n">d2l</span><span class="o">.</span><span class="n">DATA_HUB</span><span class="p">[</span><span class="s1">&#39;ptb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">d2l</span><span class="o">.</span><span class="n">DATA_URL</span> <span class="o">+</span> <span class="s1">&#39;ptb.zip&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;319d85e578af0cdc590547f26231e4e31cdf1e42&#39;</span><span class="p">)</span>
+
+<span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">read_ptb</span><span class="p">():</span>
+    <span class="n">data_dir</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">download_extract</span><span class="p">(</span><span class="s1">&#39;ptb&#39;</span><span class="p">)</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;ptb.train.txt&#39;</span><span class="p">))</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">raw_text</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">raw_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]</span>  <span class="c1"># split to lines</span>
+
+<span class="n">sentences</span> <span class="o">=</span> <span class="n">read_ptb</span><span class="p">()</span>
+<span class="sa">f</span><span class="s1">&#39;# sentences: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;# sentences: 42069&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Vocab</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">min_freq</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="sa">f</span><span class="s1">&#39;vocab size: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;vocab size: 6719&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="subsampling">
+<h4>subsampling<a class="headerlink" href="#subsampling" title="Permalink to this headline">¶</a></h4>
+<p>Generally speaking, in a context window, it is better to train lower-frequency words.</p>
+<p>Therefore, when training the word embedding model, we drop out words depend on it’s frequency:</p>
+<div class="math notranslate nohighlight">
+\[f(w_{i}) = \frac{\mbox{number of word }w_{i} \mbox{ in the dataset}}{\mbox{total number of words in the dataset}}\]</div>
+<p>The dropout probability is given as:</p>
+<div class="math notranslate nohighlight">
+\[P(w_{i}) = \mbox{max}\left(1 - \sqrt{\frac{c}{f(w_{i})}}, 0\right)\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is a hyperparameter (set to  <span class="math notranslate nohighlight">\(10^{-4}\)</span>  in this experiment)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">subsampling</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">vocab</span><span class="p">):</span>
+    <span class="c1"># Map low frequency words into &lt;unk&gt;</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="p">[[</span><span class="n">vocab</span><span class="o">.</span><span class="n">idx_to_token</span><span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="n">tk</span><span class="p">]]</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">line</span><span class="p">]</span>
+                 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+    <span class="c1"># Count the frequency for each word</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">count_corpus</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+    <span class="n">num_tokens</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">counter</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+
+    <span class="c1"># Return True if to keep this token during subsampling</span>
+    <span class="k">def</span> <span class="nf">keep</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span>
+            <span class="mf">1e-4</span> <span class="o">/</span> <span class="n">counter</span><span class="p">[</span><span class="n">token</span><span class="p">]</span> <span class="o">*</span> <span class="n">num_tokens</span><span class="p">))</span>
+
+    <span class="c1"># Now do the subsampling</span>
+    <span class="k">return</span> <span class="p">[[</span><span class="n">tk</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">line</span> <span class="k">if</span> <span class="n">keep</span><span class="p">(</span><span class="n">tk</span><span class="p">)]</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+
+<span class="n">subsampled</span> <span class="o">=</span> <span class="n">subsampling</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">vocab</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>subsampling significantly reduced the sequence length.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2l</span><span class="o">.</span><span class="n">set_figsize</span><span class="p">()</span>
+<span class="n">d2l</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">([[</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">],</span>
+              <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">subsampled</span><span class="p">]])</span>
+<span class="n">d2l</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;# tokens per sentence&#39;</span><span class="p">)</span>
+<span class="n">d2l</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+<span class="n">d2l</span><span class="o">.</span><span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;origin&#39;</span><span class="p">,</span> <span class="s1">&#39;subsampled&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Pretrain_15_0.svg" src="../_images/Pretrain_15_0.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;we map each token into an index to construct the corpus&quot;&quot;&quot;</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="n">line</span><span class="p">]</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">subsampled</span><span class="p">]</span>
+<span class="n">corpus</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[], [71, 32, 2115, 406], [5277, 3054, 1580, 95]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extracting-central-target-words-context-words-and-negatives">
+<h4>Extracting Central Target Words, Context Words and Negatives<a class="headerlink" href="#extracting-central-target-words-context-words-and-negatives" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">get_centers_and_contexts</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">max_window_size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Extracting Central Target Words and Context Words&quot;&quot;&quot;</span>
+    <span class="n">centers</span><span class="p">,</span> <span class="n">contexts</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">:</span>
+        <span class="c1"># Each sentence needs at least 2 words to form a &quot;central target word</span>
+        <span class="c1"># - context word&quot; pair</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">centers</span> <span class="o">+=</span> <span class="n">line</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)):</span>  <span class="c1"># Context window centered at i</span>
+            <span class="c1"># context window size uniformly between integer 1 and the max_window_size</span>
+            <span class="n">window_size</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_window_size</span><span class="p">)</span>
+            <span class="n">indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
+                <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">window_size</span><span class="p">),</span>
+                      <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">),</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">window_size</span><span class="p">)))</span>
+            <span class="c1"># Exclude the central target word from the context words</span>
+            <span class="n">indices</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">contexts</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">line</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">centers</span><span class="p">,</span> <span class="n">contexts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_centers</span><span class="p">,</span> <span class="n">all_contexts</span> <span class="o">=</span> <span class="n">get_centers_and_contexts</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="sa">f</span><span class="s1">&#39;# center-context pairs: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">all_centers</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;# center-context pairs: 353046&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>instead of calling random.choices every time. we define a RandomGenerator according to sampling_weights.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">class</span> <span class="nc">RandomGenerator</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Draw a random int in [0, n] according to n sampling weights.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sampling_weights</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">population</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sampling_weights</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sampling_weights</span> <span class="o">=</span> <span class="n">sampling_weights</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">candidates</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">candidates</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">candidates</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">population</span><span class="p">,</span>
+                                             <span class="bp">self</span><span class="o">.</span><span class="n">sampling_weights</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">candidates</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+
+<span class="n">generator</span> <span class="o">=</span> <span class="n">RandomGenerator</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="p">[</span><span class="n">generator</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 2, 2, 2, 1, 1, 2, 1, 2, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<p>according to the original paper:</p>
+<div class="math notranslate nohighlight">
+\[\mbox{sampling weight of }w_{i} \propto f(w_{i})^{0.75}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">get_negatives</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">,</span> <span class="n">corpus</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">count_corpus</span><span class="p">(</span><span class="n">corpus</span><span class="p">)</span>
+    <span class="n">sampling_weights</span> <span class="o">=</span> <span class="p">[</span><span class="n">counter</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">**</span><span class="mf">0.75</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">counter</span><span class="p">))]</span>
+    <span class="n">all_negatives</span><span class="p">,</span> <span class="n">generator</span> <span class="o">=</span> <span class="p">[],</span> <span class="n">RandomGenerator</span><span class="p">(</span><span class="n">sampling_weights</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">contexts</span> <span class="ow">in</span> <span class="n">all_contexts</span><span class="p">:</span>
+        <span class="n">negatives</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">negatives</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">contexts</span><span class="p">)</span> <span class="o">*</span> <span class="n">K</span><span class="p">:</span>
+            <span class="n">neg</span> <span class="o">=</span> <span class="n">generator</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+            <span class="c1"># Noise words cannot be context words</span>
+            <span class="k">if</span> <span class="n">neg</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">contexts</span><span class="p">:</span>
+                <span class="n">negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neg</span><span class="p">)</span>
+        <span class="n">all_negatives</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">negatives</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">all_negatives</span>
+
+<span class="n">all_negatives</span> <span class="o">=</span> <span class="n">get_negatives</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">,</span> <span class="n">corpus</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="bachify">
+<h4>Bachify<a class="headerlink" href="#bachify" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">batchify</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;to specify the minibatch reading method in the DataLoader instance&quot;&quot;&quot;</span>
+    <span class="n">max_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">data</span><span class="p">)</span>
+    <span class="n">centers</span><span class="p">,</span> <span class="n">contexts_negatives</span><span class="p">,</span> <span class="n">masks</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">center</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">negative</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">cur_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">negative</span><span class="p">)</span>
+        <span class="n">centers</span> <span class="o">+=</span> <span class="p">[</span><span class="n">center</span><span class="p">]</span>
+        <span class="n">contexts_negatives</span> <span class="o">+=</span> <span class="p">[</span><span class="n">context</span> <span class="o">+</span> <span class="n">negative</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">max_len</span> <span class="o">-</span> <span class="n">cur_len</span><span class="p">)]</span>
+        <span class="n">masks</span> <span class="o">+=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">cur_len</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">max_len</span> <span class="o">-</span> <span class="n">cur_len</span><span class="p">)]</span>
+        <span class="n">labels</span> <span class="o">+=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">max_len</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">context</span><span class="p">))]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">centers</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+        <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">contexts_negatives</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">masks</span><span class="p">),</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">labels</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="combine-all-things-together">
+<h4>Combine All Things Together<a class="headerlink" href="#combine-all-things-together" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">load_data_ptb</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">max_window_size</span><span class="p">,</span> <span class="n">num_noise_words</span><span class="p">):</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">read_ptb</span><span class="p">()</span>
+    <span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Vocab</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">min_freq</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">subsampled</span> <span class="o">=</span> <span class="n">subsampling</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">vocab</span><span class="p">)</span>
+    <span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="n">line</span><span class="p">]</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">subsampled</span><span class="p">]</span>
+    <span class="n">all_centers</span><span class="p">,</span> <span class="n">all_contexts</span> <span class="o">=</span> <span class="n">get_centers_and_contexts</span><span class="p">(</span>
+        <span class="n">corpus</span><span class="p">,</span> <span class="n">max_window_size</span><span class="p">)</span>
+    <span class="n">all_negatives</span> <span class="o">=</span> <span class="n">get_negatives</span><span class="p">(</span><span class="n">all_contexts</span><span class="p">,</span> <span class="n">corpus</span><span class="p">,</span> <span class="n">num_noise_words</span><span class="p">)</span>
+
+    <span class="k">class</span> <span class="nc">PTBDataset</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
+        <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">centers</span><span class="p">,</span> <span class="n">contexts</span><span class="p">,</span> <span class="n">negatives</span><span class="p">):</span>
+            <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">centers</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">contexts</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">negatives</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">centers</span> <span class="o">=</span> <span class="n">centers</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">contexts</span> <span class="o">=</span> <span class="n">contexts</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">negatives</span> <span class="o">=</span> <span class="n">negatives</span>
+
+        <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">centers</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">contexts</span><span class="p">[</span><span class="n">index</span><span class="p">],</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">negatives</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+        <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">centers</span><span class="p">)</span>
+
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">PTBDataset</span><span class="p">(</span><span class="n">all_centers</span><span class="p">,</span> <span class="n">all_contexts</span><span class="p">,</span> <span class="n">all_negatives</span><span class="p">)</span>
+
+    <span class="n">data_iter</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                            <span class="n">collate_fn</span><span class="o">=</span><span class="n">batchify</span><span class="p">,</span>
+                                            <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># set num_workers=0 to avoid error</span>
+    <span class="k">return</span> <span class="n">data_iter</span><span class="p">,</span> <span class="n">vocab</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_iter</span><span class="p">,</span> <span class="n">vocab</span> <span class="o">=</span> <span class="n">load_data_ptb</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;centers&#39;</span><span class="p">,</span> <span class="s1">&#39;contexts_negatives&#39;</span><span class="p">,</span> <span class="s1">&#39;masks&#39;</span><span class="p">,</span> <span class="s1">&#39;labels&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">data_iter</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">batch</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s1">&#39;shape:&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>centers shape: torch.Size([512, 1])
+contexts_negatives shape: torch.Size([512, 60])
+masks shape: torch.Size([512, 60])
+labels shape: torch.Size([512, 60])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pretraining-word2vec">
+<h3>Pretraining word2vec<a class="headerlink" href="#pretraining-word2vec" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">embed</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">num_embeddings</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Parameter embedding_weight (</span><span class="si">{</span><span class="n">embed</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, &#39;</span>
+      <span class="s1">&#39;dtype=</span><span class="si">{embed.weight.dtype}</span><span class="s1">)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameter embedding_weight (torch.Size([20, 4]), dtype={embed.weight.dtype})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h4>skip-gram model<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">skip_gram</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">contexts_and_negatives</span><span class="p">,</span> <span class="n">embed_v</span><span class="p">,</span> <span class="n">embed_u</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">embed_v</span><span class="p">(</span><span class="n">center</span><span class="p">)</span>
+    <span class="n">u</span> <span class="o">=</span> <span class="n">embed_u</span><span class="p">(</span><span class="n">contexts_and_negatives</span><span class="p">)</span>
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">u</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># (b, a, w) * (b, w, b) -&gt; (b, a, b)</span>
+    <span class="k">return</span> <span class="n">pred</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">skip_gram</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">),</span>
+          <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">),</span> <span class="n">embed</span><span class="p">,</span> <span class="n">embed</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>torch.Size([2, 1, 3])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="binary-cross-entropy-loss-function">
+<h4>Binary Cross Entropy Loss Function<a class="headerlink" href="#binary-cross-entropy-loss-function" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SigmoidBCELoss</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="s2">&quot;BCEWithLogitLoss with masking on call.&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">binary_cross_entropy_with_logits</span><span class="p">(</span>
+            <span class="n">inputs</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">reduction</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">out</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">loss</span> <span class="o">=</span> <span class="n">SigmoidBCELoss</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="o">.</span><span class="mi">5</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">label</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+<span class="n">loss</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([0.7241, 0.3620])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">loss</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">mask</span><span class="p">)</span> <span class="o">/</span> <span class="n">mask</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># compute real mean loss</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([0.7241, 0.7241])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="training">
+<h4>training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">embed_size</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">num_embeddings</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">),</span> <span class="n">embedding_dim</span><span class="o">=</span><span class="n">embed_size</span><span class="p">),</span>  <span class="c1"># for central embedding</span>
+    <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">num_embeddings</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">),</span> <span class="n">embedding_dim</span><span class="o">=</span><span class="n">embed_size</span><span class="p">))</span>  <span class="c1"># for context embedding</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">data_iter</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">d2l</span><span class="o">.</span><span class="n">try_gpu</span><span class="p">()):</span>
+    <span class="k">def</span> <span class="nf">init_weights</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">m</span><span class="p">)</span> <span class="o">==</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">:</span>
+            <span class="n">nn</span><span class="o">.</span><span class="n">init</span><span class="o">.</span><span class="n">xavier_uniform_</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span>
+
+    <span class="n">net</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">init_weights</span><span class="p">)</span>
+    <span class="n">net</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lr</span><span class="p">)</span>
+    <span class="n">animator</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Animator</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;epoch&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;loss&#39;</span><span class="p">,</span>
+                            <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">])</span>
+    <span class="n">metric</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Accumulator</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Sum of losses, no. of tokens</span>
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
+        <span class="n">timer</span><span class="p">,</span> <span class="n">num_batches</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Timer</span><span class="p">(),</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_iter</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">batch</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_iter</span><span class="p">):</span>
+            <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+            <span class="n">center</span><span class="p">,</span> <span class="n">context_negative</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">data</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">]</span>
+
+            <span class="n">pred</span> <span class="o">=</span> <span class="n">skip_gram</span><span class="p">(</span><span class="n">center</span><span class="p">,</span> <span class="n">context_negative</span><span class="p">,</span> <span class="n">net</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">l</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">loss</span><span class="p">(</span><span class="n">pred</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span><span class="o">.</span><span class="n">float</span><span class="p">(),</span> <span class="n">label</span><span class="o">.</span><span class="n">float</span><span class="p">(),</span> <span class="n">mask</span><span class="p">)</span> <span class="o">/</span>
+                <span class="n">mask</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">mask</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># a little different due to mask</span>
+            <span class="n">l</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+            <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+            <span class="n">metric</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">l</span><span class="o">.</span><span class="n">numel</span><span class="p">())</span>  <span class="c1"># numel Returns the total number of elements in the input tensor</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">num_batches</span> <span class="o">//</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">==</span> <span class="n">num_batches</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">animator</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">epoch</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_batches</span><span class="p">,</span>
+                             <span class="p">(</span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">],))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;loss </span><span class="si">{</span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, &#39;</span>
+          <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">timer</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1"> tokens/sec on </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">device</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">train</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">data_iter</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loss 0.373, 37292.3 tokens/sec on cpu
+</pre></div>
+</div>
+<img alt="../_images/Pretrain_43_1.svg" src="../_images/Pretrain_43_1.svg" /></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_similar_tokens</span><span class="p">(</span><span class="n">query_token</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">embed</span><span class="p">):</span>
+    <span class="n">W</span> <span class="o">=</span> <span class="n">embed</span><span class="o">.</span><span class="n">weight</span><span class="o">.</span><span class="n">data</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">W</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="n">query_token</span><span class="p">]]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="c1"># Compute the cosine similarity. Add 1e-9 for numerical stability</span>
+    <span class="n">cos</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">mv</span><span class="p">(</span>
+        <span class="n">W</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="n">torch</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">W</span> <span class="o">*</span> <span class="n">W</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">torch</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-9</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">topk</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">topk</span><span class="p">(</span><span class="n">cos</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int32&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">topk</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>  <span class="c1"># Remove the input words</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;cosine sim=</span><span class="si">{</span><span class="nb">float</span><span class="p">(</span><span class="n">cos</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">vocab</span><span class="o">.</span><span class="n">idx_to_token</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">get_similar_tokens</span><span class="p">(</span><span class="s1">&#39;football&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">net</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>torch.Size([6719, 100])
+torch.Size([100])
+torch.Size([6719])
+cosine sim=0.548: basketball
+cosine sim=0.488: baseball
+cosine sim=0.483: sports
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="global-vectors-glove">
+<h2>Global Vectors(Glove)<a class="headerlink" href="#global-vectors-glove" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapter11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../chapter10/7.transformer decoder.html" title="previous page">Transformer Decoder</a>
+    <a class='right-next' id="next-link" href="../chapter12/75.bert.html" title="next page">Bert</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By newfacade<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
