@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>标注和预测 &#8212; 深度学习手册</title>
+    <title>目标检测数据集 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="循环神经网络" href="../chapter08/0.html" />
-    <link rel="prev" title="目标检测和边界框" href="1.bounding box.html" />
+    <link rel="next" title="SSD" href="4.ssd.html" />
+    <link rel="prev" title="标注和预测" href="2.label predict.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -298,12 +298,54 @@
      目标检测和边界框
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.label predict.html">
      标注和预测
     </a>
    </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     目标检测数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="4.ssd.html">
+     SSD
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter06/0.html">
+   语义分割
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter06/1.semantic.html">
+     语义分割和数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter06/2.transpose.html">
+     转置卷积
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter06/3.fully conv.html">
+     全卷积网络
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter07/1.style transfer.html">
+   样式迁移
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -316,8 +358,8 @@
   <a class="reference internal" href="../chapter08/0.html">
    循环神经网络
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -368,8 +410,8 @@
   <a class="reference internal" href="../chapter09/0.html">
    机器翻译
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -400,8 +442,8 @@
   <a class="reference internal" href="../chapter10/0.html">
    注意力机制
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -464,8 +506,8 @@
   <a class="reference internal" href="../chapter14/0.html">
    基础知识
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -506,8 +548,8 @@
   <a class="reference internal" href="../chapter15/0.html">
    自定义
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -548,8 +590,8 @@
   <a class="reference internal" href="../chapter16/0.html">
    加载和预处理数据
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -580,8 +622,8 @@
   <a class="reference internal" href="../chapter17/0.html">
    部署
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -644,7 +686,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapter05/2.anchor box.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chapter05/3.dataset.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -664,7 +706,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter05/2.anchor box.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter05/3.dataset.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -685,7 +727,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter05/2.anchor box.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter05/3.dataset.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -709,27 +751,17 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   交并比
+   读取图像和标签
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   标注类别
+  <a class="reference internal nav-link" href="#dataset">
+   自定义Dataset
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   计算偏移
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id5">
-   预测
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id6">
-   多尺度目标检测
+  <a class="reference internal nav-link" href="#load">
+   load函数
   </a>
  </li>
 </ul>
@@ -744,68 +776,83 @@
               <div>
                 
   <div class="section" id="id1">
-<h1>标注和预测<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>目标检测数据集<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>要对锚框进行训练，需使用真实边界框标注锚框，包括锚框的类别和偏移。<br/>
-预测时，需根据锚框的类别和偏移反向推导出边界框，并进行过滤得到最终的预测边界框。</p>
+<p>目标检测领域没有像 MNIST 和 Fashion-MNIST 那样的小数据集。<br/>
+为了快速测试目标检测模型，我们使用d2l收集并标记的一个小型数据集-香蕉数据集。</p>
 </div>
 <div class="section" id="id2">
-<h2>交并比<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>从上图中我们可以看出，深蓝色锚框较好地覆盖了图像中的狗。那么如果已知真实的边界框，那么如何量化“好”呢？</p>
-<p>我们可以使用Jaccard系数，即给定集合A和B，用它们交集的大小除以并集的大小：</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{J}(A, B) = \frac{|A\cap{B}|}{|A\cup{B}|}
-\]</div>
-<p>对于两个边界框，就是两个边界框相交面积和相并面积之比，即交并比（intersection over union，IoU）。</p>
-<p><img alt="jupyter" src="../_images/iou.svg" /></p>
+<h2>读取图像和标签<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">torchvision</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+
+
+<span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">read_data_bananas</span><span class="p">(</span><span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;读取香蕉检测数据集中的图像和标签。&quot;&quot;&quot;</span>
+    <span class="c1"># 数据路径</span>
+    <span class="n">data_dir</span> <span class="o">=</span> <span class="s2">&quot;../data/banana-detection/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="s1">&#39;bananas_train&#39;</span> <span class="k">if</span> <span class="n">is_train</span> <span class="k">else</span> <span class="s1">&#39;bananas_val&#39;</span><span class="p">)</span>
+    <span class="c1"># 含标注信息的CSV文件</span>
+    <span class="n">csv_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;label.csv&#39;</span><span class="p">))</span>
+    <span class="n">csv_data</span> <span class="o">=</span> <span class="n">csv_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;img_name&#39;</span><span class="p">)</span>
+    <span class="n">images</span><span class="p">,</span> <span class="n">targets</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">img_name</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">csv_data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">images</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">torchvision</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">read_image</span><span class="p">(</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">img_name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)))</span>
+        <span class="c1"># Here `target` contains (class, upper-left x, upper-left y,</span>
+        <span class="c1"># lower-right x, lower-right y), where all the images have the same</span>
+        <span class="c1"># banana class (index 0)</span>
+        <span class="n">targets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">images</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">targets</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">256</span>
+</pre></div>
 </div>
-<div class="section" id="id3">
-<h2>标注类别<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>假设锚框是 <span class="math notranslate nohighlight">\(A_{1},...,A_{n}\)</span>，真实边界框是 <span class="math notranslate nohighlight">\(B_{1},...,B_{m}\)</span>，其中 <span class="math notranslate nohighlight">\(n\ge{m}\)</span>。</p>
-<p>我们定义一个矩阵 <span class="math notranslate nohighlight">\(\mathbf{X}\in\mathbb{R}^{n\times{m}}\)</span>，其中第 <span class="math notranslate nohighlight">\(i\)</span> 行第 <span class="math notranslate nohighlight">\(j\)</span> 列的元素 <span class="math notranslate nohighlight">\(x_{ij}\)</span> 为锚框 <span class="math notranslate nohighlight">\(A_{i}\)</span> 和边界框 <span class="math notranslate nohighlight">\(B_{j}\)</span> 的IoU。</p>
-<p>那么分配包含以下步骤：</p>
-<ol class="simple">
-<li><p>找到矩阵 <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> 的最大元素，设在第 <span class="math notranslate nohighlight">\(i_{1}\)</span> 行第 <span class="math notranslate nohighlight">\(j_{1}\)</span> 列，那么把 <span class="math notranslate nohighlight">\(B_{j_{1}}\)</span> 分配给 <span class="math notranslate nohighlight">\(A_{i_{1}}\)</span>，并丢弃地第 <span class="math notranslate nohighlight">\(i_{1}\)</span> 行和第 <span class="math notranslate nohighlight">\(j_{1}\)</span> 列的所有元素。</p></li>
-<li><p>在 <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> 的剩余元素中找最大元素，设在第 <span class="math notranslate nohighlight">\(i_{2}\)</span> 行第 <span class="math notranslate nohighlight">\(j_{2}\)</span> 列，那么类似地分配然后丢弃。</p></li>
-<li><p>直到我们丢弃完 <span class="math notranslate nohighlight">\(\mathbf{X}\)</span> 的所有元素，这时每一个边界框都一个锚框与之对应。</p></li>
-<li><p>遍历剩下的 <span class="math notranslate nohighlight">\(n - m\)</span> 个锚框，对于每一个锚框找到与其IoU最大的边界框，当此IoU大于阈值时进行分配。</p></li>
-</ol>
-<p>下图是 <span class="math notranslate nohighlight">\(x_{23}\to x_{71}\to x_{54}\to x_{92}\)</span></p>
-<p><img alt="jupyter" src="../_images/anchor-label.svg" /></p>
 </div>
-<div class="section" id="id4">
-<h2>计算偏移<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>假设一个锚框 <span class="math notranslate nohighlight">\(A\)</span> 被分配了一个真实边界框 <span class="math notranslate nohighlight">\(B\)</span>，我们还需要根据 <span class="math notranslate nohighlight">\(A\)</span> 和 <span class="math notranslate nohighlight">\(B\)</span> 的坐标计算偏移。</p>
-<p>记 <span class="math notranslate nohighlight">\(A\)</span> 和 <span class="math notranslate nohighlight">\(B\)</span> 的中心坐标分别为 <span class="math notranslate nohighlight">\((x_{a},y_{a})\)</span> 和 <span class="math notranslate nohighlight">\((x_{b},y_{b})\)</span>，宽度分别为 <span class="math notranslate nohighlight">\(w_{a}\)</span> 和 <span class="math notranslate nohighlight">\(w_{b}\)</span>，高度分别为 <span class="math notranslate nohighlight">\(h_{a}\)</span> 和 <span class="math notranslate nohighlight">\(h_{b}\)</span>，那么我们可以将 <span class="math notranslate nohighlight">\(A\)</span> 的偏移量标记为：</p>
-<div class="math notranslate nohighlight">
-\[\left(5 * \frac{x_{b}-x_{a}}{w_{a}}, 5 * \frac{y_{b}-y_{a}}{h_{a}}, 10 * \log{\frac{w_b}{w_a}}, 10 * \log{\frac{h_b}{h_a}}\right)\]</div>
-<p>都是相对值。</p>
 </div>
-<div class="section" id="id5">
-<h2>预测<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>在预测期间，我们先为图像生成多个锚框，再为这些锚框一一预测类别和偏移量。</p>
-<p>假设有锚框 <span class="math notranslate nohighlight">\(A\)</span>，其坐标为 <span class="math notranslate nohighlight">\((x_{a}, y_{a})\)</span>，宽高分别为 <span class="math notranslate nohighlight">\(w_{a}\)</span> 和 <span class="math notranslate nohighlight">\(h_{a}\)</span>，预测的偏移为 <span class="math notranslate nohighlight">\((f_{1}, f_{2}, f_{3}, f_{4})\)</span>，那么预测边界框为：</p>
-<div class="math notranslate nohighlight">
-\[x_{b} = x_{a} + \frac{f_{1} * w_{a}}{5}, y_{b} = y_{a} + \frac{f_{2} * h_{a}}{5}\]</div>
-<div class="math notranslate nohighlight">
-\[w_{b} = w_{a}*\exp{\left(\frac{f_{3}}{10}\right)}, h_{b} = h_{a}*\exp{\left(\frac{f_{4}}{10}\right)}\]</div>
-<p>当有许多锚框时，预测边界框可能会明显重叠，我们可以使用非极大值抑制 (non-maximum suppression，NMS)合并属于同一目标的类似的预测边界框。</p>
-<p>对于一个预测边界框 <span class="math notranslate nohighlight">\(B\)</span> ，目标检测模型会计算每个类的预测概率。</p>
-<p>假设最大的预测概率为 <span class="math notranslate nohighlight">\(p\)</span>，则该概率所对应的类别 <span class="math notranslate nohighlight">\(B\)</span> 即为预测的类别，称 <span class="math notranslate nohighlight">\(p\)</span> 为 <span class="math notranslate nohighlight">\(B\)</span> 的置信度，那么NMS的具体步骤为：</p>
-<ol class="simple">
-<li><p>选取置信度最高的预测边界框 <span class="math notranslate nohighlight">\(B_{1}\)</span>，移除与 <span class="math notranslate nohighlight">\(B_{1}\)</span> 的IoU 超过预定阈值 <span class="math notranslate nohighlight">\(\epsilon\)</span> 的边界框</p></li>
-<li><p>从剩余边界框中选取置信度第二高的预测边界框 <span class="math notranslate nohighlight">\(B_{2}\)</span>…</p></li>
-<li><p>重复上述过程，直至没有边界框</p></li>
-</ol>
 </div>
-<div class="section" id="id6">
-<h2>多尺度目标检测<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
-<p>若为每个像素生成锚框，那么锚框数量就太多了。</p>
-<p>我们可以对像素进行均匀采样，且让面积小的锚框采样次数多一些，面积大的锚框采样次数少一些。</p>
-<p><img alt="jupyter" src="../_images/multiscale1.svg" /></p>
-<p><img alt="jupyter" src="../_images/multiscale2.svg" /></p>
+<div class="section" id="dataset">
+<h2>自定义Dataset<a class="headerlink" href="#dataset" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">class</span> <span class="nc">BananasDataset</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;用于加载香蕉检测数据集&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">is_train</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span> <span class="o">=</span> <span class="n">read_data_bananas</span><span class="p">(</span><span class="n">is_train</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;read &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="sa">f</span><span class="s1">&#39; training examples&#39;</span> <span class="k">if</span>
+              <span class="n">is_train</span> <span class="k">else</span> <span class="sa">f</span><span class="s1">&#39; validation examples&#39;</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">float</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">labels</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load">
+<h2>load函数<a class="headerlink" href="#load" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">load_data_bananas</span><span class="p">(</span><span class="n">batch_size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;加载香蕉检测数据集。&quot;&quot;&quot;</span>
+    <span class="n">train_iter</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">BananasDataset</span><span class="p">(</span><span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+                                             <span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">val_iter</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">BananasDataset</span><span class="p">(</span><span class="n">is_train</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+                                           <span class="n">batch_size</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">val_iter</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -834,8 +881,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="1.bounding box.html" title="previous page">目标检测和边界框</a>
-    <a class='right-next' id="next-link" href="../chapter08/0.html" title="next page">循环神经网络</a>
+    <a class='left-prev' id="prev-link" href="2.label predict.html" title="previous page">标注和预测</a>
+    <a class='right-next' id="next-link" href="4.ssd.html" title="next page">SSD</a>
 
         </div>
         
