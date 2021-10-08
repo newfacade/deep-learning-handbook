@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -876,57 +871,17 @@ Linear output shape:	 torch.Size([1, 10])
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 训练，没GPU就别想了*_*</span>
-<span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">10</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 训练，基本得用GPU跑</span>
+<span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span> <span class="o">=</span> <span class="mf">0.003</span><span class="p">,</span> <span class="mi">10</span>
 <span class="n">d2l</span><span class="o">.</span><span class="n">train_image_classifier</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">test_iter</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Traceback (most recent call last):
-  File &quot;/Users/facer/opt/anaconda3/lib/python3.8/multiprocessing/queues.py&quot;, line 245, in _feed
-    send_bytes(obj)
-  File &quot;/Users/facer/opt/anaconda3/lib/python3.8/multiprocessing/connection.py&quot;, line 200, in send_bytes
-    self._send_bytes(m[offset:offset + size])
-  File &quot;/Users/facer/opt/anaconda3/lib/python3.8/multiprocessing/connection.py&quot;, line 411, in _send_bytes
-    self._send(header + buf)
-  File &quot;/Users/facer/opt/anaconda3/lib/python3.8/multiprocessing/connection.py&quot;, line 368, in _send
-    n = write(self._handle, buf)
-BrokenPipeError: [Errno 32] Broken pipe
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loss 0.340, train acc 0.874833, test acc  0.878600
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">47</span><span class="n">a7bb567582</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># 训练，没GPU就别想了*_*</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">10</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">d2l</span><span class="o">.</span><span class="n">train_image_classifier</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">test_iter</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">)</span>
-
-<span class="nn">~/PycharmProjects/deep-learning-handbook/d2l.py</span> in <span class="ni">train_image_classifier</span><span class="nt">(net, train_iter, test_iter, learning_rate, num_epochs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">227</span>             <span class="c1"># Backpropagation</span>
-<span class="g g-Whitespace">    </span><span class="mi">228</span>             <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">229</span>             <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span>             <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span>             <span class="c1"># 记录数据</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/torch/tensor.py</span> in <span class="ni">backward</span><span class="nt">(self, gradient, retain_graph, create_graph)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span>                 <span class="n">retain_graph</span><span class="o">=</span><span class="n">retain_graph</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>                 <span class="n">create_graph</span><span class="o">=</span><span class="n">create_graph</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">221</span>         <span class="n">torch</span><span class="o">.</span><span class="n">autograd</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gradient</span><span class="p">,</span> <span class="n">retain_graph</span><span class="p">,</span> <span class="n">create_graph</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span> 
-<span class="g g-Whitespace">    </span><span class="mi">223</span>     <span class="k">def</span> <span class="nf">register_hook</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hook</span><span class="p">):</span>
-
-<span class="nn">~/opt/anaconda3/lib/python3.8/site-packages/torch/autograd/__init__.py</span> in <span class="ni">backward</span><span class="nt">(tensors, grad_tensors, retain_graph, create_graph, grad_variables)</span>
-<span class="g g-Whitespace">    </span><span class="mi">128</span>         <span class="n">retain_graph</span> <span class="o">=</span> <span class="n">create_graph</span>
-<span class="g g-Whitespace">    </span><span class="mi">129</span> 
-<span class="ne">--&gt; </span><span class="mi">130</span>     <span class="n">Variable</span><span class="o">.</span><span class="n">_execution_engine</span><span class="o">.</span><span class="n">run_backward</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">131</span>         <span class="n">tensors</span><span class="p">,</span> <span class="n">grad_tensors_</span><span class="p">,</span> <span class="n">retain_graph</span><span class="p">,</span> <span class="n">create_graph</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">132</span>         <span class="n">allow_unreachable</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># allow_unreachable flag</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-<img alt="../_images/5.alexnet_7_2.svg" src="../_images/5.alexnet_7_2.svg" /></div>
+<img alt="../_images/5.alexnet_7_1.svg" src="../_images/5.alexnet_7_1.svg" /></div>
 </div>
 </div>
 </div>

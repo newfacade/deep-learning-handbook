@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -791,44 +786,11 @@
 <h2>画图函数<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
 
 
 <span class="c1">#@save</span>
-<span class="k">def</span> <span class="nf">use_svg_display</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;使用svg格式&quot;&quot;&quot;</span>
-    <span class="n">display</span><span class="o">.</span><span class="n">set_matplotlib_formats</span><span class="p">(</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
-<span class="k">def</span> <span class="nf">set_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span> <span class="n">xscale</span><span class="p">,</span> <span class="n">yscale</span><span class="p">,</span> <span class="n">legend</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;设置坐标轴&quot;&quot;&quot;</span>
-    <span class="c1"># 设置坐标标签</span>
-    <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">)</span>
-    <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">)</span>
-    <span class="c1"># 设置比例尺，{`linear`, `log`, ...}</span>
-    <span class="n">axes</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="n">xscale</span><span class="p">)</span>
-    <span class="n">axes</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="n">yscale</span><span class="p">)</span>
-    <span class="c1"># 设置x轴和y轴的显示范围</span>
-    <span class="n">axes</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlim</span><span class="p">)</span>
-    <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylim</span><span class="p">)</span>
-    <span class="c1"># 加上图例、网格</span>
-    <span class="k">if</span> <span class="n">legend</span><span class="p">:</span>
-        <span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">legend</span><span class="p">)</span>
-    <span class="n">axes</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
          <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xscale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span>
          <span class="n">fmts</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;m--&#39;</span><span class="p">,</span> <span class="s1">&#39;g-.&#39;</span><span class="p">,</span> <span class="s1">&#39;r:&#39;</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">),</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -901,7 +863,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1.optimization challenges_8_0.svg" src="../_images/1.optimization challenges_8_0.svg" /></div>
+<img alt="../_images/1.optimization challenges_6_0.svg" src="../_images/1.optimization challenges_6_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="id4">
@@ -915,7 +877,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1.optimization challenges_10_0.svg" src="../_images/1.optimization challenges_10_0.svg" /></div>
+<img alt="../_images/1.optimization challenges_8_0.svg" src="../_images/1.optimization challenges_8_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="id5">
@@ -929,7 +891,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1.optimization challenges_12_0.svg" src="../_images/1.optimization challenges_12_0.svg" /></div>
+<img alt="../_images/1.optimization challenges_10_0.svg" src="../_images/1.optimization challenges_10_0.svg" /></div>
 </div>
 </div>
 </div>

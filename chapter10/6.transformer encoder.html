@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformer Encoder &#8212; 深度学习手册</title>
+    <title>Transformer &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Transformer Decoder" href="7.transformer decoder.html" />
-    <link rel="prev" title="Positionwise FFN &amp; AddNorm" href="5.positionwise ffn &amp; addnorm.html" />
+    <link rel="next" title="Pretrain" href="../chapter11/Pretrain.html" />
+    <link rel="prev" title="Transformer的其它组件" href="5.positionwise ffn &amp; addnorm.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,13 +745,18 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#encoder-block">
-   Encoder Block
+  <a class="reference internal nav-link" href="#id1">
+   编码器
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Transformer Encoder
+  <a class="reference internal nav-link" href="#id2">
+   解码器
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   训练
   </a>
  </li>
 </ul>
@@ -770,62 +770,65 @@
         
               <div>
                 
-  <div class="section" id="transformer-encoder">
-<h1>Transformer Encoder<a class="headerlink" href="#transformer-encoder" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="transformer">
+<h1>Transformer<a class="headerlink" href="#transformer" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Transformer作为编码器-解码器结构的一个实例，它完全基于注意力机制，核心是多头注意力，其整体结构图如下图所示。<br/>
+前面几节，我们介绍了Transformer的各个组件，本节我们要把它们拼起来。</p>
+</div>
 <p><img alt="jupyter" src="../_images/transformer.svg" /></p>
-<div class="section" id="encoder-block">
-<h2>Encoder Block<a class="headerlink" href="#encoder-block" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>编码器<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>下面的<code class="docutils literal notranslate"><span class="pre">EncoderBlock</span></code>类实现了示意图左边的虚线框，它包含两个子层：多头注意力和基于位置的前馈网络，这两个子层都使用了残差连接和紧随的层归一化。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
 <span class="kn">import</span> <span class="nn">math</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+
+
 <span class="k">class</span> <span class="nc">EncoderBlock</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_size</span><span class="p">,</span> <span class="n">query_size</span><span class="p">,</span> <span class="n">value_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
                  <span class="n">norm_shape</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> 
                  <span class="n">dropout</span><span class="p">,</span> <span class="n">use_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">EncoderBlock</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># 多头注意力</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">attention</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">MultiHeadAttention</span><span class="p">(</span><span class="n">key_size</span><span class="p">,</span> <span class="n">query_size</span><span class="p">,</span>
                                                 <span class="n">value_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
                                                 <span class="n">num_heads</span><span class="p">,</span> <span class="n">dropout</span><span class="p">,</span> <span class="n">use_bias</span><span class="p">)</span>
+        <span class="c1"># 第一个add&amp;norm</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addnorm1</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">AddNorm</span><span class="p">(</span><span class="n">norm_shape</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+        <span class="c1"># positionwiseFFN</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ffn</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">PositionWiseFFN</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">)</span>
+        <span class="c1"># 第二个add&amp;norm</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">addnorm2</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">AddNorm</span><span class="p">(</span><span class="n">norm_shape</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">valid_lens</span><span class="p">):</span>
         <span class="c1"># `X` shape: (`batch_size`, `num_steps`, `num_hiddens`)</span>
-        <span class="c1"># after attention: unchanged</span>
-        <span class="c1"># after addnorm1: unchanged</span>
-        <span class="c1"># after ffn: `num_hiddens` -&gt; `ffn_num_hiddens` -&gt; `num_hiddens`</span>
-        <span class="c1"># after addnorm2: unchanged</span>
+        <span class="c1"># 第一个子层</span>
         <span class="n">Y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addnorm1</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">attention</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">valid_lens</span><span class="p">))</span>
+        <span class="c1"># 第二个子层，形状不变</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">addnorm2</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ffn</span><span class="p">(</span><span class="n">Y</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>Transformer Encoder<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
-<span class="k">class</span> <span class="nc">TransformerEncoder</span><span class="p">(</span><span class="n">d2l</span><span class="o">.</span><span class="n">Encoder</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransformerEncoder</span><span class="p">(</span><span class="n">d2l</span><span class="o">.</span><span class="n">Encoder</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transformer的编码器&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> 
                  <span class="n">norm_shape</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> 
                  <span class="n">num_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="p">,</span> <span class="n">use_bias</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">TransformerEncoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span> <span class="o">=</span> <span class="n">num_hiddens</span>
+        <span class="c1"># Embedding将输入从`vocab_size`变为`num_hiddens`</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">)</span>
+        <span class="c1"># 位置编码</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pos_encoding</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">PositionalEncoding</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+        <span class="c1"># 各个EncoderBlock</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">blks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">blks</span><span class="o">.</span><span class="n">add_module</span><span class="p">(</span>
@@ -835,7 +838,7 @@
                              <span class="n">dropout</span><span class="p">,</span> <span class="n">use_bias</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">valid_lens</span><span class="p">):</span>
-        <span class="c1"># rescale by square root</span>
+        <span class="c1"># 因为位置编码值在-1到1之间，因此需要进行平方根缩放，保持它们在一个量级</span>
         <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos_encoding</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span><span class="p">))</span>
         <span class="k">for</span> <span class="n">blk</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">blks</span><span class="p">:</span>
             <span class="n">X</span> <span class="o">=</span> <span class="n">blk</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">valid_lens</span><span class="p">)</span>
@@ -844,22 +847,134 @@
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="id2">
+<h2>解码器<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>如结构图所示，Transformer的解码器也是由多个同构的层组成。</p>
+<p>下面的<code class="docutils literal notranslate"><span class="pre">DecoderBlock</span></code>类包含三个子层：解码器自注意力、”编码器-解码器”注意力和基于位置的前馈网络。</p>
+<p>在遮蔽多头自注意力层（Masked multi-head attention，第一层）中，查询、键和值都来自于上一个解码器层的输出。在训练截断，输出序列所有时间步的词元都是已知的；然而，在预测阶段，其输出序列的词元是逐个生成的。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">encoder</span> <span class="o">=</span> <span class="n">TransformerEncoder</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> 
-                             <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">24</span><span class="p">],</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> 
-                             <span class="mi">2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">encoder</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">valid_lens</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="n">encoder</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">),</span> <span class="n">valid_lens</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DecoderBlock</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;解码器中的第i个块&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_size</span><span class="p">,</span> <span class="n">query_size</span><span class="p">,</span> <span class="n">value_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
+                 <span class="n">norm_shape</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> 
+                 <span class="n">dropout</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DecoderBlock</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attention1</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">MultiHeadAttention</span><span class="p">(</span><span class="n">key_size</span><span class="p">,</span> <span class="n">query_size</span><span class="p">,</span>
+                                                 <span class="n">value_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
+                                                 <span class="n">num_heads</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addnorm1</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">AddNorm</span><span class="p">(</span><span class="n">norm_shape</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attention2</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">MultiHeadAttention</span><span class="p">(</span><span class="n">key_size</span><span class="p">,</span> <span class="n">query_size</span><span class="p">,</span>
+                                                 <span class="n">value_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
+                                                 <span class="n">num_heads</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addnorm2</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">AddNorm</span><span class="p">(</span><span class="n">norm_shape</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ffn</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">PositionWiseFFN</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">addnorm3</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">AddNorm</span><span class="p">(</span><span class="n">norm_shape</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+        <span class="n">enc_outputs</span><span class="p">,</span> <span class="n">enc_valid_lens</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">state</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># During training, all the tokens of any output sequence are processed</span>
+        <span class="c1"># at the same time, so `state[2][self.i]` is `None` as initialized.</span>
+        <span class="c1"># When decoding any output sequence token by token during prediction,</span>
+        <span class="c1"># `state[2][self.i]` contains representations of the decoded output at</span>
+        <span class="c1"># the `i`-th block up to the current time step</span>
+        <span class="k">if</span> <span class="n">state</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">key_values</span> <span class="o">=</span> <span class="n">X</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">key_values</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="n">state</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">],</span> <span class="n">X</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">state</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">key_values</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">training</span><span class="p">:</span>
+            <span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+            <span class="c1"># Shape of `dec_valid_lens`: (`batch_size`, `num_steps`), where</span>
+            <span class="c1"># every row is [1, 2, ..., `num_steps`]</span>
+            <span class="n">dec_valid_lens</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> 
+                                          <span class="n">device</span><span class="o">=</span><span class="n">X</span><span class="o">.</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dec_valid_lens</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># Self-attention</span>
+        <span class="n">X2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">attention1</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">key_values</span><span class="p">,</span> <span class="n">key_values</span><span class="p">,</span> <span class="n">dec_valid_lens</span><span class="p">)</span>
+        <span class="n">Y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addnorm1</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X2</span><span class="p">)</span>
+        <span class="c1"># Encoder-decoder attention. Shape of `enc_outputs`:</span>
+        <span class="c1"># (`batch_size`, `num_steps`, `num_hiddens`)</span>
+        <span class="n">Y2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">attention2</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">enc_outputs</span><span class="p">,</span> <span class="n">enc_outputs</span><span class="p">,</span> <span class="n">enc_valid_lens</span><span class="p">)</span>
+        <span class="n">Z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addnorm2</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">Y2</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">addnorm3</span><span class="p">(</span><span class="n">Z</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ffn</span><span class="p">(</span><span class="n">Z</span><span class="p">)),</span> <span class="n">state</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">TransformerDecoder</span><span class="p">(</span><span class="n">d2l</span><span class="o">.</span><span class="n">Decoder</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Transformer解码器&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> 
+                 <span class="n">norm_shape</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> 
+                 <span class="n">num_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TransformerDecoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span> <span class="o">=</span> <span class="n">num_hiddens</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">=</span> <span class="n">num_layers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pos_encoding</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">PositionalEncoding</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">blks</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">blks</span><span class="o">.</span><span class="n">add_module</span><span class="p">(</span>
+                <span class="s2">&quot;block&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
+                <span class="n">DecoderBlock</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
+                             <span class="n">norm_shape</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> 
+                             <span class="n">dropout</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dense</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">init_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enc_outputs</span><span class="p">,</span> <span class="n">enc_valid_lens</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">enc_outputs</span><span class="p">,</span> <span class="n">enc_valid_lens</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pos_encoding</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">X</span><span class="p">)</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">blk</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">blks</span><span class="p">):</span>
+            <span class="n">X</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="n">blk</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dense</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">state</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>训练<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 载入数据</span>
+<span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10</span>
+<span class="n">train_iter</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">,</span> <span class="n">tgt_vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_nmt</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">dropout</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span>
+<span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">device</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">d2l</span><span class="o">.</span><span class="n">try_gpu</span><span class="p">()</span>
+<span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">4</span>
+<span class="n">norm_shape</span> <span class="o">=</span> <span class="p">[</span><span class="mi">32</span><span class="p">]</span>
+<span class="c1"># 创建模型</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">TransformerEncoder</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">src_vocab</span><span class="p">),</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">norm_shape</span><span class="p">,</span>
+                             <span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+<span class="n">decoder</span> <span class="o">=</span> <span class="n">TransformerDecoder</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tgt_vocab</span><span class="p">),</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">norm_shape</span><span class="p">,</span>
+                             <span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">dropout</span><span class="p">)</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">EncoderDecoder</span><span class="p">(</span><span class="n">encoder</span><span class="p">,</span> <span class="n">decoder</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d2l</span><span class="o">.</span><span class="n">train_nmt</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">tgt_vocab</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>torch.Size([2, 100, 24])
-</pre></div>
-</div>
-</div>
+<img alt="../_images/6.transformer encoder_10_0.svg" src="../_images/6.transformer encoder_10_0.svg" /></div>
 </div>
 </div>
 </div>
@@ -889,8 +1004,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="5.positionwise ffn &amp; addnorm.html" title="previous page">Positionwise FFN &amp; AddNorm</a>
-    <a class='right-next' id="next-link" href="7.transformer decoder.html" title="next page">Transformer Decoder</a>
+    <a class='left-prev' id="prev-link" href="5.positionwise ffn &amp; addnorm.html" title="previous page">Transformer的其它组件</a>
+    <a class='right-next' id="next-link" href="../chapter11/Pretrain.html" title="next page">Pretrain</a>
 
         </div>
         

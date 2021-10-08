@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Positionwise FFN &amp; AddNorm &#8212; 深度学习手册</title>
+    <title>Transformer的其它组件 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Transformer Encoder" href="6.transformer encoder.html" />
-    <link rel="prev" title="Positional Encoding" href="4.positional encoding.html" />
+    <link rel="next" title="Transformer" href="6.transformer encoder.html" />
+    <link rel="prev" title="位置编码" href="4.positional encoding.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,13 +745,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#positionwise-feed-forward-network">
-   Positionwise Feed-Forward Network
+  <a class="reference internal nav-link" href="#id1">
+   基于位置的前馈网络
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#add-norm">
-   Add &amp; Norm
+  <a class="reference internal nav-link" href="#id2">
+   残差连接和层归一化
   </a>
  </li>
 </ul>
@@ -770,27 +765,26 @@
         
               <div>
                 
-  <div class="section" id="positionwise-ffn-addnorm">
-<h1>Positionwise FFN &amp; AddNorm<a class="headerlink" href="#positionwise-ffn-addnorm" title="Permalink to this headline">¶</a></h1>
-<p>Transformer is an instance of the encoder-decoder architecture:</p>
+  <div class="section" id="transformer">
+<h1>Transformer的其它组件<a class="headerlink" href="#transformer" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>下图是transformer的结构图，我们已经描述并实现了其中的多头注意力（Multi-head attention）和位置编码（Positional encoding）。<br/>
+本节我们来讲tranformer的另外的组件：基于位置的前馈网络（Positionwise FFN）、残差连接和层归一化（Add &amp; norm）。</p>
+</div>
 <p><img alt="jupyter" src="../_images/transformer.svg" /></p>
-<p>We have already described multi-head attention and positional encoding before.</p>
-<p>In the following, we will show the other components of the transformer model.</p>
-<div class="section" id="positionwise-feed-forward-network">
-<h2>Positionwise Feed-Forward Network<a class="headerlink" href="#positionwise-feed-forward-network" title="Permalink to this headline">¶</a></h2>
-<p>Positionwise FFN transforms the representation at all the sequance positions using the same MLP.</p>
+<div class="section" id="id1">
+<h2>基于位置的前馈网络<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>即对序列中所有位置的表示进行变换时，使用的是同一个多层感知机（MLP）。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+
+
+<span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">PositionWiseFFN</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;基于位置的前馈网络&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ffn_num_input</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PositionWiseFFN</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dense1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">ffn_num_input</span><span class="p">,</span> <span class="n">ffn_num_hiddens</span><span class="p">)</span>
@@ -798,53 +792,55 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">dense2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">ffn_num_hiddens</span><span class="p">,</span> <span class="n">ffn_num_input</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        X shape: (batch_size, seq_len, ffn_num_input)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># X shape: (`batch_size`, `num_steps`, `ffn_num_input`)</span>
+        <span class="c1"># 输入和输出的形状一样</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">dense2</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dense1</span><span class="p">(</span><span class="n">X</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ffn</span> <span class="o">=</span> <span class="n">PositionWiseFFN</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-<span class="n">ffn</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">ffn</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)))</span>
-</pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[[ 0.2890,  0.0860, -0.2614,  0.1723],
-         [ 0.2890,  0.0860, -0.2614,  0.1723],
-         [ 0.2890,  0.0860, -0.2614,  0.1723]],
-
-        [[ 0.2890,  0.0860, -0.2614,  0.1723],
-         [ 0.2890,  0.0860, -0.2614,  0.1723],
-         [ 0.2890,  0.0860, -0.2614,  0.1723]]], grad_fn=&lt;AddBackward0&gt;)
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="add-norm">
-<h2>Add &amp; Norm<a class="headerlink" href="#add-norm" title="Permalink to this headline">¶</a></h2>
-<p>Layer normalization: e.g. each sample is normalized.</p>
-<p>Batch normalization: e.g. each feature is normalized.</p>
+<div class="section" id="id2">
+<h2>残差连接和层归一化<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>此组件由残差连接和紧随其后的层归一化组成，两者都是构建有效的深度结构的关键。</p>
+<p>层归一化和批量归一化（Batch Normalization）的目标相同，但层归一化的均值和方差在最后几个维度上进行计算。在自然语言处理任务中批量归一化通常不如层归一化效果好。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LayerNorm</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">bn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">BatchNorm1d</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;layer norm:&#39;</span><span class="p">,</span> <span class="n">ln</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">batch norm:&#39;</span><span class="p">,</span> <span class="n">bn</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 层归一化</span>
+<span class="n">ln</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">unbiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>layer norm: tensor([[-1.2247,  0.0000,  1.2247],
-        [-1.2247,  0.0000,  1.2247]], grad_fn=&lt;NativeLayerNormBackward&gt;) 
-batch norm: tensor([[-1.0000, -1.0000, -1.0000],
-        [ 1.0000,  1.0000,  1.0000]], grad_fn=&lt;NativeBatchNormBackward&gt;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(tensor([[-1.2247,  0.0000,  1.2247],
+         [-1.2247,  0.0000,  1.2247]], grad_fn=&lt;NativeLayerNormBackward&gt;),
+ tensor([[-1.2247,  0.0000,  1.2247],
+         [-1.2247,  0.0000,  1.2247]]))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 批量归一化</span>
+<span class="n">bn</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="p">(</span><span class="n">X</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">unbiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(tensor([[-1.0000, -1.0000, -1.0000],
+         [ 1.0000,  1.0000,  1.0000]], grad_fn=&lt;NativeBatchNormBackward&gt;),
+ tensor([[-1., -1., -1.],
+         [ 1.,  1.,  1.]]))
 </pre></div>
 </div>
 </div>
@@ -853,20 +849,15 @@ batch norm: tensor([[-1.0000, -1.0000, -1.0000],
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">AddNorm</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;a residual connection followed by layer normalization.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;残差连接和层归一化&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">normalized_shape</span><span class="p">,</span> <span class="n">dropout</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AddNorm</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
+        <span class="c1"># normalized_shape指定均值和方差计算的维度，需是后几个维度</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ln</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LayerNorm</span><span class="p">(</span><span class="n">normalized_shape</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        X shape: (N, normalized_shape)</span>
-<span class="sd">        The mean and standard-deviation are calculated separately over the last certain number dimensions</span>
-<span class="sd">        which have to be of the shape specified by normalized_shape</span>
-<span class="sd">        ln(X) = (X - E(X)) / sqrt(Var(X) + eps) * gamma + beta</span>
-<span class="sd">        gamma and beta are normalized_shape learned parameters</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 先残差连接，再层归一化</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ln</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span> <span class="o">+</span> <span class="n">X</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -876,6 +867,7 @@ batch norm: tensor([[-1.0000, -1.0000, -1.0000],
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">add_norm</span> <span class="o">=</span> <span class="n">AddNorm</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">add_norm</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="c1"># 形状不变</span>
 <span class="n">add_norm</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)),</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)))</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -914,8 +906,8 @@ batch norm: tensor([[-1.0000, -1.0000, -1.0000],
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="4.positional encoding.html" title="previous page">Positional Encoding</a>
-    <a class='right-next' id="next-link" href="6.transformer encoder.html" title="next page">Transformer Encoder</a>
+    <a class='left-prev' id="prev-link" href="4.positional encoding.html" title="previous page">位置编码</a>
+    <a class='right-next' id="next-link" href="6.transformer encoder.html" title="next page">Transformer</a>
 
         </div>
         

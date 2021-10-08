@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Head Attention &#8212; 深度学习手册</title>
+    <title>多头注意力 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Positional Encoding" href="4.positional encoding.html" />
-    <link rel="prev" title="Attention Scoring Functions" href="2.attention scoring functions.html" />
+    <link rel="next" title="位置编码" href="4.positional encoding.html" />
+    <link rel="prev" title="注意力评分函数" href="2.attention scoring functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,13 +745,18 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementation">
-   Implementation
+  <a class="reference internal nav-link" href="#id2">
+   模型
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#self-attention">
-   Self-Attention
+  <a class="reference internal nav-link" href="#id3">
+   实现
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   自注意力
   </a>
  </li>
 </ul>
@@ -770,45 +770,50 @@
         
               <div>
                 
-  <div class="section" id="multi-head-attention">
-<h1>Multi-Head Attention<a class="headerlink" href="#multi-head-attention" title="Permalink to this headline">¶</a></h1>
-<p>In multi-head attention, queries, keys, and values are transformed with  <span class="math notranslate nohighlight">\(h\)</span>  independently learned linear projections.</p>
-<p>These  <span class="math notranslate nohighlight">\(h\)</span>  projected queries, keys, and values are fed into attention pooling in parallel.</p>
-<p>In the end,  <span class="math notranslate nohighlight">\(h\)</span> outputs are concatenated and transformed with another learned linear projection to produce the final output.</p>
+  <div class="section" id="id1">
+<h1>多头注意力<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在实践中，当给定相同的查询、键和值的集合时，我们希望模型可以基于相同的注意力机制学习到不同的行为，然后将不同的行为作为知识组合起来。</p>
+</div>
+<div class="section" id="id2">
+<h2>模型<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>多头注意力首先用独立学习得到的 <span class="math notranslate nohighlight">\(h\)</span> 组不同的线性投影（linear projections）来变换查询、键和值。</p>
+<p>然后这 <span class="math notranslate nohighlight">\(h\)</span> 组变换后的查询、键和值将并行地送到注意力汇聚中。</p>
+<p>最后将这 <span class="math notranslate nohighlight">\(h\)</span> 个注意力汇聚拼接在一起，经过另一个线性投影产生最终的输出。</p>
 <p><img alt="jupyter" src="../_images/multi-head-attention.svg" /></p>
-<p>Mathematically, given a query  <span class="math notranslate nohighlight">\(\mathbf{q}\in\mathbb{R}^{d_q}\)</span> , a key  <span class="math notranslate nohighlight">\(\mathbf{k}\in\mathbb{R}^{d_k}\)</span> , and a value  <span class="math notranslate nohighlight">\(\mathbf{v}\in\mathbb{R}^{d_v}\)</span> , each attention head  <span class="math notranslate nohighlight">\(\mathbf{h}_{i}(i=1,...,h)\)</span> is computed as:</p>
+<p>让我们用数学的语言将这个模型描述出来。给定查询 <span class="math notranslate nohighlight">\(\mathbf{q}\in\mathbb{R}^{d_q}\)</span>、键 <span class="math notranslate nohighlight">\(\mathbf{k}\in\mathbb{R}^{d_k}\)</span> 和值 <span class="math notranslate nohighlight">\(\mathbf{v}\in\mathbb{R}^{d_v}\)</span>，每个注意力头 <span class="math notranslate nohighlight">\(\mathbf{h}_{i}(i=1,...,h)\)</span> 的计算方法为：</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{h}_{i} = f(\mathbf{W}_{i}^{(q)}\mathbf{q}, \mathbf{W}_{i}^{(k)}\mathbf{k}, \mathbf{W}_{i}^{(v)}\mathbf{v}) \in \mathbb{R}^{p_v}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathbf{W}_{i}^{(q)}\in\mathbb{R}^{p_{q}\times{d_{q}}}\)</span> ,  <span class="math notranslate nohighlight">\(\mathbf{W}_{i}^{(k)}\in\mathbb{R}^{p_{k}\times{d_{k}}}\)</span> ,  <span class="math notranslate nohighlight">\(\mathbf{W}_{i}^{(v)}\in\mathbb{R}^{p_{v}\times{d_{v}}}\)</span>  and  <span class="math notranslate nohighlight">\(f\)</span>  is attention pooling.</p>
-<p>The multi-head attention output is another linear transformation via learnable parameters  <span class="math notranslate nohighlight">\(\mathbf{W}_{o}\in\mathbb{R}^{p_{o}\times{h{p_v}}}\)</span>:</p>
+<p>其中可学习的参数包括 <span class="math notranslate nohighlight">\(\mathbf{W}_{i}^{(q)}\in\mathbb{R}^{p_{q}\times{d_{q}}}\)</span> ,  <span class="math notranslate nohighlight">\(\mathbf{W}_{i}^{(k)}\in\mathbb{R}^{p_{k}\times{d_{k}}}\)</span> ,  <span class="math notranslate nohighlight">\(\mathbf{W}_{i}^{(v)}\in\mathbb{R}^{p_{v}\times{d_{v}}}\)</span>  和注意汇聚函数  <span class="math notranslate nohighlight">\(f\)</span>，<span class="math notranslate nohighlight">\(f\)</span> 可以是加性注意力或是缩放点积注意力。</p>
+<p>最后把 <span class="math notranslate nohighlight">\(h\)</span> 个头连接后的进行线性变换：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\mathbf{W}_{o}\begin{bmatrix}
  \mathbf{h}_{1}\\
  \vdots \\
 \mathbf{h}_{h}
 \end{bmatrix}\in\mathbb{R}^{p_{o}}\end{split}\]</div>
-<p>In our implementation, we choose the scaled dot-product attention and set  <span class="math notranslate nohighlight">\(p_{q}=p_{k}=p_{v}=\frac{p_{o}}{h}\)</span>.</p>
-<div class="section" id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<p>其中可学习的参数是 <span class="math notranslate nohighlight">\(\mathbf{W}_{o}\in\mathbb{R}^{p_{o}\times{h{p_v}}}\)</span>。</p>
+</div>
+<div class="section" id="id3">
+<h2>实现<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>在实现过程中，我们使用缩放点积注意力作为每一个注意力头。为简单起见，我们设定 <span class="math notranslate nohighlight">\(p_{q}=p_{k}=p_{v}=\frac{p_{o}}{h}\)</span>。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+
+
+<span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">MultiHeadAttention</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;多头注意力&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_size</span><span class="p">,</span> <span class="n">query_size</span><span class="p">,</span> <span class="n">value_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
                  <span class="n">num_heads</span><span class="p">,</span> <span class="n">dropout</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">MultiHeadAttention</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_heads</span> <span class="o">=</span> <span class="n">num_heads</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">attention</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">DotProductAttention</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
-        <span class="c1"># `num_hiddens` % `num_heads` == 0</span>
+        <span class="c1"># `num_heads`个线性变换拼接起来，所以`num_hiddens`应可以整除`num_heads`</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">W_q</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">query_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">W_k</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">key_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">W_v</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">value_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="n">bias</span><span class="p">)</span>
@@ -843,6 +848,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">transpose_qkv</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;改变X的shape&quot;&quot;&quot;</span>
     <span class="c1"># Shape of input `X`:</span>
     <span class="c1"># (`batch_size`, no. of queries or key-value pairs, `num_hiddens`).</span>
     <span class="c1"># Shape of output `X`:</span>
@@ -862,7 +868,7 @@
 
 <span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">transpose_output</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Reverse the operation of `transpose_qkv`&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;逆转`transpose_qkv`的操作&quot;&quot;&quot;</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
@@ -871,26 +877,41 @@
 </div>
 </div>
 </div>
-<div class="section" id="self-attention">
-<h2>Self-Attention<a class="headerlink" href="#self-attention" title="Permalink to this headline">¶</a></h2>
-<p>Given a sequence of input tokens  <span class="math notranslate nohighlight">\(\mathbf{x}_{1},...,\mathbf{x}_{n}\)</span>  where any  <span class="math notranslate nohighlight">\(\mathbf{x}_{i}\in\mathbb{R}^{d}\)</span>, its self-attention outputs a sequence of the same length  <span class="math notranslate nohighlight">\(\mathbf{y}_{1},...,\mathbf{y}_{n}\)</span> , where</p>
+<div class="section" id="id4">
+<h2>自注意力<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>给定一个词元组成的输入序列 <span class="math notranslate nohighlight">\(\mathbf{x}_{1},...,\mathbf{x}_{n}\)</span>，其中 <span class="math notranslate nohighlight">\(\mathbf{x}_{i}\in\mathbb{R}^{d}\)</span>。</p>
+<p>改序列的自注意力输出一个长度相同的序列 <span class="math notranslate nohighlight">\(\mathbf{y}_{1},...,\mathbf{y}_{n}\)</span>，其中：</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{y}_{i}=f(\mathbf{x}_{i},(\mathbf{x}_{1},\mathbf{x}_{1}),...,(\mathbf{x}_{n},\mathbf{x}_{n}))\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">5</span>
-<span class="c1"># Suppose: `d` = `num_hiddens`</span>
+<span class="c1"># 这里 `d` = `num_hiddens`</span>
 <span class="n">attention</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">MultiHeadAttention</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span>
                                    <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_heads</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">attention</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MultiHeadAttention(
+  (attention): DotProductAttention(
+    (dropout): Dropout(p=0.5, inplace=False)
+  )
+  (W_q): Linear(in_features=100, out_features=100, bias=False)
+  (W_k): Linear(in_features=100, out_features=100, bias=False)
+  (W_v): Linear(in_features=100, out_features=100, bias=False)
+  (W_o): Linear(in_features=100, out_features=100, bias=False)
+)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">attention</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-<span class="n">batch_size</span><span class="p">,</span> <span class="n">num_queries</span><span class="p">,</span> <span class="n">valid_lens</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_queries</span><span class="p">,</span> <span class="n">valid_lens</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_queries</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">))</span>
+<span class="c1"># 形状相同</span>
 <span class="n">attention</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">valid_lens</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
@@ -929,8 +950,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2.attention scoring functions.html" title="previous page">Attention Scoring Functions</a>
-    <a class='right-next' id="next-link" href="4.positional encoding.html" title="next page">Positional Encoding</a>
+    <a class='left-prev' id="prev-link" href="2.attention scoring functions.html" title="previous page">注意力评分函数</a>
+    <a class='right-next' id="next-link" href="4.positional encoding.html" title="next page">位置编码</a>
 
         </div>
         

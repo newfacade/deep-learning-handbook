@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sequence to Sequence &#8212; 深度学习手册</title>
+    <title>序列到序列学习 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="注意力机制" href="../chapter10/0.html" />
-    <link rel="prev" title="Training Machine Translation" href="3.training machine translation.html" />
+    <link rel="prev" title="训练机器翻译" href="3.training machine translation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,18 +745,23 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#encoder">
-   Encoder
+  <a class="reference internal nav-link" href="#id2">
+   结构
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decoder">
-   Decoder
+  <a class="reference internal nav-link" href="#id3">
+   编码器
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training">
-   Training
+  <a class="reference internal nav-link" href="#id4">
+   解码器
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   训练
   </a>
  </li>
 </ul>
@@ -775,97 +775,96 @@
         
               <div>
                 
-  <div class="section" id="sequence-to-sequence">
-<h1>Sequence to Sequence<a class="headerlink" href="#sequence-to-sequence" title="Permalink to this headline">¶</a></h1>
-<p>We can use two RNNs to design the encoder-decoder architecture and apply it to sequence to sequence learning for machine translation.</p>
-<p>To generate the output sequence token by token, the decoder RNN can predict the next token based on what tokens have been seen ( in training ) or generated ( in prediction ), together with the encoded information of the input sequence.</p>
+  <div class="section" id="id1">
+<h1>序列到序列学习<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本节中，我们将使用两个循环神经网络作为编码器和解码器，将其应用于机器翻译的序列到序列学习。</p>
+</div>
+<div class="section" id="id2">
+<h2>结构<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>我们要实现的模型结构如下图所示：</p>
 <p><img alt="jupyter" src="../_images/seq2seq_1.svg" /></p>
-<p>Before feeding in, we use a embedding layer to transform tokens to dense-vectors.</p>
-<p>After decoder-output, we need a fully connected layer to transform embedding vectors back to vocab-size-vectors.</p>
-<p>Multi-layer rnns can also be applied, adding all these:</p>
+<p>在训练时，我们使用<code class="docutils literal notranslate"><span class="pre">&lt;bos&gt;</span></code>+真实输出序列作为解码器的输入，即teacher-forcing。</p>
+<p>预测时，解码器当前时间步的输入都将来自于前一时间步的输出词元。</p>
+<p>我们当然也可以使用多层RNN，示意图如下：</p>
 <p><img alt="jupyter" src="../_images/seq2seq-details.svg" /></p>
-<div class="section" id="encoder">
-<h2>Encoder<a class="headerlink" href="#encoder" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>编码器<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
-<span class="kn">import</span> <span class="nn">math</span>
-<span class="kn">import</span> <span class="nn">torch</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+
+
 <span class="k">class</span> <span class="nc">Seq2SeqEncoder</span><span class="p">(</span><span class="n">d2l</span><span class="o">.</span><span class="n">Encoder</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The RNN encoder for sequence to sequence learning.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;用于序列到序列学习的RNN编码器&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> 
                  <span class="n">dropout</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Seq2SeqEncoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="c1"># Embedding layer</span>
+        <span class="c1"># 先要使用Embedding把one-hot转为dense</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">GRU</span><span class="p">(</span><span class="n">embed_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span>
                           <span class="n">dropout</span><span class="o">=</span><span class="n">dropout</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
-        <span class="c1"># X input shape: (`batch_size`, `num_steps`)</span>
-        <span class="c1"># The output `X` shape: (`batch_size`, `num_steps`, `embed_size`)</span>
+        <span class="c1"># 从 (`batch_size`, `num_steps`) 转为 (`batch_size`, `num_steps`, `embed_size`)</span>
         <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
         <span class="c1"># In RNN models, the first axis corresponds to time steps</span>
         <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
         <span class="c1"># When state is not mentioned in self.rnn, it defaults to zeros</span>
         <span class="n">output</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
-        <span class="c1"># `output` shape: (`num_steps`, `batch_size`, `num_hiddens`)</span>
-        <span class="c1"># `state` shape: (`num_layers`, `batch_size`, `num_hiddens`)</span>
+        <span class="c1"># shape of output: (`num_steps`, `batch_size`, `num_hiddens`)</span>
+        <span class="c1"># shape of state: (`num_layers`, `batch_size`, `num_hiddens`)</span>
         <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">state</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="decoder">
-<h2>Decoder<a class="headerlink" href="#decoder" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>解码器<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
-<span class="k">class</span> <span class="nc">Seq2SeqDecoder</span><span class="p">(</span><span class="n">d2l</span><span class="o">.</span><span class="n">Decoder</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The RNN decoder for sequence to sequence learning.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Seq2SeqDecoder</span><span class="p">(</span><span class="n">d2l</span><span class="o">.</span><span class="n">Decoder</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;用于序列到序列学习的RNN解码器&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span>
                  <span class="n">dropout</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Seq2SeqDecoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">)</span>
-        <span class="c1"># using the seq2seq design that encoder_state involve in  every steps of decoder</span>
+        <span class="c1"># 解码器每步还会接受编码器的最终state作为输入的一部分</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">GRU</span><span class="p">(</span><span class="n">embed_size</span> <span class="o">+</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span>
                           <span class="n">dropout</span><span class="o">=</span><span class="n">dropout</span><span class="p">)</span>
+        <span class="c1"># 输出层</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dense</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">init_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enc_outputs</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">enc_outputs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
-        <span class="c1"># The output `X` shape: (`num_steps`, `batch_size`, `embed_size`)</span>
+        <span class="c1"># transform to (`num_steps`, `batch_size`, `embed_size`)</span>
         <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="c1"># Broadcast `context` so it has the same `num_steps` as `X`, using only the last layer state</span>
+        <span class="c1"># 广播编码器的最终state</span>
         <span class="n">context</span> <span class="o">=</span> <span class="n">state</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
         <span class="n">X_and_context</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">context</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
         <span class="n">output</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="p">(</span><span class="n">X_and_context</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span>
         <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dense</span><span class="p">(</span><span class="n">output</span><span class="p">)</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-        <span class="c1"># `output` shape: (`batch_size`, `num_steps`, `vocab_size`)</span>
-        <span class="c1"># `state` shape: (`num_layers`, `batch_size`, `num_hiddens`)</span>
+        <span class="c1"># shape of output: (`batch_size`, `num_steps`, `vocab_size`)</span>
+        <span class="c1"># shape of state: (`num_layers`, `batch_size`, `num_hiddens`)</span>
         <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">state</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="training">
-<h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>训练<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 获取数据</span>
+<span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">10</span>
 <span class="n">train_iter</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">,</span> <span class="n">tgt_vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_nmt</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -873,7 +872,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">embed_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">dropout</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 创建模型</span>
+<span class="n">embed_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span> <span class="n">dropout</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.1</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">Seq2SeqEncoder</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">src_vocab</span><span class="p">),</span> <span class="n">embed_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span>
                          <span class="n">dropout</span><span class="p">)</span>
 <span class="n">decoder</span> <span class="o">=</span> <span class="n">Seq2SeqDecoder</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tgt_vocab</span><span class="p">),</span> <span class="n">embed_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">num_layers</span><span class="p">,</span>
@@ -885,7 +885,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mi">300</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 训练</span>
+<span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span> <span class="o">=</span> <span class="mf">0.005</span><span class="p">,</span> <span class="mi">300</span>
 <span class="n">d2l</span><span class="o">.</span><span class="n">train_nmt</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">tgt_vocab</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -897,6 +898,7 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">engs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;go .&#39;</span><span class="p">,</span> <span class="s2">&quot;i lost .&quot;</span><span class="p">,</span> <span class="s1">&#39;he</span><span class="se">\&#39;</span><span class="s1">s calm .&#39;</span><span class="p">,</span> <span class="s1">&#39;i</span><span class="se">\&#39;</span><span class="s1">m home .&#39;</span><span class="p">]</span>
 <span class="n">fras</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;va !&#39;</span><span class="p">,</span> <span class="s1">&#39;j</span><span class="se">\&#39;</span><span class="s1">ai perdu .&#39;</span><span class="p">,</span> <span class="s1">&#39;il est calme .&#39;</span><span class="p">,</span> <span class="s1">&#39;je suis chez moi .&#39;</span><span class="p">]</span>
+<span class="c1"># 预测并使用BLEU评估</span>
 <span class="k">for</span> <span class="n">eng</span><span class="p">,</span> <span class="n">fra</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">engs</span><span class="p">,</span> <span class="n">fras</span><span class="p">):</span>
     <span class="n">translation</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">predict_nmt</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">eng</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">,</span> <span class="n">tgt_vocab</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">eng</span><span class="si">}</span><span class="s1"> =&gt; </span><span class="si">{</span><span class="n">translation</span><span class="si">}</span><span class="s1">, bleu </span><span class="si">{</span><span class="n">d2l</span><span class="o">.</span><span class="n">bleu</span><span class="p">(</span><span class="n">translation</span><span class="p">,</span> <span class="n">fra</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -906,8 +908,8 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>go . =&gt; va !, bleu 1.000
 i lost . =&gt; j&#39;ai perdu ., bleu 1.000
-he&#39;s calm . =&gt; va chez moi prie ., bleu 0.000
-i&#39;m home . =&gt; je suis gras moi debout ., bleu 0.546
+he&#39;s calm . =&gt; il est du &lt;unk&gt; !, bleu 0.447
+i&#39;m home . =&gt; je suis chez moi ., bleu 1.000
 </pre></div>
 </div>
 </div>
@@ -940,7 +942,7 @@ i&#39;m home . =&gt; je suis gras moi debout ., bleu 0.546
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="3.training machine translation.html" title="previous page">Training Machine Translation</a>
+    <a class='left-prev' id="prev-link" href="3.training machine translation.html" title="previous page">训练机器翻译</a>
     <a class='right-next' id="next-link" href="../chapter10/0.html" title="next page">注意力机制</a>
 
         </div>

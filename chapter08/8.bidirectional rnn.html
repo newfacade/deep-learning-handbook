@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bidirectional RNN &#8212; 深度学习手册</title>
+    <title>双向循环神经网络 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="机器翻译" href="../chapter09/0.html" />
-    <link rel="prev" title="Deep RNN" href="7.deep rnn.html" />
+    <link rel="prev" title="深度循环神经网络" href="7.deep rnn.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,8 +745,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training">
-   Training
+  <a class="reference internal nav-link" href="#id2">
+   训练
   </a>
  </li>
 </ul>
@@ -765,34 +760,30 @@
         
               <div>
                 
-  <div class="section" id="bidirectional-rnn">
-<h1>Bidirectional RNN<a class="headerlink" href="#bidirectional-rnn" title="Permalink to this headline">¶</a></h1>
-<p>In sequence learning, so far we assumed that our goal is to model the next output given what we have seen so far.</p>
-<p>While this is a typical scenario, it is not the only one we might encounter.</p>
-<p>Bidirectional RNNs add a hidden layer that passes information in a backward direction to process backward information:</p>
+  <div class="section" id="id1">
+<h1>双向循环神经网络<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>之前我们假定序列的依赖是单向的，即下一个token是什么只依赖于它之前的信息。</p>
+<p>这是一种典型的情况，但在实际中反向依赖的情况也不少，就像填空题，只有知道了左右两边的信息才能做出最准确的判断。</p>
+<p>双向循环神经网络添加了反向传递信息的隐藏层，以便更灵活地处理信息。</p>
 <p><img alt="jupyter" src="../_images/birnn.svg" /></p>
-<p>As above:</p>
+<p>计算公式为:</p>
 <div class="math notranslate nohighlight">
 \[\overrightarrow{\mathbf{H}}_{t} = \phi(\mathbf{X}_{t}\mathbf{W}_{xh}^{(f)} + \overrightarrow{\mathbf{H}}_{t-1}\mathbf{W}_{hh}^{(f)} + \mathbf{b}_{h}^{(f)})\]</div>
 <div class="math notranslate nohighlight">
 \[\overleftarrow{\mathbf{H}}_{t} = \phi(\mathbf{X}_{t}\mathbf{W}_{xh}^{(b)} + \overleftarrow{\mathbf{H}}_{t-1}\mathbf{W}_{hh}^{(b)} + \mathbf{b}_{h}^{(b)})\]</div>
-<p>In the output layer, we concatenate  <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{H}}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  adn  <span class="math notranslate nohighlight">\(\overleftarrow{\mathbf{H}}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  to obtain  <span class="math notranslate nohighlight">\(\mathbf{H}_{t}\in\mathbb{R}^{n\times{2h}}\)</span>.</p>
+<p>在输出层，我们将 <span class="math notranslate nohighlight">\(\overrightarrow{\mathbf{H}}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  和  <span class="math notranslate nohighlight">\(\overleftarrow{\mathbf{H}}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  连接起来得到 <span class="math notranslate nohighlight">\(\mathbf{H}_{t}\in\mathbb{R}^{n\times{2h}}\)</span>，最终：</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{O}_{t} = \mathbf{H}_{t}\mathbf{W}_{hq} + \mathbf{b}_{q}\]</div>
-<div class="section" id="training">
-<h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>训练<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">40</span>
-<span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_novels</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
+
+<span class="c1"># 载入数据</span>
+<span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">40</span>
+<span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_time_machine</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -800,6 +791,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_hiddens</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="c1"># bidirectional=True使得我们的GRU是双向的</span>
 <span class="n">bidirect_gru_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">GRU</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">),</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">bidirectional</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">net</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">RNNModel</span><span class="p">(</span><span class="n">bidirect_gru_layer</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">))</span>
 </pre></div>
@@ -808,16 +800,17 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_epochs</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 训练，好像有点问题哈*_*</span>
+<span class="n">num_epochs</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">0.1</span>
 <span class="n">d2l</span><span class="o">.</span><span class="n">train_language_model</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>alicececececececececececececececece
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>time travellerererererererererererererererererererererererererer
 </pre></div>
 </div>
-<img alt="../_images/8.bidirectional rnn_5_1.svg" src="../_images/8.bidirectional rnn_5_1.svg" /></div>
+<img alt="../_images/8.bidirectional rnn_4_1.svg" src="../_images/8.bidirectional rnn_4_1.svg" /></div>
 </div>
 </div>
 </div>
@@ -847,7 +840,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="7.deep rnn.html" title="previous page">Deep RNN</a>
+    <a class='left-prev' id="prev-link" href="7.deep rnn.html" title="previous page">深度循环神经网络</a>
     <a class='right-next' id="next-link" href="../chapter09/0.html" title="next page">机器翻译</a>
 
         </div>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Positional Encoding &#8212; 深度学习手册</title>
+    <title>位置编码 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Positionwise FFN &amp; AddNorm" href="5.positionwise ffn &amp; addnorm.html" />
-    <link rel="prev" title="Multi-Head Attention" href="3.multi-head attention.html" />
+    <link rel="next" title="Transformer的其它组件" href="5.positionwise ffn &amp; addnorm.html" />
+    <link rel="prev" title="多头注意力" href="3.multi-head attention.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -752,35 +747,34 @@
         
               <div>
                 
-  <div class="section" id="positional-encoding">
-<h1>Positional Encoding<a class="headerlink" href="#positional-encoding" title="Permalink to this headline">¶</a></h1>
-<p>To use the sequence order information, we can inject absolute or relative positional information by adding positional encoding to the input representations.</p>
-<p>Suppose input  <span class="math notranslate nohighlight">\(\mathbf{X}\in\mathbb{R}^{n\times{d}}\)</span>, the positional encoding outputs  <span class="math notranslate nohighlight">\(\mathbf{X} + \mathbf{P}\)</span>  where:</p>
+  <div class="section" id="id1">
+<h1>位置编码<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>为了使用序列的顺序信息，我们通过在输入表示中添加位置编码（positional encoding）来注入绝对的或相对的位置信息。</p>
+<p>假设输入为 <span class="math notranslate nohighlight">\(\mathbf{X}\in\mathbb{R}^{n\times{d}}\)</span>，位置编码使用相同形状的位置嵌入矩阵 <span class="math notranslate nohighlight">\(\mathbf{P}\in\mathbb{R}^{n\times{d}}\)</span> 输出 <span class="math notranslate nohighlight">\(\mathbf{X} + \mathbf{P}\)</span>，其中：</p>
 <div class="math notranslate nohighlight">
-\[p_{i, 2j} = sin\left(\frac{i}{10000^{2j/d}}\right)\]</div>
+\[p_{i, 2j} = \sin\left(\frac{i}{10000^{2j/d}}\right)\]</div>
 <div class="math notranslate nohighlight">
-\[p_{i, 2j + 1} = cos\left(\frac{i}{10000^{2j/d}}\right)\]</div>
-<p>Rows represents by <span class="math notranslate nohighlight">\(sin, cos\)</span> positions.</p>
-<p>Columns represents by frequencies.</p>
+\[p_{i, 2j + 1} = \cos\left(\frac{i}{10000^{2j/d}}\right)\]</div>
+<p>行用 <span class="math notranslate nohighlight">\(\sin, \cos\)</span> 的位置来表示。</p>
+<p>列用 <span class="math notranslate nohighlight">\(\sin, \cos\)</span> 的频率来表示。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+
+
+<span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">PositionalEncoding</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;位置编码&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">dropout</span><span class="p">,</span> <span class="n">max_len</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">PositionalEncoding</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
-        <span class="c1"># Create a long enough `P`</span>
+        <span class="c1"># 创建一个足够长的 `P`</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">P</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_len</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">))</span>
-        <span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">max_len</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> \
-            <span class="n">torch</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_hiddens</span><span class="p">)</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">max_len</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span>
+            <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">torch</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span>
+            <span class="mi">0</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">/</span> <span class="n">num_hiddens</span><span class="p">)</span>
+        <span class="c1"># `num_hideens`必须为偶数，不然shape对不上</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">P</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">P</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
@@ -791,7 +785,7 @@
 </div>
 </div>
 </div>
-<p>Positional encoding just like binary representation:</p>
+<p>位置编码就像是二进制表示：</p>
 <p><img alt="jupyter" src="../_images/position.svg" /></p>
 </div>
 
@@ -820,8 +814,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="3.multi-head attention.html" title="previous page">Multi-Head Attention</a>
-    <a class='right-next' id="next-link" href="5.positionwise ffn &amp; addnorm.html" title="next page">Positionwise FFN &amp; AddNorm</a>
+    <a class='left-prev' id="prev-link" href="3.multi-head attention.html" title="previous page">多头注意力</a>
+    <a class='right-next' id="next-link" href="5.positionwise ffn &amp; addnorm.html" title="next page">Transformer的其它组件</a>
 
         </div>
         

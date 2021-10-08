@@ -55,7 +55,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="LSTM" href="6.lstm.html" />
-    <link rel="prev" title="Training Language Model" href="4.training language model.html" />
+    <link rel="prev" title="训练语言模型" href="4.training language model.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,13 +745,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model">
-   Model
+  <a class="reference internal nav-link" href="#id1">
+   模型
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training">
-   Training
+  <a class="reference internal nav-link" href="#id2">
+   训练
   </a>
  </li>
 </ul>
@@ -772,46 +767,46 @@
                 
   <div class="section" id="gru">
 <h1>GRU<a class="headerlink" href="#gru" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
-<span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当我们在RNN中计算梯度时，矩阵连续乘积会导致梯度消失或梯度爆炸。<br/>
+也就是说RNN面临着长期依赖的问题，即随着输入序列长度的增加，网络无法学习和利用序列中较久之前的信息。<br/>
+门控循环单元（Gated Recurrent Unit，GRU）可以通过门控较好地解决这个问题。</p>
 </div>
-</div>
-</div>
-<div class="section" id="model">
-<h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
-<p>When calculate gradiends in RNNs, long products of matrices can lead to vanishing or exploding gradients.</p>
-<p>A number of methods have been proposed to address this, one is gru.</p>
-<p>The key distinction between RNNs and GRUs is that the latter support gating of the hidden state.</p>
-<p><img alt="jupyter" src="../_images/gru-3.svg" /></p>
-<p>In GRU, the reset gate  <span class="math notranslate nohighlight">\(\mathbf{R}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  and update gate  <span class="math notranslate nohighlight">\(\mathbf{Z}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  are computed as follows:</p>
+<div class="section" id="id1">
+<h2>模型<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>GRU中有两个门控单元，重置门  <span class="math notranslate nohighlight">\(\mathbf{R}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  和更新门  <span class="math notranslate nohighlight">\(\mathbf{Z}_{t}\in\mathbb{R}^{n\times{h}}\)</span>，它们的计算公式类似:</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{R}_{t} = \sigma(\mathbf{X}_{t}\mathbf{W}_{xr} + \mathbf{H}_{t-1}\mathbf{W}_{hr} + \mathbf{b}_{r})\]</div>
 <div class="math notranslate nohighlight">
 \[\mathbf{Z}_{t} = \sigma(\mathbf{X}_{t}\mathbf{W}_{xz} + \mathbf{H}_{t-1}\mathbf{W}_{hz} + \mathbf{b}_{z})\]</div>
-<p>Reset gate controls how much of the previous states we use in generating candidates, better capture short dependencies:</p>
+<p>重置门决定 <span class="math notranslate nohighlight">\(\mathbf{H}_{t-1}\)</span> 在计算 <span class="math notranslate nohighlight">\(\tilde{\mathbf{H}}_{t}\)</span> 时是否被忽略，有助于捕捉序列中的短期依赖关系：</p>
 <div class="math notranslate nohighlight">
 \[\tilde{\mathbf{H}}_{t} = \mbox{tanh}(\mathbf{X}_{t}\mathbf{W}_{xh} + (\mathbf{R}_{t} \odot \mathbf{H}_{t-1})\mathbf{W}_{hh} + \mathbf{b}_{h})\]</div>
-<p>Update gate controls how much of the previous states we retained, better capture longer dependencies:</p>
+<p>更新门控制着 <span class="math notranslate nohighlight">\(\mathbf{H}_{t}\)</span> 是否需要被 <span class="math notranslate nohighlight">\(\tilde{\mathbf{H}}_{t}\)</span> 所更新，有助于捕捉序列中的长期依赖关系：</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{H}_{t} = \mathbf{Z}_{t} \odot \mathbf{H}_{t-1} + (1 - \mathbf{Z}_{t}) \odot \tilde{\mathbf{H}}_{t}\]</div>
+<p>可以看出，相比于普通的RNN，GRU有着额外的途径保留之前的信息。</p>
+<p><img alt="jupyter" src="../_images/gru-3.svg" /></p>
 </div>
-<div class="section" id="training">
-<h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>训练<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">40</span>
-<span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_novels</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">d2l</span>
+
+<span class="c1"># 载入数据</span>
+<span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">40</span>
+<span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_time_machine</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_hiddens</span> <span class="o">=</span> <span class="mi">128</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 建立模型，模型的基础结构是GRU</span>
+<span class="n">num_hiddens</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="n">gru_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">GRU</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">),</span> <span class="n">num_hiddens</span><span class="p">)</span>
 <span class="n">net</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">RNNModel</span><span class="p">(</span><span class="n">gru_layer</span><span class="p">,</span> <span class="n">vocab_size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">))</span>
 </pre></div>
@@ -820,16 +815,17 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_epochs</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 训练</span>
+<span class="n">num_epochs</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">0.1</span>
 <span class="n">d2l</span><span class="o">.</span><span class="n">train_language_model</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>alice and the said the could and th
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>time traveller and the seat the seat the seat the seat the seat 
 </pre></div>
 </div>
-<img alt="../_images/5.gru_6_1.svg" src="../_images/5.gru_6_1.svg" /></div>
+<img alt="../_images/5.gru_5_1.svg" src="../_images/5.gru_5_1.svg" /></div>
 </div>
 </div>
 </div>
@@ -859,7 +855,7 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="4.training language model.html" title="previous page">Training Language Model</a>
+    <a class='left-prev' id="prev-link" href="4.training language model.html" title="previous page">训练语言模型</a>
     <a class='right-next' id="next-link" href="6.lstm.html" title="next page">LSTM</a>
 
         </div>

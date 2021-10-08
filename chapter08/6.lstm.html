@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Deep RNN" href="7.deep rnn.html" />
+    <link rel="next" title="深度循环神经网络" href="7.deep rnn.html" />
     <link rel="prev" title="GRU" href="5.gru.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,13 +745,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model">
-   Model
+  <a class="reference internal nav-link" href="#id1">
+   模型
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#train">
-   Train
+  <a class="reference internal nav-link" href="#id2">
+   训练
   </a>
  </li>
 </ul>
@@ -772,53 +767,49 @@
                 
   <div class="section" id="lstm">
 <h1>LSTM<a class="headerlink" href="#lstm" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
-<span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>长短期记忆网络（long short-term memory，LSTM）相比GRU更复杂，效果也会稍好一些。</p>
 </div>
-</div>
-</div>
-<div class="section" id="model">
-<h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
-<p>LSTM shares many of the properties of the GRU.</p>
-<p>Interestingly, LSTMs have a slightly more complex design than GRUs but predates GRUs by almost two decades.</p>
-<p><img alt="jupyter" src="../_images/lstm-3.svg" /></p>
-<p>LSTM have three gates: the input gate <span class="math notranslate nohighlight">\(\mathbf{I}_{t}\in\mathbb{R}^{n\times{h}}\)</span>, the forget gate <span class="math notranslate nohighlight">\(\mathbf{F}_{t}\in\mathbb{R}^{n\times{h}}\)</span> and the output gate <span class="math notranslate nohighlight">\(\mathbf{O}_{t}\in\mathbb{R}^{n\times{h}}\)</span>.</p>
+<div class="section" id="id1">
+<h2>模型<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>LSTM有三个门控单元，输入门 <span class="math notranslate nohighlight">\(\mathbf{I}_{t}\in\mathbb{R}^{n\times{h}}\)</span>，遗忘门 <span class="math notranslate nohighlight">\(\mathbf{F}_{t}\in\mathbb{R}^{n\times{h}}\)</span> 和输出门 <span class="math notranslate nohighlight">\(\mathbf{O}_{t}\in\mathbb{R}^{n\times{h}}\)</span>，它们的计算公式类似：</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{I}_{t} = \sigma(\mathbf{X}_{t}\mathbf{W}_{xi} + \mathbf{H}_{t-1}\mathbf{W}_{hi} + \mathbf{b}_{i})\]</div>
 <div class="math notranslate nohighlight">
 \[\mathbf{F}_{t} = \sigma(\mathbf{X}_{t}\mathbf{W}_{xf} + \mathbf{H}_{t-1}\mathbf{W}_{hf} + \mathbf{b}_{f})\]</div>
 <div class="math notranslate nohighlight">
 \[\mathbf{O}_{t} = \sigma(\mathbf{X}_{t}\mathbf{W}_{xo} + \mathbf{H}_{t-1}\mathbf{W}_{ho} + \mathbf{b}_{o})\]</div>
-<p>Besides hidden state, LSTM introduces the memory cell <span class="math notranslate nohighlight">\(\mathbf{C}_{t}\in\mathbb{R}^{n\times{h}}\)</span>, engineered to record additional information.</p>
-<p>To update memory cell, candidate memory which performs like a gate except it uses <span class="math notranslate nohighlight">\(\mbox{tanh}\)</span> instead of <span class="math notranslate nohighlight">\(\sigma\)</span> is needed:</p>
+<p>除隐藏状态外，LSTM还引入了存储单元 <span class="math notranslate nohighlight">\(\mathbf{C}_{t}\in\mathbb{R}^{n\times{h}}\)</span> 用于记录长期信息，它相比隐藏状态来说改变得会很慢。</p>
+<p>候选记忆单元的计算与门类似，只是使用了 <span class="math notranslate nohighlight">\(\mbox{tanh}\)</span> 作为激活函数：</p>
 <div class="math notranslate nohighlight">
 \[\tilde{\mathbf{C}}_{t} = \mbox{tanh}(\mathbf{X}_t\mathbf{W}_{xc} + \mathbf{H}_{t-1}\mathbf{W}_{hc} + \mathbf{b}_c)\]</div>
-<p>Next the forget gate and the input gate come to play.</p>
-<p>Forget gate <span class="math notranslate nohighlight">\(\mathbf{F}_{t}\)</span>: how much of the old memory we retain.</p>
-<p>Input gate <span class="math notranslate nohighlight">\(\mathbf{I}_{t}\)</span>: how much of the new information we use.</p>
+<p>存储单元的转移由输入门和遗忘门共同控制，输入门决定了当前时刻输入信息 <span class="math notranslate nohighlight">\(\tilde{\mathbf{C}}_{t}\)</span> 有多少被吸收，遗忘门决定了上一时刻存储单元 <span class="math notranslate nohighlight">\(\mathbf{C}_{t-1}\)</span> 有多少不被遗忘：</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{C}_{t} = \mathbf{F}_{t}\odot\mathbf{C}_{t-1} + \mathbf{I}_{t}\odot\tilde{\mathbf{C}}_{t}\]</div>
-<p>Finally, combine output gate and memory cell to generate hidden state:</p>
+<p>最终，LSTM的隐藏状态由输出门和存储单元共同决定：</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{H}_{t} = \mathbf{O}_{t}\odot\mbox{tanh}(\mathbf{C}_{t})\]</div>
+<p><img alt="jupyter" src="../_images/lstm-3.svg" /></p>
 </div>
-<div class="section" id="train">
-<h2>Train<a class="headerlink" href="#train" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>训练<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">40</span>
-<span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_novels</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="nn">d2l</span>
+
+<span class="c1"># 载入数据</span>
+<span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span> <span class="o">=</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">40</span>
+<span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_data_time_machine</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_hiddens</span> <span class="o">=</span> <span class="mi">256</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 建立模型，模型的基础结构是LSTM</span>
+<span class="n">num_hiddens</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="n">lstm_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">),</span> <span class="n">num_hiddens</span><span class="p">)</span>
 <span class="n">net</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">RNNModel</span><span class="p">(</span><span class="n">lstm_layer</span><span class="p">,</span> <span class="n">vocab_size</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">vocab</span><span class="p">))</span>
 </pre></div>
@@ -827,16 +818,17 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_epochs</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 训练</span>
+<span class="n">num_epochs</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">0.1</span>
 <span class="n">d2l</span><span class="o">.</span><span class="n">train_language_model</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">train_iter</span><span class="p">,</span> <span class="n">vocab</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>alice and the courd and the said th
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>time traveller the sound the sound the sound the sound the sound
 </pre></div>
 </div>
-<img alt="../_images/6.lstm_6_1.svg" src="../_images/6.lstm_6_1.svg" /></div>
+<img alt="../_images/6.lstm_5_1.svg" src="../_images/6.lstm_5_1.svg" /></div>
 </div>
 </div>
 </div>
@@ -867,7 +859,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="5.gru.html" title="previous page">GRU</a>
-    <a class='right-next' id="next-link" href="7.deep rnn.html" title="next page">Deep RNN</a>
+    <a class='right-next' id="next-link" href="7.deep rnn.html" title="next page">深度循环神经网络</a>
 
         </div>
         

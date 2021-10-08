@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attention Scoring Functions &#8212; 深度学习手册</title>
+    <title>注意力评分函数 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Multi-Head Attention" href="3.multi-head attention.html" />
-    <link rel="prev" title="Attention" href="1.attention.html" />
+    <link rel="next" title="多头注意力" href="3.multi-head attention.html" />
+    <link rel="prev" title="注意力" href="1.attention.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,21 +745,19 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#masked-softmax-operation">
-   Masked Softmax Operation
+  <a class="reference internal nav-link" href="#softmax">
+   带遮蔽的softmax
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#additive-attention">
-   Additive Attention
+  <a class="reference internal nav-link" href="#id2">
+   加性注意力
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#scaled-dot-product-attention">
-     Scaled Dot-Product Attention
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   缩放点积注意力
+  </a>
  </li>
 </ul>
 
@@ -777,40 +770,38 @@
         
               <div>
                 
-  <div class="section" id="attention-scoring-functions">
-<h1>Attention Scoring Functions<a class="headerlink" href="#attention-scoring-functions" title="Permalink to this headline">¶</a></h1>
-<p>As nadaraya-watson kernel regression, the main type of attention mechanism:</p>
-<p><img alt="jupyter" src="../_images/attention-output.svg" /></p>
-<p>Mathematically, suppose that we have a query  <span class="math notranslate nohighlight">\(\mathbf{q}\in\mathbb{R}^{q}\)</span>  and  <span class="math notranslate nohighlight">\(m\)</span>  key-value pairs  <span class="math notranslate nohighlight">\((\mathbf{k}_{1}, \mathbf{v}_{1}),...,(\mathbf{k}_{m}, \mathbf{v}_{m})\)</span>  where  <span class="math notranslate nohighlight">\(\mathbf{k}_{i}\in\mathbb{R}^{k}\)</span>  and  <span class="math notranslate nohighlight">\(\mathbf{v}_{i}\in\mathbb{R}^{v}\)</span> .</p>
-<p>The attention pooling  𝑓  is a weighted sum of the values:</p>
+  <div class="section" id="id1">
+<h1>注意力评分函数<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>假设有一个查询  <span class="math notranslate nohighlight">\(\mathbf{q}\in\mathbb{R}^{q}\)</span>  和  <span class="math notranslate nohighlight">\(m\)</span>  个键-值对  <span class="math notranslate nohighlight">\((\mathbf{k}_{1}, \mathbf{v}_{1}),...,(\mathbf{k}_{m}, \mathbf{v}_{m})\)</span>，其中 <span class="math notranslate nohighlight">\(\mathbf{k}_{i}\in\mathbb{R}^{k}\)</span> ，<span class="math notranslate nohighlight">\(\mathbf{v}_{i}\in\mathbb{R}^{v}\)</span> 。注意力汇聚函数就被表示成值的加权和：</p>
 <div class="math notranslate nohighlight">
 \[f(\mathbf{q}, (\mathbf{k}_{1}, \mathbf{v}_{1}),...,(\mathbf{k}_{m}, \mathbf{v}_{m})) = \sum_{i=1}^{m}\frac{\exp(a(\mathbf{q}, \mathbf{k}_{i}))}{\sum_{j=1}^{m}\exp(a(\mathbf{q}, \mathbf{k}_{j}))}\mathbf{v}_{i}\in\mathbb{R}^{v}\]</div>
-<p>where <span class="math notranslate nohighlight">\(a\)</span> is the attention scoring function.</p>
-<div class="section" id="masked-softmax-operation">
-<h2>Masked Softmax Operation<a class="headerlink" href="#masked-softmax-operation" title="Permalink to this headline">¶</a></h2>
-<p>In some cases, not all the values should be fed into attention pooling, e.g. padding tokens.</p>
+<p>注意力评分函数 <span class="math notranslate nohighlight">\(a\)</span> 将查询 <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> 和键 <span class="math notranslate nohighlight">\(\mathbf{k}_{i}\)</span> 两个向量映射成了标量 <span class="math notranslate nohighlight">\(a(\mathbf{q}, \mathbf{k}_{i})\)</span>，表示键对值的注意力。</p>
+<p>有很多种不同的注意力评分函数，本节介绍其中较流行的两种：加性注意力（additive attention）和缩放点积注意力（scaled dot-product attention）。</p>
+<p><img alt="jupyter" src="../_images/attention-output.svg" /></p>
+<div class="section" id="softmax">
+<h2>带遮蔽的softmax<a class="headerlink" href="#softmax" title="Permalink to this headline">¶</a></h2>
+<p>正如上面公式中所示，softmax运算用于输出一个概率分布作为注意力权重。</p>
+<p>但是在很多时候，并非所有的值都应被纳入注意力汇聚中，比如说文本序列中的填充词元。</p>
+<p>下面的函数实现了这样的遮蔽softmax。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+
+
+<span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">masked_softmax</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">valid_lens</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Perform softmax operation by masking elements on the last axis.&quot;&quot;&quot;</span>
-    <span class="c1"># `X`: 3D tensor, `valid_lens`: 1D or 2D tensor</span>
+    <span class="sd">&quot;&quot;&quot;实现带遮蔽的softmax&quot;&quot;&quot;</span>
+    <span class="c1"># shape of X: (`batch_size`, no. of queries, no. of key-value pairs)</span>
+    <span class="c1"># shape of valid_lens: either (`batch_size`,) or (`batch_size`, no. of queries)</span>
     <span class="n">shape</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
+    <span class="c1"># 将valid_lens转化为(`batch_size` * no. of queries)</span>
     <span class="k">if</span> <span class="n">valid_lens</span><span class="o">.</span><span class="n">dim</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="n">valid_lens</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">repeat_interleave</span><span class="p">(</span><span class="n">valid_lens</span><span class="p">,</span> <span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">valid_lens</span> <span class="o">=</span> <span class="n">valid_lens</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-    <span class="c1"># On the last axis, replace masked elements with a very large negative</span>
-    <span class="c1"># value, whose exponentiation outputs 0</span>
+    <span class="c1"># 在最后的轴上，遮蔽的元素被替换成一个非常大的负值，其指数约为0</span>
     <span class="n">X</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">sequence_mask</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span> <span class="n">valid_lens</span><span class="p">,</span> 
                           <span class="n">value</span><span class="o">=-</span><span class="mf">1e6</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">nn</span><span class="o">.</span><span class="n">functional</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">shape</span><span class="p">),</span> <span class="n">dim</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
@@ -819,17 +810,18 @@
 </div>
 </div>
 </div>
-<div class="section" id="additive-attention">
-<h2>Additive Attention<a class="headerlink" href="#additive-attention" title="Permalink to this headline">¶</a></h2>
-<p>In general, when queries and keys are vectors of different lengths, we can use additive attention as the scoring function.</p>
-<p>Given a query  <span class="math notranslate nohighlight">\(\mathbf{q} \in \mathbb{R}^{q}\)</span>  and a key  <span class="math notranslate nohighlight">\(\mathbf{k} \in \mathbb{R}^{k}\)</span> , the additive attention scoring function</p>
+<div class="section" id="id2">
+<h2>加性注意力<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>一般来说，当查询和键是不同长度的矢量时，可以通过加性注意力作为评分函数。</p>
+<p>给定查询  <span class="math notranslate nohighlight">\(\mathbf{q} \in \mathbb{R}^{q}\)</span>  和键  <span class="math notranslate nohighlight">\(\mathbf{k} \in \mathbb{R}^{k}\)</span>，加性注意力评分函数：</p>
 <div class="math notranslate nohighlight">
 \[a(\mathbf{q}, \mathbf{k}) = \mathbf{w}_{h}^{T}\mbox{tanh}(\mathbf{W}_{q}\mathbf{q} + \mathbf{W}_{k}\mathbf{k})\]</div>
-<p>where learnable parameters <span class="math notranslate nohighlight">\(\mathbf{W}_{q} \in \mathbb{R}^{h\times{q}}, \mathbf{W}_{k} \in \mathbb{R}^{h\times{k}}\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{w}_{h} \in \mathbb{R}^{h}\)</span>.</p>
+<p>其中可学习的参数是 <span class="math notranslate nohighlight">\(\mathbf{W}_{q} \in \mathbb{R}^{h\times{q}}, \mathbf{W}_{k} \in \mathbb{R}^{h\times{k}}\)</span> 和 <span class="math notranslate nohighlight">\(\mathbf{w}_{h} \in \mathbb{R}^{h}\)</span>。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">AdditiveAttention</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;加性注意力&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key_size</span><span class="p">,</span> <span class="n">query_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">dropout</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">AdditiveAttention</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">W_k</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">key_size</span><span class="p">,</span> <span class="n">num_hiddens</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -838,14 +830,15 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queries</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">valid_lens</span><span class="p">):</span>
-        <span class="c1"># `queries` shape: (`batch_size`, no. of queries, `query_size`)</span>
-        <span class="c1"># `keys` shape: (`batch_size`, no. of key-value pairs, `key_size`)</span>
-        <span class="c1"># `values` shape: (`batch_size`, no. of key-value pairs, `value_size`)</span>
-        <span class="c1"># `valid_lens` shape: either (`batch_size`,) or (`batch_size`, no. of queries)</span>
+        <span class="c1"># shape of queries: (`batch_size`, no. of queries, `query_size`)</span>
+        <span class="c1"># shape of keys: (`batch_size`, no. of key-value pairs, `key_size`)</span>
+        <span class="c1"># shape of values: (`batch_size`, no. of key-value pairs, `value_size`)</span>
+        <span class="c1"># shape of valid_lens: either (`batch_size`,) or (`batch_size`, no. of queries)</span>
         <span class="n">queries</span><span class="p">,</span> <span class="n">keys</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_q</span><span class="p">(</span><span class="n">queries</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">W_k</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
-        <span class="c1"># After dimension expansion, shape of `queries`: (`batch_size`, no. of</span>
-        <span class="c1"># queries, 1, `num_hiddens`) and shape of `keys`: (`batch_size`, 1,</span>
-        <span class="c1"># no. of key-value pairs, `num_hiddens`). Sum them up with broadcasting</span>
+        <span class="c1"># After dimension expansion, </span>
+        <span class="c1"># shape of queries: (`batch_size`, no. of queries, 1, `num_hiddens`)</span>
+        <span class="c1"># shape of keys: (`batch_size`, 1, no. of key-value pairs, `num_hiddens`). </span>
+        <span class="c1"># 使用广播方式进行求和</span>
         <span class="n">features</span> <span class="o">=</span> <span class="n">queries</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">keys</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
         <span class="n">features</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
         <span class="c1"># Shape of `scores`: (`batch_size`, no. of queries, no. of key-value pairs)</span>
@@ -857,29 +850,30 @@
 </div>
 </div>
 </div>
-<div class="section" id="scaled-dot-product-attention">
-<h3>Scaled Dot-Product Attention<a class="headerlink" href="#scaled-dot-product-attention" title="Permalink to this headline">¶</a></h3>
-<p>A more computationally efficient design is dot product, it requires the query and the key have the same size, say  <span class="math notranslate nohighlight">\(d\)</span> .</p>
-<p>To retain variance, the dot-product divides by  <span class="math notranslate nohighlight">\(\sqrt{d}\)</span> :</p>
+</div>
+<div class="section" id="id3">
+<h2>缩放点积注意力<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>使用点积可以得到计算效率更高的评分函数，但是点积操作需要查询和键具有相同的长度 <span class="math notranslate nohighlight">\(d\)</span>。</p>
+<p>假设查询和键的元素都是独立的随机变量，均值为0方差为1，那么两个向量的点积均值为0方差为 <span class="math notranslate nohighlight">\(d\)</span>。为了确保无论向量长度如何，注意力评分的方差均为1，点积需除以 <span class="math notranslate nohighlight">\(\sqrt{d}\)</span>：</p>
 <div class="math notranslate nohighlight">
 \[a(\mathbf{q}, \mathbf{k}) = \frac{\mathbf{q}^{T}\mathbf{k}}{\sqrt{d}}\]</div>
-<p>Computing in minibatches, the scaled dot-product attention of queries  <span class="math notranslate nohighlight">\(\mathbf{Q}\in\mathbb{R}^{n\times{d}}\)</span> , keys  <span class="math notranslate nohighlight">\(\mathbf{K}\in\mathbb{R}^{m\times{d}}\)</span> , and values  <span class="math notranslate nohighlight">\(\mathbf{V}\in\mathbb{R}^{m\times{v}}\)</span>  is:</p>
+<p>从小批量的角度，假设有 <span class="math notranslate nohighlight">\(n\)</span> 个查询 <span class="math notranslate nohighlight">\(\mathbf{Q}\in\mathbb{R}^{n\times{d}}\)</span>，<span class="math notranslate nohighlight">\(m\)</span> 个键-值对  <span class="math notranslate nohighlight">\(\mathbf{K}\in\mathbb{R}^{m\times{d}}, \mathbf{V}\in\mathbb{R}^{m\times{v}}\)</span>，缩放点积注意力为：</p>
 <div class="math notranslate nohighlight">
 \[\mathrm{softmax}\left(\frac{\mathbf{Q}\mathbf{K}^{T}}{\sqrt{d}}\right)\mathbf{V} \in \mathbb{R}^{n\times{v}}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">DotProductAttention</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Scaled dot product attention.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;缩放点积注意力&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dropout</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">DotProductAttention</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">dropout</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queries</span><span class="p">,</span> <span class="n">keys</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">valid_lens</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="c1"># Shape of `queries`: (`batch_size`, no. of queries, `d`)</span>
-        <span class="c1"># Shape of `keys`: (`batch_size`, no. of key-value pairs, `d`)</span>
-        <span class="c1"># Shape of `values`: (`batch_size`, no. of key-value pairs, `value_size`)</span>
-        <span class="c1"># Shape of `valid_lens`: (`batch_size`,) or (`batch_size`, no. of queries)</span>
+        <span class="c1"># Shape of queries: (`batch_size`, no. of queries, `d`)</span>
+        <span class="c1"># Shape of keys: (`batch_size`, no. of key-value pairs, `d`)</span>
+        <span class="c1"># Shape of values: (`batch_size`, no. of key-value pairs, `value_size`)</span>
+        <span class="c1"># Shape of valid_lens: (`batch_size`,) or (`batch_size`, no. of queries)</span>
         <span class="n">d</span> <span class="o">=</span> <span class="n">queries</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
         <span class="c1"># Shape of `scores`: (`batch_size`, no. of queries, no. of key-value pairs)</span>
         <span class="n">scores</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="n">queries</span><span class="p">,</span> <span class="n">keys</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
@@ -887,7 +881,6 @@
         <span class="c1"># Output shape: (`batch_size`, no. of queries, `value_size`)</span>
         <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">bmm</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">attention_weights</span><span class="p">),</span> <span class="n">values</span><span class="p">)</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -919,8 +912,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="1.attention.html" title="previous page">Attention</a>
-    <a class='right-next' id="next-link" href="3.multi-head attention.html" title="next page">Multi-Head Attention</a>
+    <a class='left-prev' id="prev-link" href="1.attention.html" title="previous page">注意力</a>
+    <a class='right-next' id="next-link" href="3.multi-head attention.html" title="next page">多头注意力</a>
 
         </div>
         

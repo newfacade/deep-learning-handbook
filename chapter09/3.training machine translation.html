@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Training Machine Translation &#8212; 深度学习手册</title>
+    <title>训练机器翻译 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Sequence to Sequence" href="4.sequence to sequence.html" />
-    <link rel="prev" title="Encoder-Decoder" href="2.encoder-decoder.html" />
+    <link rel="next" title="序列到序列学习" href="4.sequence to sequence.html" />
+    <link rel="prev" title="编码器-解码器" href="2.encoder-decoder.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,23 +745,23 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#loss-function">
-   Loss Function
+  <a class="reference internal nav-link" href="#id2">
+   损失函数
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#training">
-   Training
+  <a class="reference internal nav-link" href="#id3">
+   训练
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prediction">
-   Prediction
+  <a class="reference internal nav-link" href="#id4">
+   预测
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluation">
-   Evaluation
+  <a class="reference internal nav-link" href="#id5">
+   评估
   </a>
  </li>
 </ul>
@@ -780,24 +775,26 @@
         
               <div>
                 
-  <div class="section" id="training-machine-translation">
-<h1>Training Machine Translation<a class="headerlink" href="#training-machine-translation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1>训练机器翻译<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>本节实现一个可以训练机器翻译模型的函数。</p>
+</div>
+<div class="section" id="id2">
+<h2>损失函数<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>每个时间步，解码器预测了输出词元的概率分布。类似于语言模型，可以使用softmax获得分布，并通过计算交叉熵损失来进行优化。</p>
+<p>但是填充词元应该被排除在损失函数的计算之外。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="loss-function">
-<h2>Loss Function<a class="headerlink" href="#loss-function" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+
+
+<span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">sequence_mask</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">valid_len</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Mask irrelevant entries in sequences.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;在序列中屏蔽不想关的项&quot;&quot;&quot;</span>
     <span class="c1"># `X` shape: (`batch_size`, `num_steps`)</span>
     <span class="c1"># [None, :] makes (`num_steps`,) to (1, `num_steps`)</span>
     <span class="c1"># [:, None] makes (`batch_size`) to (`batch_size`, 1)</span>
@@ -813,19 +810,19 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">MaskedSoftmaxCELoss</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The softmax cross-entropy loss with masks.&quot;&quot;&quot;</span>
-    <span class="c1"># `pred` shape: (`batch_size`, `num_steps`, `vocab_size`)</span>
-    <span class="c1"># `label` shape: (`batch_size`, `num_steps`)</span>
-    <span class="c1"># `valid_len` shape: (`batch_size`,)</span>
+    <span class="sd">&quot;&quot;&quot;带屏蔽的softmax交叉熵损失函数&quot;&quot;&quot;</span>
+    <span class="c1"># shape of pred: (`batch_size`, `num_steps`, `vocab_size`)</span>
+    <span class="c1"># shape of label: (`batch_size`, `num_steps`)</span>
+    <span class="c1"># shape of valid_len: (`batch_size`,)</span>
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">valid_len</span><span class="p">):</span>
+        <span class="c1"># 非pad为1，pad为0</span>
         <span class="n">weights</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
         <span class="n">weights</span> <span class="o">=</span> <span class="n">sequence_mask</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">valid_len</span><span class="p">)</span>
         <span class="c1"># &#39;none&#39;: no reduction will be applied, &#39;mean&#39;: the weighted mean of the output is taken</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">reduction</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span>
         <span class="c1"># nn.CrossEntropyLoss((`batch_size`, `vocab_size`, `num_steps`), (`batch_size`, `num_steps`))</span>
-        <span class="n">unweighted_loss</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">MaskedSoftmaxCELoss</span><span class="p">,</span> 
-                                <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">pred</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">label</span><span class="p">)</span>
-        <span class="c1"># mean is taken on `num_steps`</span>
+        <span class="n">unweighted_loss</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">pred</span><span class="o">.</span><span class="n">permute</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">label</span><span class="p">)</span>
+        <span class="c1"># 得到带屏蔽的损失</span>
         <span class="n">weighted_loss</span> <span class="o">=</span> <span class="p">(</span><span class="n">unweighted_loss</span> <span class="o">*</span> <span class="n">weights</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">weighted_loss</span>
 </pre></div>
@@ -833,36 +830,43 @@
 </div>
 </div>
 </div>
-<div class="section" id="training">
-<h2>Training<a class="headerlink" href="#training" title="Permalink to this headline">¶</a></h2>
-<p>Here we use the so called teacher forcing in decoder which trains much faster</p>
+<div class="section" id="id3">
+<h2>训练<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>训练时，我们解码器的输入不是采样自上一步的输出，而是<code class="docutils literal notranslate"><span class="pre">&lt;bos&gt;</span></code> + 真实的输出序列，这被称为teacher-forcing，它能使我们训练得更快。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">train_nmt</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">data_iter</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">tgt_vocab</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;e.g. english-french translation&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;训练机器翻译模型&quot;&quot;&quot;</span>
     <span class="n">device</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">try_gpu</span><span class="p">()</span>
     <span class="n">net</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
     <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">lr</span><span class="p">)</span>
-    <span class="n">loss</span> <span class="o">=</span> <span class="n">MaskedSoftmaxCELoss</span><span class="p">()</span>
-    <span class="n">net</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>  <span class="c1"># dropout used, need specify</span>
+    <span class="n">loss_fn</span> <span class="o">=</span> <span class="n">MaskedSoftmaxCELoss</span><span class="p">()</span>
+    <span class="n">net</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>  <span class="c1"># 用了Dropout，必须明示</span>
+    <span class="c1"># 画带屏蔽的交叉熵损失</span>
     <span class="n">animator</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Animator</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;epoch&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;loss&#39;</span><span class="p">,</span>
                             <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">])</span>
     <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
-        <span class="n">metric</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Accumulator</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Sum of training loss, no. of tokens</span>
+        <span class="c1"># 损失和，tokens总数</span>
+        <span class="n">metric</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Accumulator</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">data_iter</span><span class="p">:</span>
-            <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
             <span class="n">X</span><span class="p">,</span> <span class="n">X_valid_len</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_valid_len</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">]</span>
+            <span class="c1"># 解码器的输入是&lt;bos&gt;+真实输出序列 </span>
             <span class="n">bos</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">tgt_vocab</span><span class="p">[</span><span class="s1">&#39;&lt;bos&gt;&#39;</span><span class="p">]]</span> <span class="o">*</span> <span class="n">Y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
                                <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-            <span class="c1"># teacher forcing decoder input</span>
             <span class="n">dec_input</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">([</span><span class="n">bos</span><span class="p">,</span> <span class="n">Y</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="c1"># 模型需是Encoder-Decoder结构</span>
             <span class="n">Y_hat</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">dec_input</span><span class="p">,</span> <span class="n">X_valid_len</span><span class="p">)</span>
-            <span class="n">l</span> <span class="o">=</span> <span class="n">loss</span><span class="p">(</span><span class="n">Y_hat</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_valid_len</span><span class="p">)</span>
-            <span class="n">l</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+            
+            <span class="c1"># Backpropagation</span>
+            <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+            <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">Y_hat</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_valid_len</span><span class="p">)</span>
+            <span class="n">loss</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
             <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+            <span class="c1"># 记录数据</span>
             <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
-                <span class="n">metric</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">Y_valid_len</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+                <span class="n">metric</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">loss</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span> <span class="n">Y_valid_len</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+        <span class="c1"># 画图</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">epoch</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">animator</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">epoch</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">],))</span>
 </pre></div>
@@ -870,28 +874,29 @@
 </div>
 </div>
 </div>
-<div class="section" id="prediction">
-<h2>Prediction<a class="headerlink" href="#prediction" title="Permalink to this headline">¶</a></h2>
-<p>To predict the output sequence token by token, at each decoder time step the predicted token from the previous time step is fed into the decoder as an input.</p>
+<div class="section" id="id4">
+<h2>预测<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>预测时，我们没有真实的输出序列，解码器当前时间步的输入都将来自于前一时间步的输出词元。</p>
 <p><img alt="jupyter" src="../_images/seq2seq-predict.svg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">predict_nmt</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">src_sentence</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">,</span> <span class="n">tgt_vocab</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">d2l</span><span class="o">.</span><span class="n">try_gpu</span><span class="p">()):</span>
-    <span class="sd">&quot;&quot;&quot;Predict given source sentence.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;机器翻译模型做预测&quot;&quot;&quot;</span>
     <span class="n">net</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
-    <span class="c1"># Encoder Preprocess</span>
+    <span class="c1"># 处理src_sentence</span>
     <span class="n">src_tokens</span> <span class="o">=</span> <span class="n">src_vocab</span><span class="p">[</span><span class="n">src_sentence</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)]</span> <span class="o">+</span> <span class="p">[</span><span class="n">src_vocab</span><span class="p">[</span><span class="s1">&#39;&lt;eos&gt;&#39;</span><span class="p">]]</span>
     <span class="n">enc_valid_len</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">src_tokens</span><span class="p">)],</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
     <span class="n">src_tokens</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">truncate_pad</span><span class="p">(</span><span class="n">src_tokens</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">[</span><span class="s1">&#39;&lt;pad&gt;&#39;</span><span class="p">])</span>
     <span class="n">enc_X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span>
         <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">src_tokens</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">enc_outputs</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">encoder</span><span class="p">(</span><span class="n">enc_X</span><span class="p">,</span> <span class="n">enc_valid_len</span><span class="p">)</span>
-    <span class="c1"># Decoder first step Preprocess</span>
+    <span class="c1"># 解码器初始state及初始输入</span>
     <span class="n">dec_state</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">decoder</span><span class="o">.</span><span class="n">init_state</span><span class="p">(</span><span class="n">enc_outputs</span><span class="p">,</span> <span class="n">enc_valid_len</span><span class="p">)</span>
     <span class="n">dec_X</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span>
         <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">tgt_vocab</span><span class="p">[</span><span class="s1">&#39;&lt;bos&gt;&#39;</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">long</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">),</span> <span class="n">dim</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">output_seq</span><span class="p">,</span> <span class="n">attention_weight_seq</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="c1"># 一步一步来</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_steps</span><span class="p">):</span>
         <span class="n">Y</span><span class="p">,</span> <span class="n">dec_state</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">decoder</span><span class="p">(</span><span class="n">dec_X</span><span class="p">,</span> <span class="n">dec_state</span><span class="p">)</span>
         <span class="c1"># We use the token with the highest prediction likelihood as the input</span>
@@ -909,26 +914,29 @@
 </div>
 </div>
 </div>
-<div class="section" id="evaluation">
-<h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
-<p>We can evaluate a predicted sequence by comparing it with the label sequence.</p>
-<p>Denote by  <span class="math notranslate nohighlight">\(p_{n}\)</span>  the precision of  <span class="math notranslate nohighlight">\(n\)</span>-grams, which is the ratio of the number of matched  <span class="math notranslate nohighlight">\(n\)</span>-grams in the predicted and label sequences to the number of  <span class="math notranslate nohighlight">\(n\)</span>-grams in the predicted sequence.</p>
-<p>Then, BLEU is defined as:</p>
+<div class="section" id="id5">
+<h2>评估<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>我们可以通过与真实标签序列做比较来评估预测序列。</p>
+<p>用 <span class="math notranslate nohighlight">\(p_{n}\)</span> 表示 <span class="math notranslate nohighlight">\(n\)</span>元语法的精确度，它是两个数量的比值，分子是预测序列与标签序列中匹配的 <span class="math notranslate nohighlight">\(n\)</span>元语法的数量，分母是预测序列中 <span class="math notranslate nohighlight">\(n\)</span>元语法的数量。</p>
+<p>那么, BLEU 的定义是:</p>
 <div class="math notranslate nohighlight">
 \[\exp\left(\min\left(0, 1 - \frac{\mathrm{len}_{\text{label}}}{\mathrm{len}_{\text{pred}}}\right)\right)\prod_{i=1}^{k}p_{n}^{1/{2^{n}}}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(k\)</span>  is the longest  <span class="math notranslate nohighlight">\(n\)</span>-grams for matching.</p>
+<p>其中 <span class="math notranslate nohighlight">\(k\)</span> 是用于匹配的最长 <span class="math notranslate nohighlight">\(n\)</span>元语法，指数项用于惩罚较短的预测序列。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">bleu</span><span class="p">(</span><span class="n">pred_seq</span><span class="p">,</span> <span class="n">label_seq</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Compute the BLEU.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;计算 BLEU&quot;&quot;&quot;</span>
     <span class="n">pred_tokens</span><span class="p">,</span> <span class="n">label_tokens</span> <span class="o">=</span> <span class="n">pred_seq</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">),</span> <span class="n">label_seq</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
     <span class="n">len_pred</span><span class="p">,</span> <span class="n">len_label</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">pred_tokens</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">label_tokens</span><span class="p">)</span>
     <span class="n">score</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">len_label</span> <span class="o">/</span> <span class="n">len_pred</span><span class="p">))</span>
+    <span class="c1"># 计算n元语法的精确度</span>
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
         <span class="n">num_matches</span><span class="p">,</span> <span class="n">label_subs</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="c1"># 统计标签序列中各n元语法的数量</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_label</span> <span class="o">-</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
             <span class="n">label_subs</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">label_tokens</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">])]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1"># 计算匹配</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_pred</span> <span class="o">-</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">label_subs</span><span class="p">[</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pred_tokens</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">])]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="n">num_matches</span> <span class="o">+=</span> <span class="mi">1</span>
@@ -967,8 +975,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2.encoder-decoder.html" title="previous page">Encoder-Decoder</a>
-    <a class='right-next' id="next-link" href="4.sequence to sequence.html" title="next page">Sequence to Sequence</a>
+    <a class='left-prev' id="prev-link" href="2.encoder-decoder.html" title="previous page">编码器-解码器</a>
+    <a class='right-next' id="next-link" href="4.sequence to sequence.html" title="next page">序列到序列学习</a>
 
         </div>
         

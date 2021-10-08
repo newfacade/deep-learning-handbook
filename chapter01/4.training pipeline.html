@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图像分类Pipeline &#8212; 深度学习手册</title>
+    <title>训练图像分类 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Softmax回归" href="4.softmax regression.html" />
-    <link rel="prev" title="Fashion-MNIST数据集" href="2.fashion mnist.html" />
+    <link rel="next" title="Softmax回归" href="5.softmax regression.html" />
+    <link rel="prev" title="Fashion-MNIST数据集" href="3.fashion mnist.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="1.linear regression.html">
+    <a class="reference internal" href="1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="2.fashion mnist.html">
+    <a class="reference internal" href="3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     图像分类Pipeline
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="4.softmax regression.html">
+    <a class="reference internal" href="5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -686,7 +681,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/chapter01/3.training pipeline.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/chapter01/4.training pipeline.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -706,7 +701,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter01/3.training pipeline.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter01/4.training pipeline.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -727,7 +722,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter01/3.training pipeline.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter01/4.training pipeline.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -750,12 +745,17 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
+  <a class="reference internal nav-link" href="#id2">
    一些辅助函数和类
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
+  <a class="reference internal nav-link" href="#id3">
+   动画
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
    训练图像分类的函数
   </a>
  </li>
@@ -770,15 +770,15 @@
         
               <div>
                 
-  <div class="section" id="pipeline">
-<h1>图像分类Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1>训练图像分类<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>图像分类型任务训练时的pipeline都是类似的，只是模型和数据集不同<br/>
-所以我们可以先定义好训练图像分类的函数，模型和数据集作其参数，这样会很方便</p>
+<p>图像分类型任务训练时的步骤都是类似的，只是模型和数据集不同。<br/>
+所以我们可以先定义好训练图像分类的函数，模型和数据集作其参数，这样会很方便。</p>
 </div>
-<div class="section" id="id1">
-<h2>一些辅助函数和类<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>一些辅助函数和类<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -854,8 +854,97 @@
 </div>
 </div>
 </div>
-<div class="section" id="id2">
-<h2>训练图像分类的函数<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>动画<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>为了让我们的训练过程更加直观，我们实现一个展示训练过程中各项数据动态变化的类</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">use_svg_display</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;使用svg格式&quot;&quot;&quot;</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">set_matplotlib_formats</span><span class="p">(</span><span class="s1">&#39;svg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">set_axes</span><span class="p">(</span><span class="n">axes</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span> <span class="n">xscale</span><span class="p">,</span> <span class="n">yscale</span><span class="p">,</span> <span class="n">legend</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;设置坐标轴&quot;&quot;&quot;</span>
+    <span class="c1"># 设置坐标标签</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">xlabel</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">)</span>
+    <span class="c1"># 设置比例尺，{`linear`, `log`, ...}</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="n">xscale</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="n">yscale</span><span class="p">)</span>
+    <span class="c1"># 设置x轴和y轴的显示范围</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">xlim</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ylim</span><span class="p">)</span>
+    <span class="c1"># 加上图例、网格</span>
+    <span class="k">if</span> <span class="n">legend</span><span class="p">:</span>
+        <span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">legend</span><span class="p">)</span>
+    <span class="n">axes</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="k">class</span> <span class="nc">Animator</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;动态画折线图&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">ylim</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xscale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="n">yscale</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span>
+                 <span class="n">fmts</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;m--&#39;</span><span class="p">,</span> <span class="s1">&#39;g-.&#39;</span><span class="p">,</span> <span class="s1">&#39;r:&#39;</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">3.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)):</span>
+        <span class="sd">&quot;&quot;&quot;参数都是 matplotlib 画图的参数&quot;&quot;&quot;</span>
+        <span class="c1"># 使用svg格式</span>
+        <span class="n">d2l</span><span class="o">.</span><span class="n">use_svg_display</span><span class="p">()</span>
+        <span class="c1"># 获得画布和坐标轴</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+        <span class="c1"># config_axes() 即 d2l.set_axes(self.axes, xlabel, ylabel, xlim, ylim, xscale, yscale, legend)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_axes</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">d2l</span><span class="o">.</span><span class="n">set_axes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">,</span> <span class="n">xlabel</span><span class="p">,</span> <span class="n">ylabel</span><span class="p">,</span> <span class="n">xlim</span><span class="p">,</span> <span class="n">ylim</span><span class="p">,</span> <span class="n">xscale</span><span class="p">,</span> <span class="n">yscale</span><span class="p">,</span> <span class="n">legend</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmts</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">fmts</span>
+
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Add multiple data points into the figure&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="s2">&quot;__len__&quot;</span><span class="p">):</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span><span class="p">]</span>
+        <span class="c1"># Total n curves</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;__len__&quot;</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+        <span class="c1"># initialization</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">Y</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+        <span class="c1"># 添加数据</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)):</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">cla</span><span class="p">()</span>  <span class="c1"># 清除子图目前状态，防止重叠</span>
+        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">fmt</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">Y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fmts</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">fmt</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config_axes</span><span class="p">()</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fig</span><span class="p">)</span>
+        <span class="c1"># 不是多图而是动态</span>
+        <span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>训练图像分类的函数<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>分类问题的损失函数CrossEntropyLoss:</p>
+<div class="math notranslate nohighlight">
+\[\mbox{loss}(x, class) = -\mbox{log}\left(\frac{\mbox{exp}(x[class])}{\sum_{j}\mbox{exp}(x[j])}\right) = -x[class] + \log\left ({\sum_{j}\exp({x[j]})}\right )\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
@@ -871,6 +960,9 @@
     <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
     <span class="c1"># 记录误差和、正确预测样本数、总样本数</span>
     <span class="n">metric</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Accumulator</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+    <span class="c1"># 画训练误差、训练准确率、测试准确率</span>
+    <span class="n">animator</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Animator</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;epoch&quot;</span><span class="p">,</span> <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                            <span class="n">legend</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;train_loss&quot;</span><span class="p">,</span> <span class="s2">&quot;train_acc&quot;</span><span class="p">,</span> <span class="s2">&quot;test_acc&quot;</span><span class="p">])</span>
     <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">):</span>
         <span class="n">net</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>  <span class="c1"># 因为计算accuracy会使net转向eval模式</span>
         <span class="n">metric</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
@@ -886,18 +978,17 @@
             <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
             <span class="c1"># 记录数据</span>
             <span class="n">metric</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">d2l</span><span class="o">.</span><span class="n">correct_predictions</span><span class="p">(</span><span class="n">y_hat</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">y</span><span class="o">.</span><span class="n">numel</span><span class="p">())</span>
-        <span class="c1"># 打印数据</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;epoch </span><span class="si">{</span><span class="n">epoch</span> <span class="o">+</span> <span class="mi">1</span><span class="si">:</span><span class="s2">&lt;2</span><span class="si">}</span><span class="s2">, &quot;</span>
-              <span class="sa">f</span><span class="s2">&quot;loss </span><span class="si">{</span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">metric</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, &quot;</span>
-              <span class="sa">f</span><span class="s2">&quot;train acc </span><span class="si">{</span><span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">metric</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, &quot;</span>
-              <span class="sa">f</span><span class="s2">&quot;test acc </span><span class="si">{</span><span class="n">d2l</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">test_iter</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># 画图</span>
+        <span class="n">animator</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">epoch</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> 
+                     <span class="p">(</span><span class="n">metric</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">metric</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">metric</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">metric</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">d2l</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">test_iter</span><span class="p">,</span> <span class="n">device</span><span class="p">)))</span>
+    <span class="c1"># 打印最终的数据</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;loss </span><span class="si">{</span><span class="n">animator</span><span class="o">.</span><span class="n">Y</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">, &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;train acc </span><span class="si">{</span><span class="n">animator</span><span class="o">.</span><span class="n">Y</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">3f</span><span class="si">}</span><span class="s2">, &quot;</span>
+          <span class="sa">f</span><span class="s2">&quot;test acc </span><span class="si">{</span><span class="n">animator</span><span class="o">.</span><span class="n">Y</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>分类问题的损失函数CrossEntropyLoss的计算公式:</p>
-<div class="math notranslate nohighlight">
-\[\mbox{loss}(x, class) = -\mbox{log}\left(\frac{\mbox{exp}(x[class])}{\sum_{j}\mbox{exp}(x[j])}\right) = -x[class] + \log\left ({\sum_{j}\exp({x[j]})}\right )\]</div>
 </div>
 </div>
 
@@ -926,8 +1017,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2.fashion mnist.html" title="previous page">Fashion-MNIST数据集</a>
-    <a class='right-next' id="next-link" href="4.softmax regression.html" title="next page">Softmax回归</a>
+    <a class='left-prev' id="prev-link" href="3.fashion mnist.html" title="previous page">Fashion-MNIST数据集</a>
+    <a class='right-next' id="next-link" href="5.softmax regression.html" title="next page">Softmax回归</a>
 
         </div>
         

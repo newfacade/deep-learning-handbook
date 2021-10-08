@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -792,13 +787,7 @@ Xavier初始化和Kaiming初始化的intuition：在正向传播或反向传播�
 <p>考虑一个没有 bias term 和激活函数的全连接层：</p>
 <div class="math notranslate nohighlight">
 \[o_{i} = \sum_{j=1}^{\text{fan}_{in}}w_{ij}x_{j}\]</div>
-<p>假设</p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(w_{ij}\)</span> 的均值为0，方差为 <span class="math notranslate nohighlight">\(\sigma^{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(x_{j}\)</span> 的均值为0，方差为 <span class="math notranslate nohighlight">\(\gamma^{2}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(w_{ij}, x_{j}\)</span> 相互独立。</p></li>
-</ol>
-<p>那么 <span class="math notranslate nohighlight">\(o_{i}\)</span> 的均值显然为0，它的方差为：</p>
+<p>假设 <span class="math notranslate nohighlight">\(w_{ij}\)</span> 的均值为0，方差为 <span class="math notranslate nohighlight">\(\sigma^{2}\)</span>; <span class="math notranslate nohighlight">\(x_{j}\)</span> 的均值为0，方差为 <span class="math notranslate nohighlight">\(\gamma^{2}\)</span>; <span class="math notranslate nohighlight">\(w_{ij}, x_{j}\)</span> 相互独立。那么 <span class="math notranslate nohighlight">\(o_{i}\)</span> 的均值显然为0，它的方差为：</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{equation}
@@ -810,11 +799,11 @@ Xavier初始化和Kaiming初始化的intuition：在正向传播或反向传播�
 \end{split}
 \end{equation}
 \end{split}\]</div>
-<p>为了保证输入和输出的方差不变，需要 <span class="math notranslate nohighlight">\(\text{fan}_{in}\sigma^{2}=1\)</span>.</p>
+<p>为了保证输入和输出的方差不变，需要 <span class="math notranslate nohighlight">\(\text{fan}_{in}\sigma^{2}=1\)</span>。</p>
 <p>另一方面，在反向传播中, 我们有:</p>
 <div class="math notranslate nohighlight">
 \[\frac{\partial L}{\partial x_{j}} = \sum_{i=1}^{\text{fan}_{out}}w_{ij}\frac{\partial L}{\partial o_{i}}\]</div>
-<p>类似地，为了维持梯度的方差，需要 <span class="math notranslate nohighlight">\(\text{fan}_{out}\sigma^{2} = 1\)</span>.</p>
+<p>类似地，为了维持梯度的方差，需要 <span class="math notranslate nohighlight">\(\text{fan}_{out}\sigma^{2} = 1\)</span>。</p>
 <p>若 <span class="math notranslate nohighlight">\(\text{fan}_{in} \ne \text{fan}_{out}\)</span> 上述两式不能同时成立, pytorch的实现里取了折中:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{2}(\text{fan}_{in} + \text{fan}_{out})\sigma^{2} = 1 \ \text{ or }\ \sigma = \sqrt{\frac{2}{\text{fan}_{in} + \text{fan}_{out}}}\]</div>
@@ -830,9 +819,9 @@ Xavier初始化和Kaiming初始化的intuition：在正向传播或反向传播�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.3252,  0.7780, -0.2572,  0.1146,  1.5340],
-        [-0.6096, -0.2467,  0.8004,  0.5341,  0.8064],
-        [ 0.5833, -0.0735,  0.1220,  0.0802,  0.0757]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.0330, -0.1627,  0.5484, -0.6934, -0.0037],
+        [ 0.2257,  0.4591, -0.5610, -0.0438, -0.0834],
+        [ 0.0437,  0.2729, -0.2554,  0.0250,  0.6984]])
 </pre></div>
 </div>
 </div>
@@ -846,9 +835,7 @@ Xavier初始化和Kaiming初始化的intuition：在正向传播或反向传播�
 <p>在与Xavier初始化一样的假设下，<span class="math notranslate nohighlight">\(o_{i}\)</span>的方差为Xavier初始化中<span class="math notranslate nohighlight">\(o_{i}\)</span>方差的一半（因为有一半为0）:</p>
 <div class="math notranslate nohighlight">
 \[\text{Var}(o_{i}) = \frac{1}{2}\text{fan}_{in}\sigma^{2}\gamma^{2}\]</div>
-<p>保持正向传播时方差不变需 <span class="math notranslate nohighlight">\(\text{fan}_{in}\sigma^{2}=2\)</span></p>
-<p>类似地，保持梯度方差不变需 <span class="math notranslate nohighlight">\(\text{fan}_{out}\sigma^{2}=2\)</span></p>
-<p>pytorch中实现的Kaiming初始化：</p>
+<p>保持正向传播时方差不变需 <span class="math notranslate nohighlight">\(\text{fan}_{in}\sigma^{2}=2\)</span>。保持梯度方差不变需 <span class="math notranslate nohighlight">\(\text{fan}_{out}\sigma^{2}=2\)</span>。pytorch中实现的Kaiming初始化：</p>
 <div class="math notranslate nohighlight">
 \[\sigma = \sqrt{\frac{2}{\mbox{fan}_{mode}}}\]</div>
 <p>其中 <span class="math notranslate nohighlight">\(\text{fan}_{mode}\)</span> 为 <span class="math notranslate nohighlight">\(\text{fan}_{in}\)</span> or <span class="math notranslate nohighlight">\(\text{fan}_{out}\)</span>.</p>
@@ -861,9 +848,9 @@ Xavier初始化和Kaiming初始化的intuition：在正向传播或反向传播�
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[ 0.7420, -0.8129, -0.3173, -0.5430,  0.0054],
-        [ 0.6243, -0.8120, -0.2983, -0.2764, -0.9007],
-        [ 0.9125, -0.0166,  0.5704,  0.3428,  0.1280]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tensor([[-0.1288,  0.2462,  0.2680, -0.2140, -0.5077],
+        [ 1.0324, -0.8032,  0.0058,  0.2864, -0.8681],
+        [-0.3520, -1.0235, -0.3865,  0.1485, -0.6039]])
 </pre></div>
 </div>
 </div>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Model &#8212; 深度学习手册</title>
+    <title>语言模型 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Text Preprocessing" href="2.text preprocessing.html" />
+    <link rel="next" title="语言模型数据集" href="2.text preprocessing.html" />
     <link rel="prev" title="循环神经网络" href="0.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -751,12 +746,19 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#n-gram">
-   N-gram
+   N-gram模型
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#laplace">
+     Laplace平滑
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#perplexity">
-   Perplexity
+   困惑度（Perplexity）
   </a>
  </li>
 </ul>
@@ -770,48 +772,55 @@
         
               <div>
                 
-  <div class="section" id="language-model">
-<h1>Language Model<a class="headerlink" href="#language-model" title="Permalink to this headline">¶</a></h1>
-<p>Assume that the tokens in a text sequence of length  <span class="math notranslate nohighlight">\(T\)</span>  are in turn  <span class="math notranslate nohighlight">\(x_{1},x_{2},...,x_{T}\)</span>.</p>
-<p>The goal of language model is to estimate the joint-probability of the sequence:</p>
+  <div class="section" id="id1">
+<h1>语言模型<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>假设长度为 <span class="math notranslate nohighlight">\(T\)</span> 的文本序列中的词元（tokens）依次为 <span class="math notranslate nohighlight">\(x_{1},x_{2},...,x_{T}\)</span>。<br/>
+语言模型（language model）的目标是估计序列的联合概率：</p>
 <div class="math notranslate nohighlight">
 \[P(x_{1},x_{2},...,x_{T})\]</div>
-<p>An ideal language model would be able to generate natural text just on its own, simply by drawing one token at a time:</p>
+<p>语言模型非常有用。列如，只要一次抽取一个词元：</p>
 <div class="math notranslate nohighlight">
 \[x_{t} \sim P(x_{t}|x_{1},...,x_{t-1})\]</div>
+<p>一个理想的语言模型就能够基于模型本身生成自然的文本。</p>
+</div>
 <div class="section" id="n-gram">
-<h2>N-gram<a class="headerlink" href="#n-gram" title="Permalink to this headline">¶</a></h2>
-<p>How to compute the joint-probabilty? start by applying basic probability rules:</p>
+<h2>N-gram模型<a class="headerlink" href="#n-gram" title="Permalink to this headline">¶</a></h2>
+<p>如何计算联合概率呢？我们首先将它拆解为条件概率的乘积：</p>
 <div class="math notranslate nohighlight">
 \[P(x_{1},...,x_{T}) = \prod_{t=1}^{T}P(x_{t}|x_{1},...,x_{t-1})\]</div>
-<p>While probability could be estimate by frequencies:</p>
+<p>如果我们有一个大型的语料库，那么条件概率可以由频次之比来估计，比如说:</p>
 <div class="math notranslate nohighlight">
 \[\hat{P}(\mbox{learning}|\mbox{deep}) = \frac{n(\mbox{deep}, \mbox{learning})}{n(\mbox{deep})}\]</div>
-<p>Further more, Laplace smoothing:</p>
+<p>长段的连续词元会有出现频次过少的问题，因此N-gram模型假设我们的文本具有 <span class="math notranslate nohighlight">\(N\)</span>-阶 Markov 性质:</p>
+<div class="math notranslate nohighlight">
+\[P(x_{t}|x_{1},...,x_{t-1}) = P(x_{t}|x_{t-N+1},...,x_{t-1})\]</div>
+<p>即最多只依赖 <span class="math notranslate nohighlight">\(N-1\)</span> 个词元。bigram 和 trigram 模型:</p>
+<div class="math notranslate nohighlight">
+\[P(x_{1}, x_{2}, x_{3}, x_{4}) = P(x_{1})P(x_{2}|x_{1})P(x_{3}|x_{2})P(x_{4}|x_{3})\]</div>
+<div class="math notranslate nohighlight">
+\[P(x_{1}, x_{2}, x_{3}, x_{4}) = P(x_{1})P(x_{2}|x_{1})P(x_{3}|x_{1},x_{2})P(x_{4}|x_{2},x_{3})\]</div>
+<div class="section" id="laplace">
+<h3>Laplace平滑<a class="headerlink" href="#laplace" title="Permalink to this headline">¶</a></h3>
+<p>即使我们假设文本具有Markov性质，不常见的连续词元也会有出现频次过少的问题（甚至为0）。</p>
+<p>一个常见的应对策略是使用Laplace平滑，具体方法是分子分母中各加上一个小常量：</p>
 <div class="math notranslate nohighlight">
 \[\hat{P}(x) = \frac{n(x) + \epsilon_{1}/m}{n + \epsilon_{1}}\]</div>
 <div class="math notranslate nohighlight">
 \[\hat{P}(x'|x)=\frac{n(x,x') + \epsilon_{2}\hat{P}(x')}{n(x) + \epsilon_{2}}\]</div>
 <div class="math notranslate nohighlight">
 \[\hat{P}(x''|x,x')=\frac{n(x, x', x'') + \epsilon_{3}\hat{P}(x'')}{n(x, x') + \epsilon_{3}}\]</div>
-<p>On the other hand, Assume <span class="math notranslate nohighlight">\(N\)</span>-order Markov property:</p>
-<div class="math notranslate nohighlight">
-\[P(x_{t}|x_{1},...,x_{t-1}) = P(x_{t}|x_{t-N+1},...,x_{t-1})\]</div>
-<p>We arrive at the <span class="math notranslate nohighlight">\(N\)</span>-gram language model, e.g. the bigram and trigram model:</p>
-<div class="math notranslate nohighlight">
-\[P(x_{1}, x_{2}, x_{3}, x_{4}) = P(x_{1})P(x_{2}|x_{1})P(x_{3}|x_{2})P(x_{4}|x_{3})\]</div>
-<div class="math notranslate nohighlight">
-\[P(x_{1}, x_{2}, x_{3}, x_{4}) = P(x_{1})P(x_{2}|x_{1})P(x_{3}|x_{1},x_{2})P(x_{4}|x_{2},x_{3})\]</div>
+<p>这里<span class="math notranslate nohighlight">\(n\)</span>是语料库的单词总数，<span class="math notranslate nohighlight">\(m\)</span>是不同的单词数，<span class="math notranslate nohighlight">\(\epsilon_{1},\epsilon_{2},\epsilon_{3}\)</span>是超参数。</p>
+</div>
 </div>
 <div class="section" id="perplexity">
-<h2>Perplexity<a class="headerlink" href="#perplexity" title="Permalink to this headline">¶</a></h2>
-<p>How to measure the language model quality?</p>
-<p>A better language model should allow us to predict the next token more accurately.</p>
-<p>So we can measure it by the cross-entropy loss averaged over all the  <span class="math notranslate nohighlight">\(n\)</span>  tokens of a sequence:</p>
+<h2>困惑度（Perplexity）<a class="headerlink" href="#perplexity" title="Permalink to this headline">¶</a></h2>
+<p>如何衡量一个语言模型的好坏呢？</p>
+<p>直觉上，一个好的语言模型应该能够让我们更准确的预测下一个token，对于一个共n个词元的真实序列，这可以通过平均交叉熵损失函数来衡量:</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{n}\sum_{t=1}^{n}-\mbox{log}\ P(x_{t}|x_{t-1},...,x_{1})\]</div>
-<p>where  <span class="math notranslate nohighlight">\(x_{t}\)</span>  is the actual token, this makes the performance on documents of different lengths comparable.</p>
-<p>For historical reasons, we use exponentials called Perplexity:</p>
+<p>困惑度（Perplexity）就是上述量的指数:</p>
 <div class="math notranslate nohighlight">
 \[\mbox{exp}\left (\frac{1}{n}\sum_{t=1}^{n}-\mbox{log}\ P(x_{t}|x_{t-1},...,x_{1})\right )\]</div>
 </div>
@@ -843,7 +852,7 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="0.html" title="previous page">循环神经网络</a>
-    <a class='right-next' id="next-link" href="2.text preprocessing.html" title="next page">Text Preprocessing</a>
+    <a class='right-next' id="next-link" href="2.text preprocessing.html" title="next page">语言模型数据集</a>
 
         </div>
         

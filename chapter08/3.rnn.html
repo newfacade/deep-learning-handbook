@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RNN &#8212; 深度学习手册</title>
+    <title>循环神经网络 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Training Language Model" href="4.training language model.html" />
-    <link rel="prev" title="Text Preprocessing" href="2.text preprocessing.html" />
+    <link rel="next" title="训练语言模型" href="4.training language model.html" />
+    <link rel="prev" title="语言模型数据集" href="2.text preprocessing.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,13 +745,13 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#model">
-   Model
+  <a class="reference internal nav-link" href="#id2">
+   模型
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementation">
-   Implementation
+  <a class="reference internal nav-link" href="#id3">
+   实现
   </a>
  </li>
 </ul>
@@ -770,46 +765,49 @@
         
               <div>
                 
-  <div class="section" id="rnn">
-<h1>RNN<a class="headerlink" href="#rnn" title="Permalink to this headline">¶</a></h1>
-<p>Rather than modeling  <span class="math notranslate nohighlight">\(P(x_{t}|x_{t-n+1},...,x_{t-1})\)</span>  it is preferable to use a latent variable model:</p>
+  <div class="section" id="id1">
+<h1>循环神经网络<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(n\)</span>-gram模型的参数量会随着<span class="math notranslate nohighlight">\(n\)</span>呈指数增长，因此与其模型化 <span class="math notranslate nohighlight">\(P(x_{t}|x_{t-n+1},...,x_{t-1})\)</span>，不如使用隐变量模型：</p>
 <div class="math notranslate nohighlight">
-\[P(x_{t}|x_{1},...,x_{t-1}) \approx P(x_{t}|h_{t-1})\]</div>
-<p>where  <span class="math notranslate nohighlight">\(h_{t-1}\)</span>  is a hidden state that stores the sequence information up to time step  <span class="math notranslate nohighlight">\(t-1\)</span> .</p>
+\[P(x_{t}|h_{t-1}) \approx P(x_{t}|x_{1},...,x_{t-1})\]</div>
+<p>其中 <span class="math notranslate nohighlight">\(h_{t-1}\)</span> 存储着到时间步 <span class="math notranslate nohighlight">\(t-1\)</span> 的序列信息，这就是循环神经网络（recurrent neural networks，RNN）的思想。</p>
+</div>
+<div class="section" id="id2">
+<h2>模型<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>回想全连接层:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H} = \phi(\mathbf{X}\mathbf{W}_{xh} + \mathbf{b}_{h})\]</div>
+<p>其中 <span class="math notranslate nohighlight">\(\mathbf{X}\in\mathbb{R}^{n\times{d}}\)</span>,<span class="math notranslate nohighlight">\(\mathbf{W}_{xh}\in\mathbb{R}^{d\times{h}}\)</span>,<span class="math notranslate nohighlight">\(\mathbf{b}_{h}\in\mathbb{R}^{1\times{h}}\)</span>,<span class="math notranslate nohighlight">\(\mathbf{H}\in\mathbb{R}^{n\times{h}}\)</span>.</p>
+<p>引入了时间步的概念之后，事情会变得有些不一样。假设 <span class="math notranslate nohighlight">\(t\)</span> 时刻的输入为 <span class="math notranslate nohighlight">\(\mathbf{X}_{t}\in\mathbb{R}^{n\times{d}}\)</span>，隐藏状态为  <span class="math notranslate nohighlight">\(\mathbf{H}_{t}\in\mathbb{R}^{n\times{h}}\)</span>，那么RNN模型是如此更新隐藏状态的:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{H}_{t} = \phi(\mathbf{X}_{t}\mathbf{W}_{xh} + \mathbf{H}_{t-1}\mathbf{W}_{hh} + \mathbf{b}_{h})\]</div>
+<p>其中 <span class="math notranslate nohighlight">\(\mathbf{W}_{hh}\in\mathbb{R}^{h\times{h}}\)</span>， 激活函数 <span class="math notranslate nohighlight">\(\phi\)</span> 默认为 <span class="math notranslate nohighlight">\(\mbox{tanh}\)</span>。</p>
+<p><img alt="jupyter" src="../_images/rnn.svg" /></p>
+</div>
+<div class="section" id="id3">
+<h2>实现<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
-<span class="kn">import</span> <span class="nn">d2l</span>
 <span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="model">
-<h2>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h2>
-<p>Recall fully-connected layer:</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{H} = \phi(\mathbf{X}\mathbf{W}_{xh} + \mathbf{b}_{h})\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathbf{X}\in\mathbb{R}^{n\times{d}}\)</span>,<span class="math notranslate nohighlight">\(\mathbf{W}_{xh}\in\mathbb{R}^{d\times{h}}\)</span>,<span class="math notranslate nohighlight">\(\mathbf{b}_{h}\in\mathbb{R}^{1\times{h}}\)</span>  and  <span class="math notranslate nohighlight">\(\mathbf{H}\in\mathbb{R}^{n\times{h}}\)</span>.</p>
-<p>Matters are entirely different when we have hidden states, Assume that we have a minibatch of inputs  <span class="math notranslate nohighlight">\(\mathbf{X}_{t}\in\mathbb{R}^{n\times{d}}\)</span>  at time step  <span class="math notranslate nohighlight">\(t\)</span>.</p>
-<p>Denote by  <span class="math notranslate nohighlight">\(\mathbf{H}_{t}\in\mathbb{R}^{n\times{h}}\)</span>  the hidden states of time step  <span class="math notranslate nohighlight">\(t\)</span>, the RNN model update hidden states by:</p>
-<div class="math notranslate nohighlight">
-\[\mathbf{H}_{t} = \phi(\mathbf{X}_{t}\mathbf{W}_{xh} + \mathbf{H}_{t-1}\mathbf{W}_{hh} + \mathbf{b}_{h})\]</div>
-<p>where <span class="math notranslate nohighlight">\(\mathbf{W}_{hh}\in\mathbb{R}^{h\times{h}}\)</span> and <span class="math notranslate nohighlight">\(\phi = \mbox{tanh}\)</span> as default.</p>
-<p><img alt="jupyter" src="../_images/rnn.svg" /></p>
-</div>
-<div class="section" id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
+<span class="kn">import</span> <span class="nn">d2l</span>
+
+
+<span class="c1">#@save</span>
 <span class="k">class</span> <span class="nc">RNNModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;The RNN model.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;RNN模型&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rnn_layer</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">RNNModel</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># 比如说nn.RNN()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span> <span class="o">=</span> <span class="n">rnn_layer</span>
+        <span class="c1"># 词汇量的大小</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span> <span class="o">=</span> <span class="n">vocab_size</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">hidden_size</span>  <span class="c1"># vocab_size -&gt; num_hiddens -&gt; vocab_size</span>
+        <span class="c1"># 输入vocab_size -&gt; 隐藏状态num_hiddens -&gt; 输出vocab_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">hidden_size</span>
+        <span class="c1"># 是否双向</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">bidirectional</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">num_directions</span> <span class="o">=</span> <span class="mi">1</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">)</span>
@@ -818,19 +816,21 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">linear</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
-        <span class="c1"># Shape of inputs: (`batch_size`, `num_steps`)</span>
-        <span class="c1"># Shape of X: (`num_steps`, `batch_size`, `vocab_size`)</span>
+        <span class="c1"># shape of inputs: (`batch_size`, `num_steps`)</span>
+        <span class="c1"># shape of X: (`num_steps`, `batch_size`, `vocab_size`)</span>
+        <span class="c1"># 将输入的int转为one_hot表示</span>
         <span class="n">X</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">one_hot</span><span class="p">(</span><span class="n">inputs</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">long</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span><span class="p">)</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+        <span class="c1"># shape of Y: (`num_steps`, `batch_size`, `num_directions` * `num_hiddens`)</span>
+        <span class="c1"># shape of state: (`num_layers` * `num_directions`, `batch_size`, `num_hiddens`)</span>
+        <span class="c1"># state是最终的隐藏状态</span>
         <span class="n">Y</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">state</span><span class="p">)</span>
-        <span class="c1"># The fully connected layer will first change the shape of `Y` to</span>
-        <span class="c1"># (`num_steps` * `batch_size`, `num_hiddens`). Its output shape is</span>
-        <span class="c1"># (`num_steps` * `batch_size`, `vocab_size`).</span>
+        <span class="c1"># shape of output: (`num_steps` * `batch_size`, `vocab_size`)</span>
         <span class="n">output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">linear</span><span class="p">(</span><span class="n">Y</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">Y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])))</span>
         <span class="k">return</span> <span class="n">output</span><span class="p">,</span> <span class="n">state</span>
 
     <span class="k">def</span> <span class="nf">begin_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">d2l</span><span class="o">.</span><span class="n">try_gpu</span><span class="p">()):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="p">,</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">):</span>
-            <span class="c1"># `nn.GRU` takes a tensor as hidden state</span>
+            <span class="c1"># `nn.RNN` and `nn.GRU` takes a tensor as hidden state</span>
             <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">num_directions</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">num_layers</span><span class="p">,</span>
                                 <span class="n">batch_size</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_hiddens</span><span class="p">),</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
@@ -845,7 +845,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;vocab_size: 100, num_hiddens: 64&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 创建一个普通的RNN模型，vocab_size为100, num_hiddens为64</span>
 <span class="n">rnn</span> <span class="o">=</span> <span class="n">RNNModel</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">RNN</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="mi">64</span><span class="p">),</span> <span class="n">vocab_size</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">rnn</span>
 </pre></div>
@@ -888,8 +888,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="2.text preprocessing.html" title="previous page">Text Preprocessing</a>
-    <a class='right-next' id="next-link" href="4.training language model.html" title="next page">Training Language Model</a>
+    <a class='left-prev' id="prev-link" href="2.text preprocessing.html" title="previous page">语言模型数据集</a>
+    <a class='right-next' id="next-link" href="4.training language model.html" title="next page">训练语言模型</a>
 
         </div>
         

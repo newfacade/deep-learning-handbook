@@ -19,3 +19,7 @@
 1. Dive into Deep Learning
 
 2. Hands-on Machine Learning with Scikit-Learn, Keras & TensorFlow, 2nd Edition.
+
+3. PyTorch官网
+
+4. TensorFlow官网

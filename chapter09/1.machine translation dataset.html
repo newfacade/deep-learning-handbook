@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Translation Dadaset &#8212; 深度学习手册</title>
+    <title>机器翻译数据集 &#8212; 深度学习手册</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Encoder-Decoder" href="2.encoder-decoder.html" />
+    <link rel="next" title="编码器-解码器" href="2.encoder-decoder.html" />
     <link rel="prev" title="机器翻译" href="0.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -109,22 +109,27 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/1.linear regression.html">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
      线性回归
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/2.fashion mnist.html">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
      Fashion-MNIST数据集
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/3.training pipeline.html">
-     图像分类Pipeline
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../chapter01/4.softmax regression.html">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
      Softmax回归
     </a>
    </li>
@@ -366,22 +371,22 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/1.language model.html">
-     Language Model
+     语言模型
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/2.text preprocessing.html">
-     Text Preprocessing
+     语言模型数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/3.rnn.html">
-     RNN
+     循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/4.training language model.html">
-     Training Language Model
+     训练语言模型
     </a>
    </li>
    <li class="toctree-l2">
@@ -396,12 +401,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/7.deep rnn.html">
-     Deep RNN
+     深度循环神经网络
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
-     Bidirectional RNN
+     双向循环神经网络
     </a>
    </li>
   </ul>
@@ -418,22 +423,22 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Machine Translation Dadaset
+     机器翻译数据集
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="2.encoder-decoder.html">
-     Encoder-Decoder
+     编码器-解码器
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="3.training machine translation.html">
-     Training Machine Translation
+     训练机器翻译
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="4.sequence to sequence.html">
-     Sequence to Sequence
+     序列到序列学习
     </a>
    </li>
   </ul>
@@ -450,37 +455,32 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/1.attention.html">
-     Attention
+     注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
-     Attention Scoring Functions
+     注意力评分函数
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/3.multi-head attention.html">
-     Multi-Head Attention
+     多头注意力
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/4.positional encoding.html">
-     Positional Encoding
+     位置编码
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
-     Positionwise FFN &amp; AddNorm
+     Transformer的其它组件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../chapter10/6.transformer encoder.html">
-     Transformer Encoder
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../chapter10/7.transformer decoder.html">
-     Transformer Decoder
+     Transformer
     </a>
    </li>
   </ul>
@@ -488,11 +488,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../chapter11/Pretrain.html">
    Pretrain
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../chapter12/75.bert.html">
-   Bert
   </a>
  </li>
 </ul>
@@ -750,8 +745,8 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#load-data">
-   Load Data
+  <a class="reference internal nav-link" href="#id2">
+   读取数据
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -760,13 +755,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#digitalize">
-   Digitalize
+  <a class="reference internal nav-link" href="#tokens">
+   Tokens转化为数字索引
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#putting-all-things-together">
-   Putting All Things Together
+  <a class="reference internal nav-link" href="#id3">
+   合起来
   </a>
  </li>
 </ul>
@@ -780,43 +775,30 @@
         
               <div>
                 
-  <div class="section" id="machine-translation-dadaset">
-<h1>Machine Translation Dadaset<a class="headerlink" href="#machine-translation-dadaset" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1>机器翻译数据集<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>机器翻译指的是将序列从一种语言自动翻译成另一种语言。<br/>
+本节我们将使用Tatoeba项目的英-法句子对生成机器翻译数据集。</p>
+</div>
+<div class="section" id="id2">
+<h2>读取数据<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">torch</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">d2l</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="load-data">
-<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
-<span class="k">def</span> <span class="nf">read_data_nmt</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Load the English-French dataset.&quot;&quot;&quot;</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/fra.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="c1"># read characters</span>
-        <span class="k">return</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
-<span class="k">def</span> <span class="nf">preprocess_nmt</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Preprocess the English-French dataset.&quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">no_space</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">prev_char</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;,.!?&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">prev_char</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span>
 
-    <span class="c1"># Replace non-breaking space with space, and convert uppercase letters to lowercase ones</span>
+
+<span class="c1">#@save</span>
+<span class="k">def</span> <span class="nf">read_data_nmt</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;读取英-法数据集&quot;&quot;&quot;</span>
+    <span class="c1"># 读取整个文件</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../data/fra.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="c1"># 使用空格替换不间断空格、大写字母转小写</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\u202f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\xa0</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="c1"># Insert space between words and punctuation marks</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">char</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">no_space</span><span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> <span class="k">else</span> <span class="n">char</span>
+    <span class="c1"># 把标点符号和单词分开</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">char</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="p">(</span><span class="n">char</span> <span class="ow">in</span> <span class="nb">set</span><span class="p">(</span><span class="s1">&#39;,.!?&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">text</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="k">else</span> <span class="n">char</span> 
            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">char</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">text</span><span class="p">)]</span>
     <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
 </pre></div>
@@ -830,13 +812,16 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">tokenize_nmt</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">num_examples</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Tokenize the English-French dataset.&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Tokenize英-法数据集&quot;&quot;&quot;</span>
     <span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)):</span>
+        <span class="c1"># 保留前num_examples个句子对，可以作为测试集</span>
         <span class="k">if</span> <span class="n">num_examples</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">num_examples</span><span class="p">:</span>
             <span class="k">break</span>
+        <span class="c1"># 以\t分隔同一行中的英语和法语</span>
         <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">parts</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="c1"># tokenize为一个个单词，得到List[List[str]]</span>
             <span class="n">source</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
             <span class="n">target</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span>
@@ -845,17 +830,15 @@
 </div>
 </div>
 </div>
-<div class="section" id="digitalize">
-<h2>Digitalize<a class="headerlink" href="#digitalize" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tokens">
+<h2>Tokens转化为数字索引<a class="headerlink" href="#tokens" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">truncate_pad</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">,</span> <span class="n">padding_token</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Truncate or pad sequences.&quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_steps</span><span class="p">:</span>
-        <span class="c1"># Truncate</span>
-        <span class="k">return</span> <span class="n">line</span><span class="p">[:</span><span class="n">num_steps</span><span class="p">]</span>
-    <span class="c1"># Pad</span>
+    <span class="c1"># 通过截断或填充使得每个句子的长度都是num_steps</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">num_steps</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">line</span><span class="p">[:</span> <span class="n">num_steps</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">line</span> <span class="o">+</span> <span class="p">[</span><span class="n">padding_token</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">num_steps</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -865,11 +848,12 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">build_array_nmt</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">vocab</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Transform text sequences of machine translation into minibatches.&quot;&quot;&quot;</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
-    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span> <span class="o">+</span> <span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="s1">&#39;&lt;eos&gt;&#39;</span><span class="p">]]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
-    <span class="n">array</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span>
-        <span class="n">truncate_pad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">,</span> <span class="n">vocab</span><span class="p">[</span><span class="s1">&#39;&lt;pad&gt;&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">])</span>
+    <span class="sd">&quot;&quot;&quot;tokens转化为数字索引，且通过截断或填充使每个句子长度都一样&quot;&quot;&quot;</span>
+    <span class="c1"># &lt;eos&gt;标明句子结束</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="n">l</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">vocab</span><span class="p">[</span><span class="s1">&#39;&lt;eos&gt;&#39;</span><span class="p">]]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
+    <span class="c1"># 截断或填充</span>
+    <span class="n">array</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([</span><span class="n">truncate_pad</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">,</span> <span class="n">vocab</span><span class="p">[</span><span class="s1">&#39;&lt;pad&gt;&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">])</span>
+    <span class="c1"># 标明哪些token是&lt;pad&gt;</span>
     <span class="n">valid_len</span> <span class="o">=</span> <span class="p">(</span><span class="n">array</span> <span class="o">!=</span> <span class="n">vocab</span><span class="p">[</span><span class="s1">&#39;&lt;pad&gt;&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">array</span><span class="p">,</span> <span class="n">valid_len</span>
 </pre></div>
@@ -877,22 +861,25 @@
 </div>
 </div>
 </div>
-<div class="section" id="putting-all-things-together">
-<h2>Putting All Things Together<a class="headerlink" href="#putting-all-things-together" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>合起来<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@save</span>
 <span class="k">def</span> <span class="nf">load_data_nmt</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">,</span> <span class="n">num_examples</span><span class="o">=</span><span class="mi">600</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the iterator and the vocabularies of the translation dataset.&quot;&quot;&quot;</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">preprocess_nmt</span><span class="p">(</span><span class="n">read_data_nmt</span><span class="p">())</span>
+    <span class="sd">&quot;&quot;&quot;读取英-法数据集、英语词汇表、法语词汇表&quot;&quot;&quot;</span>
+    <span class="c1"># 读取数据并tokenize</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">read_data_nmt</span><span class="p">()</span>
     <span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="n">tokenize_nmt</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">num_examples</span><span class="p">)</span>
-    <span class="c1"># build vocab</span>
+    <span class="c1"># 分别建立英、法词汇表</span>
     <span class="n">src_vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Vocab</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">min_freq</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
                           <span class="n">reserved_tokens</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&lt;pad&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;bos&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;eos&gt;&#39;</span><span class="p">])</span>
     <span class="n">tgt_vocab</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">Vocab</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">min_freq</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
                           <span class="n">reserved_tokens</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&lt;pad&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;bos&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;eos&gt;&#39;</span><span class="p">])</span>
+    <span class="c1"># 得到array和valid_len</span>
     <span class="n">src_array</span><span class="p">,</span> <span class="n">src_valid_len</span> <span class="o">=</span> <span class="n">build_array_nmt</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
     <span class="n">tgt_array</span><span class="p">,</span> <span class="n">tgt_valid_len</span> <span class="o">=</span> <span class="n">build_array_nmt</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">tgt_vocab</span><span class="p">,</span> <span class="n">num_steps</span><span class="p">)</span>
+    <span class="c1"># 使用load_array建立pytorch-dataset</span>
     <span class="n">data_arrays</span> <span class="o">=</span> <span class="p">(</span><span class="n">src_array</span><span class="p">,</span> <span class="n">src_valid_len</span><span class="p">,</span> <span class="n">tgt_array</span><span class="p">,</span> <span class="n">tgt_valid_len</span><span class="p">)</span>
     <span class="n">data_iter</span> <span class="o">=</span> <span class="n">d2l</span><span class="o">.</span><span class="n">load_array</span><span class="p">(</span><span class="n">data_arrays</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">data_iter</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">,</span> <span class="n">tgt_vocab</span>
@@ -903,6 +890,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_iter</span><span class="p">,</span> <span class="n">src_vocab</span><span class="p">,</span> <span class="n">tgt_vocab</span> <span class="o">=</span> <span class="n">load_data_nmt</span><span class="p">(</span><span class="n">batch_size</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">num_steps</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+<span class="c1"># 试验一下</span>
 <span class="k">for</span> <span class="n">X</span><span class="p">,</span> <span class="n">X_valid_len</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Y_valid_len</span> <span class="ow">in</span> <span class="n">train_iter</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;X:&#39;</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">int32</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;valid lengths for X:&#39;</span><span class="p">,</span> <span class="n">X_valid_len</span><span class="p">)</span>
@@ -913,12 +901,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X: tensor([[ 13,  34,   5,   3,   1,   1,   1,   1],
-        [  7, 155,   4,   3,   1,   1,   1,   1]], dtype=torch.int32)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X: tensor([[ 79,  34,   5,   3,   1,   1,   1,   1],
+        [  6, 125,   4,   3,   1,   1,   1,   1]], dtype=torch.int32)
 valid lengths for X: tensor([4, 4])
-Y: tensor([[121,   5,   3,   1,   1,   1,   1,   1],
-        [  6,   7,   0,   4,   3,   1,   1,   1]], dtype=torch.int32)
-valid lengths for Y: tensor([3, 5])
+Y: tensor([[  0,   0,   4,   3,   1,   1,   1,   1],
+        [  6,  27,   7,   0, 133,   4,   3,   1]], dtype=torch.int32)
+valid lengths for Y: tensor([4, 7])
 </pre></div>
 </div>
 </div>
@@ -952,7 +940,7 @@ valid lengths for Y: tensor([3, 5])
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="0.html" title="previous page">机器翻译</a>
-    <a class='right-next' id="next-link" href="2.encoder-decoder.html" title="next page">Encoder-Decoder</a>
+    <a class='right-next' id="next-link" href="2.encoder-decoder.html" title="next page">编码器-解码器</a>
 
         </div>
         
