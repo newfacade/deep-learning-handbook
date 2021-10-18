@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word2vec &#8212; 深度学习手册</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="GloVe" href="2.glove.html" />
+    <link rel="prev" title="自然语言处理预训练" href="0.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/ayaka.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">深度学习手册</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   前言
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  深度学习基础
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter01/0.html">
+   线性神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/1.auto diff.html">
+     自动求导
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/2.linear regression.html">
+     线性回归
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/3.fashion mnist.html">
+     Fashion-MNIST数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/4.training pipeline.html">
+     训练图像分类
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter01/5.softmax regression.html">
+     Softmax回归
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter02/0.html">
+   多层感知机
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/1.mlp.html">
+     多层感知机
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/2.regularization.html">
+     正则化
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/3.dropout.html">
+     Dropout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/4.batch normalization.html">
+     Batch Normalization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/5.back propagation.html">
+     反向传播
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/6.activation.html">
+     激活函数
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter02/7.initialization.html">
+     初始化
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter03/0.html">
+   优化算法
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/1.optimization challenges.html">
+     深度学习中的优化挑战
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/2.gradient descent.html">
+     梯度下降
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/3.momentum.html">
+     动量法
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/4.rmsprop.html">
+     RMSprop
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/5.adam.html">
+     Adam
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter03/6.lr schedule.html">
+     学习率调度器
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  计算机视觉
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter04/0.html">
+   卷积神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/1.convolution.html">
+     卷积
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/2.padding and stride.html">
+     Padding，Stride，Channels
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/3.pooling.html">
+     Pooling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/4.lenet.html">
+     LeNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/5.alexnet.html">
+     AlexNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/6.vgg.html">
+     VGG
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/7.googlenet.html">
+     GoogleNet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/8.batch normalization.html">
+     卷积层的批标准化
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter04/9.resnet.html">
+     ResNet
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter05/0.html">
+   目标检测
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter05/1.bounding box.html">
+     目标检测和边界框
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter05/2.label predict.html">
+     标注和预测
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter05/3.dataset.html">
+     目标检测数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter05/4.ssd.html">
+     SSD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter06/0.html">
+   语义分割
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter06/1.semantic.html">
+     语义分割和数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter06/2.transpose.html">
+     转置卷积
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter06/3.fully conv.html">
+     全卷积网络
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapter07/1.style transfer.html">
+   样式迁移
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  自然语言处理
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter08/0.html">
+   循环神经网络
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/1.language model.html">
+     语言模型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/2.text preprocessing.html">
+     语言模型数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/3.rnn.html">
+     循环神经网络
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/4.training language model.html">
+     训练语言模型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/5.gru.html">
+     GRU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/6.lstm.html">
+     LSTM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/7.deep rnn.html">
+     深度循环神经网络
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter08/8.bidirectional rnn.html">
+     双向循环神经网络
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter09/0.html">
+   机器翻译
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/1.machine translation dataset.html">
+     机器翻译数据集
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/2.encoder-decoder.html">
+     编码器-解码器
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/3.training machine translation.html">
+     训练机器翻译
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter09/4.sequence to sequence.html">
+     序列到序列学习
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter10/0.html">
+   注意力机制
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/1.attention.html">
+     注意力
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/2.attention scoring functions.html">
+     注意力评分函数
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/3.multi-head attention.html">
+     多头注意力
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/4.positional encoding.html">
+     位置编码
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/5.positionwise ffn &amp; addnorm.html">
+     Transformer的其它组件
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter10/6.transformer.html">
+     Transformer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="0.html">
+   自然语言处理预训练
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Word2vec
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.glove.html">
+     GloVe
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="3.bert.html">
+     BERT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter12/0.html">
+   自然语言处理应用
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter12/1.sentiment.html">
+     情感分析
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter12/2.inference.html">
+     自然语言推理
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter12/3.bert-app.html">
+     使用BERT
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  tensorflow
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter14/0.html">
+   基础知识
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/1.sequential.html">
+     Keras顺序API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/2.functional.html">
+     Keras函数式API
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/3.overfitting.html">
+     处理过拟合
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/4.optimizer.html">
+     优化算法
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/5.reuse.html">
+     预训练+微调
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter14/6.hyperparameter.html">
+     调参
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter15/0.html">
+   自定义
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+  <label for="toctree-checkbox-13">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/1.custom layer.html">
+     自定义层
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/2.custom model.html">
+     自定义模型
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/3.custom loss.html">
+     自定义损失函数和指标
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/4.custom activations etc.html">
+     自定义激活函数、初始化、正则化和约束
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/5.custom callback etc.html">
+     自定义回调函数和学习率调度器
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter15/6.custom training.html">
+     自定义训练循环
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter16/0.html">
+   加载和预处理数据
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/1.csv data.html">
+     CSV数据
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/2.tfrecord.html">
+     TFRecord和Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/3.example.html">
+     写入和读取TFRecord文件
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter16/4.preprocess.html">
+     预处理输入特征
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapter17/0.html">
+   部署
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter17/1.install.html">
+     启动TensorFlow Serving
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter17/2.restapi.html">
+     通过REST API查询
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapter17/3.version.html">
+     部署模型新的版本
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapter11/1.word2vec.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter11/1.word2vec.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/chapter11/1.word2vec.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#skip-gram">
+   Skip-Gram
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   训练
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     负采样
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     下采样
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cbow">
+   CBOW
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="word2vec">
+<h1>Word2vec<a class="headerlink" href="#word2vec" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Word2vec是一种训练词向量的技术，它将词映射到一个固定长度的向量，这些向量能很好地表达不同词之间的相似性和类比关系。<br/>
+Word2vec有Skip-Gram和CBOW两种构型。</p>
+</div>
+<div class="section" id="skip-gram">
+<h2>Skip-Gram<a class="headerlink" href="#skip-gram" title="Permalink to this headline">¶</a></h2>
+<p>Skip-Gram假设一个词可以用来在文本序列中生成其周围的单词。</p>
+<p><img alt="image" src="../_images/skip-gram.svg" /></p>
+<p>这个想法可以通过训练一个预测周围单词的两层神经网络来实现。</p>
+<p>此神经网络输入和输出的维度为 <span class="math notranslate nohighlight">\(V\)</span>，即我们要训练的词汇量，隐藏层的维度 <span class="math notranslate nohighlight">\(N\)</span> 为词向量的维度。</p>
+<p>假设中心词的索引为 <span class="math notranslate nohighlight">\(k\)</span>，其周围单词的索引为 <span class="math notranslate nohighlight">\(1j, ..., Cj\)</span>。</p>
+<p>那么输入可以表示为一个one-hot向量：<span class="math notranslate nohighlight">\(x_{k}=1\)</span>其他维度为0。按照我们的设想此时的输出 <span class="math notranslate nohighlight">\(y_{j}\)</span> 表示单词 <span class="math notranslate nohighlight">\(k\)</span> 周围出现单词 <span class="math notranslate nohighlight">\(j\)</span> 的可能性，因此我们期望 <span class="math notranslate nohighlight">\(y_{1j}, ..., y_{Cj}\)</span> 尽可能相对大。</p>
+<p>训练完成后，我们将各个单词对应的隐藏层输出作为此单词的词向量，它是 <span class="math notranslate nohighlight">\(N\)</span> 维的，包含了其周围单词分布的信息。</p>
+<p><img alt="image" src="../_images/word2vec.png" /></p>
+</div>
+<div class="section" id="id1">
+<h2>训练<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>上面我们讲了Skip-Gram模型的基本思路，但是具体的训练目标是什么呢？</p>
+<p>首先我们使用softmax操作将输出解释为条件概率：</p>
+<div class="math notranslate nohighlight">
+\[P(w_{j}|w_{k}) = \frac{\exp(y_{j})}{\sum_{l\in\mathcal{V}}\exp(y_{l})}\]</div>
+<p>可以将训练目标定为最小化负对数似然函数：</p>
+<div class="math notranslate nohighlight">
+\[-\sum_{s=1}^{C}\log{P(w_{sj}|w_{k})}\]</div>
+<div class="section" id="id2">
+<h3>负采样<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>若使用上面的目标函数进行训练，由于softmax存在归一化项，每步迭代都需要对所有单词进行遍历，训练速度很慢。</p>
+<p>因此一般我们会使用<code class="docutils literal notranslate"><span class="pre">负采样</span></code>来进行加速近似训练。负采样从预定义分布中采样负样本或者说噪声词，一个周边单词对应数个非此窗口的噪声词。</p>
+<p>假设采样到的噪声词的索引为 <span class="math notranslate nohighlight">\(1n, ..., Mn\)</span>，那么此次迭代仅需要让 <span class="math notranslate nohighlight">\(\sigma(y_{1j}),...,\sigma(y_{Cj})\)</span> 尽可能大，且 <span class="math notranslate nohighlight">\(\sigma(y_{1n}),...,\sigma(y_{Mn})\)</span> 尽可能小即可，不需要遍历所有的单词。</p>
+<p>根据word2vec论文的建议，噪声词<span class="math notranslate nohighlight">\(w\)</span>的采样概率<span class="math notranslate nohighlight">\(P(w)\)</span>与其在字典中出现频次的0.75次方成正比。</p>
+</div>
+<div class="section" id="id3">
+<h3>下采样<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>文本数据中通常有“the”、“a”等高频词，这些词在上下文窗口中与许多不同的词共同出现，提供的有用信息很少。</p>
+<p>因此，当训练词嵌入模型时，可以对高频单词进行下采样。具体地说，每个单词<span class="math notranslate nohighlight">\(w_{i}\)</span>留下的概率为：</p>
+<div class="math notranslate nohighlight">
+\[P(w_{i}) = \min\left(\sqrt{\frac{t}{f(w_{i})}}, 1\right)\]</div>
+<p>其中 <span class="math notranslate nohighlight">\(f(w_{i})\)</span> 是 <span class="math notranslate nohighlight">\(w_{i}\)</span> 的词数与数据集总词数的比率，常量 <span class="math notranslate nohighlight">\(t\)</span> 是超参数（比如说<span class="math notranslate nohighlight">\(10^{-4}\)</span>）。只有当 <span class="math notranslate nohighlight">\(f(w_{i}) &gt; t\)</span> 时，词 <span class="math notranslate nohighlight">\(w_{i}\)</span> 才有可能被抛弃，比率越高抛弃概率越大。</p>
+</div>
+</div>
+<div class="section" id="cbow">
+<h2>CBOW<a class="headerlink" href="#cbow" title="Permalink to this headline">¶</a></h2>
+<p>CBOW是word2vec的另一种构型，与Skip-Gram相反，CBOW使用周围的词预测中心的词。</p>
+<p><img alt="image" src="../_images/cbow.svg" /></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapter11"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="0.html" title="previous page">自然语言处理预训练</a>
+    <a class='right-next' id="next-link" href="2.glove.html" title="next page">GloVe</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By newfacade<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
